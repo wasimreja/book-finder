@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
+
+.header {
+	margin-top: 20%;
+	text-align: center;
+}
+
+.title {
+	font-size: 7em;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+}
+
+.finder {
+	font-weight: lighter;
+}
+
+.search {
+	margin: 0 auto;
+	width: 50%;
+}
