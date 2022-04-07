@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
 
 .header {
-	margin-top: 20%;
+	margin-top: 4rem;
 	text-align: center;
+}
+
+.illustration {
+	width: 20rem;
 }
 
 .title {
