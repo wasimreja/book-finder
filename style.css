@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap');
 
 .header {
 	margin-top: 4rem;
@@ -41,6 +41,7 @@
 	font-size: 7em;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
+	color: #403e3e;
 }
 
 .finder {
@@ -50,4 +51,35 @@
 .search {
 	margin: 0 auto;
 	width: 50%;
+	font-family: 'Comfortaa', cursive;
+}
+
+.results {
+	padding: 5% 15% 5% 15%;
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	font-size: 1rem;
+	color: #403e3e;
+}
+
+.result {
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	border-radius: 5px; 
+	padding: 2% 0 2%  0;
+}
+  
+.result:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+  
+img {
+	margin: 5px auto;
+	width: 20%
+}
+
+h1 {
+	font-family: 'Comfortaa', cursive;
+	color: #403e3e;
 }
