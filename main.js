@@ -1,7 +1,6 @@
 function search() {
 	var search = document.getElementById('input').value;
 	document.getElementById('input').value = '';
-	console.log('Working');
 	$.ajax({
 		url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + "&maxResults=20",
 		dataType: 'json',
@@ -12,7 +11,8 @@ function search() {
 				myNode.removeChild(myNode.firstChild);
 			}
 			for (var i = 0; i < res.items.length; i++) {
-				console.log(res.items[i].volumeInfo.title + " " + res.items[i].volumeInfo.subtitle + " " + res.items[i].volumeInfo.authors + " " + res.items[i].volumeInfo.imageLinks.smallThumbnail);
+				//log for check data info
+				// console.log(res.items[i].volumeInfo.title + " " + res.items[i].volumeInfo.subtitle + " " + res.items[i].volumeInfo.authors + " " + res.items[i].volumeInfo.imageLinks.smallThumbnail);
         		
 				// DIV				
 				var div = document.createElement("DIV");
@@ -32,10 +32,11 @@ function search() {
 				par.appendChild(desc);
 		
 				// Button
-				var btn = document.createElement("BUTTON");
+				var btn = document.createElement("a");
 				btn.innerHTML = "Read";
-				btn.setAttribute("onclick","location.href = ' "+res.items[i].volumeInfo.previewLink+" '; ");
-		
+				btn.href = res.items[i].volumeInfo.previewLink
+				btn.target = "_blank"
+
 				btn.classList.add("btn");
 				btn.classList.add("btn-outline-secondary");
 				div.classList.add("result");
