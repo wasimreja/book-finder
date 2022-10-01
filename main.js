@@ -53,19 +53,21 @@ function search(e) {
       });
 
       const template = `
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Thumbnail</th>
-              <th scope="col">Title</th>
-              <th scope="col">Subtitle</th>
-              <th scope="col">Authors</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${results.join('')}
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Thumbnail</th>
+                <th scope="col">Title</th>
+                <th scope="col">Subtitle</th>
+                <th scope="col">Authors</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${results.join('')}
+            </tbody>
+          </table>
+        </div>
       `;
 
       myNode.html(template);
