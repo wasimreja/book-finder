@@ -78,7 +78,11 @@ img {
 	margin: 5px auto;
 	width: 20%
 }
-
+footer{
+	text-align: center;
+	color: olive;
+	margin-top: 12rem;
+}
 h1 {
 	font-family: 'Comfortaa', cursive;
 	color: #403e3e;
