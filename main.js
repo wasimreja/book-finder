@@ -54,3 +54,9 @@ function search() {
 }
 
 document.getElementById('button-addon1').addEventListener('click', search, false);
+document.addEventListener('keypress', (e)=>{
+	if(e.key == "Enter"){
+		e.preventDefault();
+	document.getElementById("button-addon1").click();
+}
+})
