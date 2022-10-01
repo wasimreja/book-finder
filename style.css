@@ -83,3 +83,12 @@ h1 {
 	font-family: 'Comfortaa', cursive;
 	color: #403e3e;
 }
+
+.read-more {
+	display: none;
+}
+
+.show-more {
+	display: block;
+	text-decoration: underline;
+}

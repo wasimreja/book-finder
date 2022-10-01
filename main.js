@@ -19,15 +19,15 @@ function search(e) {
         myNode.removeChild(myNode.firstChild);
       }
       for (var i = 0; i < res.items.length; i++) {
-        console.log(
-          res.items[i].volumeInfo.title +
-            " " +
-            res.items[i].volumeInfo.subtitle +
-            " " +
-            res.items[i].volumeInfo.authors +
-            " " +
-            res.items[i].volumeInfo.imageLinks.smallThumbnail
-        );
+        // console.log(
+        //   res.items[i].volumeInfo.title +
+        //     " " +
+        //     res.items[i].volumeInfo.subtitle +
+        //     " " +
+        //     res.items[i].volumeInfo.authors +
+        //     " " +
+        //     res.items[i].volumeInfo.imageLinks.smallThumbnail
+        // );
 
         // DIV
         var div = document.createElement("DIV");
@@ -43,8 +43,46 @@ function search(e) {
 
         // Description
         var par = document.createElement("p");
-        var desc = document.createTextNode(res.items[i].volumeInfo.description);
-        par.appendChild(desc);
+        // var desc = document.createTextNode(res.items[i].volumeInfo.description);
+        var desc = clipText(res.items[i].volumeInfo.description);
+        
+        if (desc.short) {
+          //shortened description
+          var short = document.createTextNode(desc.short);
+          // as the name shows
+          var dotdotdot = document.createElement('span');
+          dotdotdot.innerHTML = '...';
+          // remainder of the description
+          var rem = document.createElement('span');
+          rem.innerHTML = ' ' + desc.rem;
+          rem.classList.add('read-more')
+          // element to show/hide the remainder
+          var readMore = document.createElement("a");
+          readMore.innerHTML = 'Read more';
+          readMore.classList.add('show-more')
+          readMore.addEventListener('click', (e)=>{
+            let dot = e.path[1].children[0];
+            let show = e.path[1].children[1];
+            if (e.path[0].innerHTML == 'Read more') {
+              dot.style.display = 'none';
+              show.style.display = 'inline';
+              e.path[0].innerHTML = 'Read Less'
+            } else {
+              dot.style.display = 'inline';
+              show.style.display = 'none';
+              e.path[0].innerHTML = 'Read more'
+            }
+          })
+
+          par.appendChild(short)
+          par.appendChild(dotdotdot)
+          par.appendChild(rem)
+          par.appendChild(readMore)
+        } else {
+          // in case the description is very long
+          par.appendChild(document.createTextNode(desc.allText))
+        }
+        
 
         // Button
         var btn = document.createElement("BUTTON");
@@ -72,3 +110,21 @@ function search(e) {
 }
 
 document.querySelector(".search-form").addEventListener("submit", search);
+
+function clipText(text) {
+  let allText = (text)? text.split(' ') : '';
+  let short = [];
+  let rem = [];
+  const LIMIT = 50;
+
+  if (allText.length > LIMIT) {
+    short = allText.slice(0, LIMIT);
+    rem = allText.slice(LIMIT, allText.length - 1);
+  }
+
+  allText = allText.join(' ');
+  (short)? short = short.join(' ') : '';
+  (rem)? rem = rem.join(' ') : '';
+
+  return {allText, short, rem};
+}
