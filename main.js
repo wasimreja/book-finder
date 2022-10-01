@@ -41,6 +41,12 @@ function search(e) {
         var title = document.createTextNode(res.items[i].volumeInfo.title);
         h1.appendChild(title);
 
+				//Author
+
+				var p=document.createElement("h6");
+				var author=document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+				p.appendChild(author);
+
         // Description
         var par = document.createElement("p");
         var desc = document.createTextNode(res.items[i].volumeInfo.description);
@@ -60,6 +66,7 @@ function search(e) {
         div.classList.add("container");
 
         div.appendChild(h1);
+				div.appendChild(p);
         div.appendChild(img);
         div.appendChild(par);
         div.appendChild(btn);

@@ -7,7 +7,7 @@
 	-moz-animation: fadein 2s; /* Firefox < 16 */
 	 -ms-animation: fadein 2s; /* Internet Explorer */
 	  -o-animation: fadein 2s; /* Opera < 12.1 */
-		 animation: fadein 2s;	
+		 animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -66,14 +66,14 @@
 .result {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
-	border-radius: 5px; 
+	border-radius: 5px;
 	padding: 2% 0 2%  0;
 }
-  
+
 .result:hover {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-  
+
 img {
 	margin: 5px auto;
 	width: 20%
