@@ -1,56 +1,77 @@
-function search() {
-	var search = document.getElementById('input').value;
-	document.getElementById('input').value = '';
-	console.log('Working');
-	$.ajax({
-		url: 'https://www.googleapis.com/books/v1/volumes?q=' + search + "&maxResults=20",
-		dataType: 'json',
+function search(e) {
+  e.preventDefault();
 
-		success: function(res) {
-			var myNode = document.getElementById("results");
-			while (myNode.firstChild) {
-				myNode.removeChild(myNode.firstChild);
-			}
-			for (var i = 0; i < res.items.length; i++) {
-				console.log(res.items[i].volumeInfo.title + " " + res.items[i].volumeInfo.subtitle + " " + res.items[i].volumeInfo.authors + " " + res.items[i].volumeInfo.imageLinks.smallThumbnail);
-        		
-				// DIV				
-				var div = document.createElement("DIV");
-				
-				// Image
-				var img = document.createElement("IMG");
-				img.src=res.items[i].volumeInfo.imageLinks.smallThumbnail;
-		
-				// Title
-				var h1 = document.createElement("H1");
-				var title = document.createTextNode(res.items[i].volumeInfo.title);
-				h1.appendChild(title);
-				
-				// Description
-				var par = document.createElement("p");
-				var desc = document.createTextNode(res.items[i].volumeInfo.description);
-				par.appendChild(desc);
-		
-				// Button
-				var btn = document.createElement("BUTTON");
-				btn.innerHTML = "Read";
-				btn.setAttribute("onclick","location.href = ' "+res.items[i].volumeInfo.previewLink+" '; ");
-		
-				btn.classList.add("btn");
-				btn.classList.add("btn-outline-secondary");
-				div.classList.add("result");
-				div.classList.add("container");
-		
-				div.appendChild(h1);
-				div.appendChild(img);
-				div.appendChild(par);
-				div.appendChild(btn);
-				document.getElementById('results').appendChild(div);
-			}
-		},
-		maxResults: 30,
-		type: 'GET'
-	});
+  const searchElem = $('#input');
+  if (!searchElem) return;
+  var search = searchElem.val()?.trim() || '';
+  if (!search) return;
+  searchElem.val('');
+
+  $.ajax({
+    url: `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=20`,
+    dataType: 'json',
+    maxResults: 30,
+    type: 'GET',
+    beforeSend: function () {
+      $('#req-status').html('Loading ...').css('color', 'green');
+    },
+    error: function () {
+      $('#req-status').html('Failed to load books ...').css('color', 'salmon');
+    },
+    success: function (res) {
+      var myNode = $('#results');
+      if (!myNode) return;
+      $('#req-status').html('');
+      if (!res.items?.length) {
+        $('#req-status').html('No books found').css('color', 'violet');
+        return;
+      }
+
+      const results = res.items?.map((item) => {
+        return `
+        <tr>
+          <th scope="row">
+            <img 
+              title=${item.volumeInfo?.title || '-'} 
+              alt=${item.volumeInfo?.title || '-'} 
+              src=${item.volumeInfo?.imageLinks?.smallThumbnail} 
+            />
+          </th>
+          <td>
+            <a 
+              target="_blank"
+              title=${item.volumeInfo?.title || '-'} 
+              href=${item.volumeInfo?.previewLink} 
+            >
+              ${item.volumeInfo?.title || '-'}
+            </a>
+          </td>
+          <td>${item.volumeInfo?.subtitle || '-'}</td>
+          <td>${item.volumeInfo?.authors?.join(', ') || '-'}</td>
+        </tr>
+        `;
+      });
+
+      const template = `
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Thumbnail</th>
+              <th scope="col">Title</th>
+              <th scope="col">Subtitle</th>
+              <th scope="col">Authors</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${results.join('')}
+          </tbody>
+        </table>
+      `;
+
+      myNode.html(template);
+      return;
+    },
+  });
 }
 
-document.getElementById('button-addon1').addEventListener('click', search, false);
+$('#searchForm').submit(search);
