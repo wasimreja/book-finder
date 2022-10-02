@@ -19,15 +19,15 @@ function search(e) {
         myNode.removeChild(myNode.firstChild);
       }
       for (var i = 0; i < res.items.length; i++) {
-        console.log(
-          res.items[i].volumeInfo.title +
-            " " +
-            res.items[i].volumeInfo.subtitle +
-            " " +
-            res.items[i].volumeInfo.authors +
-            " " +
-            res.items[i].volumeInfo.imageLinks.smallThumbnail
-        );
+        // console.log(
+        //   res.items[i].volumeInfo.title +
+        //     " " +
+        //     res.items[i].volumeInfo.subtitle +
+        //     " " +
+        //     res.items[i].volumeInfo.authors +
+        //     " " +
+        //     res.items[i].volumeInfo.imageLinks.smallThumbnail
+        // );
 
         // DIV
         var div = document.createElement("DIV");
@@ -41,18 +41,22 @@ function search(e) {
         var title = document.createTextNode(res.items[i].volumeInfo.title);
         h1.appendChild(title);
 
+				//Author
+
+				var p=document.createElement("h6");
+				var author=document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+				p.appendChild(author);
+
         // Description
         var par = document.createElement("p");
         var desc = document.createTextNode(res.items[i].volumeInfo.description);
         par.appendChild(desc);
 
         // Button
-        var btn = document.createElement("BUTTON");
+        var btn = document.createElement("a");
         btn.innerHTML = "Read";
-        btn.setAttribute(
-          "onclick",
-          "location.href = ' " + res.items[i].volumeInfo.previewLink + " '; "
-        );
+		btn.href= res.items[i].volumeInfo.previewLink
+		btn.target= "blank"
 
         btn.classList.add("btn");
         btn.classList.add("btn-outline-secondary");
@@ -60,6 +64,7 @@ function search(e) {
         div.classList.add("container");
 
         div.appendChild(h1);
+				div.appendChild(p);
         div.appendChild(img);
         div.appendChild(par);
         div.appendChild(btn);
