@@ -43,6 +43,12 @@ function search(e) {
         var title = document.createTextNode(res.items[i].volumeInfo.title);
         h1.appendChild(title);
 
+				//Author
+
+				var p=document.createElement("h6");
+				var author=document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+				p.appendChild(author);
+
         // Description
         var par = document.createElement("p");
         
@@ -52,12 +58,10 @@ function search(e) {
         
 
         // Button
-        var btn = document.createElement("BUTTON");
+        var btn = document.createElement("a");
         btn.innerHTML = "Read";
-        btn.setAttribute(
-          "onclick",
-          "location.href = ' " + res.items[i].volumeInfo.previewLink + " '; "
-        );
+		btn.href= res.items[i].volumeInfo.previewLink
+		btn.target= "blank"
 
         btn.classList.add("btn");
         btn.classList.add("btn-outline-secondary");
@@ -65,6 +69,7 @@ function search(e) {
         div.classList.add("container");
 
         div.appendChild(h1);
+				div.appendChild(p);
         div.appendChild(img);
         div.appendChild(par);
         div.appendChild(btn);
