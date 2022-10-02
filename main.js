@@ -34,11 +34,16 @@ function search(e) {
 
         //Author
 
-        var p = document.createElement("h6");
-        var author = document.createTextNode(
-          `by ${res.items[i].volumeInfo.authors[0]}`
-        );
-        p.appendChild(author);
+        if (
+          res.items[i].volumeInfo.authors &&
+          res.items[i].volumeInfo.authors.length > 0
+        ) {
+          var p = document.createElement("h6");
+          var author = document.createTextNode(
+            `by ${res.items[i].volumeInfo.authors[0]}`
+          );
+          p.appendChild(author);
+        }
 
         // Description
         var par = document.createElement("p");

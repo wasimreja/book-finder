@@ -184,3 +184,35 @@ h1 {
     gap: 2%;
   }
 }
+
+/* -----------------Footer----------------- */
+
+.bg-light {
+  color: #403e3e;
+  background-color: transparent;
+  border-top: 1px solid #d2cbcb;
+}
+
+/* ------------Navbar------------ */
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #d2cbcb;
+}
+.text {
+  position: center;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #403e3e;
+}
+
+.find {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #403e3e;
+}
