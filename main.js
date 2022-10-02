@@ -19,8 +19,6 @@ function search(e) {
         myNode.removeChild(myNode.firstChild);
       }
       for (var i = 0; i < res.items.length; i++) {
-        console.log(res.items[i].volumeInfo.imageLinks);
-
         // Card
         var card = document.createElement("DIV");
         card.style.backgroundImage = `url(${res.items[i].volumeInfo.imageLinks.thumbnail})`;
@@ -34,6 +32,14 @@ function search(e) {
         var title = document.createTextNode(res.items[i].volumeInfo.title);
         h1.appendChild(title);
 
+        //Author
+
+        var p = document.createElement("h6");
+        var author = document.createTextNode(
+          `by ${res.items[i].volumeInfo.authors[0]}`
+        );
+        p.appendChild(author);
+
         // Description
         var par = document.createElement("p");
         var desc = document.createTextNode(
@@ -43,12 +49,10 @@ function search(e) {
         par.classList.add("card-desc");
 
         // Button
-        var btn = document.createElement("BUTTON");
+        var btn = document.createElement("a");
         btn.innerHTML = "Read";
-        btn.setAttribute(
-          "onclick",
-          "location.href = ' " + res.items[i].volumeInfo.previewLink + " '; "
-        );
+        btn.href = res.items[i].volumeInfo.previewLink;
+        btn.target = "blank";
 
         btn.classList.add("btn");
         btn.classList.add("btn-outline-secondary");
