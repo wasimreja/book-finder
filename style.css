@@ -83,3 +83,10 @@ h1 {
 	font-family: 'Comfortaa', cursive;
 	color: #403e3e;
 }
+.word {
+	margin: auto;
+	color: #403e3e;
+	font: 100 normal 1rem 'tahoma';
+	text-align: center;
+	margin-bottom: 50px;
+  }
