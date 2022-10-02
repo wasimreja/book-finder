@@ -19,15 +19,15 @@ function search(e) {
         myNode.removeChild(myNode.firstChild);
       }
       for (var i = 0; i < res.items.length; i++) {
-        console.log(
-          res.items[i].volumeInfo.title +
-            " " +
-            res.items[i].volumeInfo.subtitle +
-            " " +
-            res.items[i].volumeInfo.authors +
-            " " +
-            res.items[i].volumeInfo.imageLinks.smallThumbnail
-        );
+        // console.log(
+        //   res.items[i].volumeInfo.title +
+        //     " " +
+        //     res.items[i].volumeInfo.subtitle +
+        //     " " +
+        //     res.items[i].volumeInfo.authors +
+        //     " " +
+        //     res.items[i].volumeInfo.imageLinks.smallThumbnail
+        // );
 
         // DIV
         var div = document.createElement("DIV");
@@ -47,12 +47,10 @@ function search(e) {
         par.appendChild(desc);
 
         // Button
-        var btn = document.createElement("BUTTON");
+        var btn = document.createElement("a");
         btn.innerHTML = "Read";
-        btn.setAttribute(
-          "onclick",
-          "location.href = ' " + res.items[i].volumeInfo.previewLink + " '; "
-        );
+		btn.href= res.items[i].volumeInfo.previewLink
+		btn.target= "blank"
 
         btn.classList.add("btn");
         btn.classList.add("btn-outline-secondary");
