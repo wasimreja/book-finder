@@ -1,6 +1,6 @@
 function search(e) {
   e.preventDefault();
-  var search = document.getElementById("input").value;
+  const search = document.getElementById("input").value;
 
   document.getElementById("input").value = "";
   document.activeElement.blur(); // this removes focus on the input bar after search
@@ -14,49 +14,39 @@ function search(e) {
     dataType: "json",
 
     success: function (res) {
-      var myNode = document.getElementById("results");
+      const myNode = document.getElementById("results");
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
-      for (var i = 0; i < res.items.length; i++) {
-        // console.log(
-        //   res.items[i].volumeInfo.title +
-        //     " " +
-        //     res.items[i].volumeInfo.subtitle +
-        //     " " +
-        //     res.items[i].volumeInfo.authors +
-        //     " " +
-        //     res.items[i].volumeInfo.imageLinks.smallThumbnail
-        // );
-
+      for (const i = 0; i < res.items.length; i++) {
         // DIV
-        var div = document.createElement("DIV");
+        const div = document.createElement("DIV");
 
         // Image
-        var img = document.createElement("IMG");
+        const img = document.createElement("IMG");
         img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
 
         // Title
-        var h1 = document.createElement("H1");
-        var title = document.createTextNode(res.items[i].volumeInfo.title);
+        const h1 = document.createElement("H1");
+        const title = document.createTextNode(res.items[i].volumeInfo.title);
         h1.appendChild(title);
 
 				//Author
 
-				var p=document.createElement("h6");
-				var author=document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+				const p=document.createElement("h6");
+				const author=document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
 				p.appendChild(author);
 
         // Description
-        var par = document.createElement("p");
-        var desc = document.createTextNode(res.items[i].volumeInfo.description);
+        const par = document.createElement("p");
+        const desc = document.createTextNode(res.items[i].volumeInfo.description);
         par.appendChild(desc);
 
         // Button
-        var btn = document.createElement("a");
+        const btn = document.createElement("a");
         btn.innerHTML = "Read";
-		btn.href= res.items[i].volumeInfo.previewLink
-		btn.target= "blank"
+        btn.href= res.items[i].volumeInfo.previewLink
+        btn.target= "blank"
 
         btn.classList.add("btn");
         btn.classList.add("btn-outline-secondary");
