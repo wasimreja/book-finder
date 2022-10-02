@@ -89,6 +89,13 @@ h1 {
 }
 
 .show-more {
-	display: block;
+  cursor: pointer;
+	display: inline;
 	text-decoration: underline;
+  width: fit-content;
+  padding: .5em;
+}
+.show-more:hover {
+  scale: 1.05;
+  color: blue;
 }
