@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://socialify.git.ci/wasimreja/book-finder/image?font=Raleway&forks=1&issues=1&language=1&name=1&owner=1&pattern=Charlie%20Brown&pulls=1&stargazers=1&theme=Dark" alt="whats-cooking" width="640" height="320" />
+   <img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
