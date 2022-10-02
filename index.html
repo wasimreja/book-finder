@@ -10,9 +10,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="img/fevicon.svg">
+    
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg bg-light" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#header">
+             <!-- <h6 class="text" style="color: black;">Book 
+                <p class="find" style="display: inline-block;">Finder</p>
+            </h6>  -->
+           <span class="text">Book</span><span class="find">Finder</span>
+  
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
     <div class="header">
         <img src="img/Man-Reading-a-Book-Vector-Illustration.svg" alt="Man Reading a Book" class="illustration">
         <h1 class="title" style=" font-size:7em;">Book <p class="finder" style="display: inline-block;">Finder</p></h1>
@@ -31,6 +47,12 @@
     </div>
     <div id="results" class="results">
     </div>
+    <footer class="bg-light">
+        <div class="text-center p-3" style="background-color:transparent;">
+          © 2022 Copyright:
+          <a class="text-dark" href="https://mdbootstrap.com/">BookFinder.com</a>
+        </div>
+      </footer>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="main.js"></script>
 </body>
