@@ -1,4 +1,6 @@
 function search(e) {
+  const scroll = document.getElementById("scroll");
+  scroll.classList.add("visible");
   e.preventDefault();
   var search = document.getElementById("input").value;
 
@@ -25,8 +27,7 @@ function search(e) {
         h1.appendChild(error_res);
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
-      }
-      else {
+      } else {
         for (var i = 0; i < res.items.length; i++) {
           // console.log(
           //   res.items[i].volumeInfo.title +
@@ -53,19 +54,23 @@ function search(e) {
           //Author
 
           var p = document.createElement("h6");
-          var author = document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+          var author = document.createTextNode(
+            `by ${res.items[i].volumeInfo.authors[0]}`
+          );
           p.appendChild(author);
 
           // Description
           var par = document.createElement("p");
-          var desc = document.createTextNode(res.items[i].volumeInfo.description);
+          var desc = document.createTextNode(
+            res.items[i].volumeInfo.description
+          );
           par.appendChild(desc);
 
           // Button
           var btn = document.createElement("a");
           btn.innerHTML = "Read";
-          btn.href = res.items[i].volumeInfo.previewLink
-          btn.target = "blank"
+          btn.href = res.items[i].volumeInfo.previewLink;
+          btn.target = "blank";
 
           btn.classList.add("btn");
           btn.classList.add("btn-outline-secondary");
