@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
-<h2 align="center"><a href="">Check it out!</a></h2>
+<h2 align="center"><a href="https://ajaiqmar.github.io/book-finder/">Check it out!</a></h2>
 
 ## About The Project
 
