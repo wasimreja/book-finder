@@ -88,7 +88,6 @@ function search(e) {
           div.appendChild(imgDiv);
           document.getElementById("results").appendChild(div);
         }
-        window.location.href = "#results";
       }
     },
     maxResults: 30,
