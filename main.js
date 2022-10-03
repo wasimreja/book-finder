@@ -1,3 +1,25 @@
+function listen(e) {
+
+  const div = e.target.parentElement;
+  var text = div.children[2].innerText;
+  const Book = div.children[0].innerText ;
+  const Author = div.children[1].innerText ;
+
+  var message = `The name of the Book is ${Book}  . It is Written ${Author}. ${text}` ;
+
+
+  let synth = speechSynthesis;
+  synth.cancel();
+
+  setTimeout(() => {
+    const speech = new SpeechSynthesisUtterance(message);
+    const voices = synth.getVoices();
+    speech.lang = 'en-US' ;
+    synth.speak(speech);
+  }, 1000);
+
+}
+
 function search(e) {
   e.preventDefault();
   var search = document.getElementById("input").value;
@@ -74,6 +96,13 @@ function search(e) {
           btn.href = res.items[i].volumeInfo.previewLink
           btn.target = "blank"
 
+          const speech = document.createElement('button');
+          speech.classList.add('listen');
+          speech.classList.add('btn');
+          speech.classList.add('btn-outline-secondary');
+          speech.classList.add('rounded');
+          speech.innerText = 'Listen' ;
+
           btn.classList.add("btn");
           btn.classList.add("btn-outline-secondary");
           div.classList.add("result");
@@ -83,10 +112,20 @@ function search(e) {
           textDiv.appendChild(p);
           textDiv.appendChild(par);
           textDiv.appendChild(btn);
+          textDiv.appendChild(speech);
 
           div.appendChild(textDiv);
           div.appendChild(imgDiv);
           document.getElementById("results").appendChild(div);
+        }
+
+        const buttons = document.querySelectorAll('.listen');
+
+        for( let button of buttons)
+        {
+          button.addEventListener('click', (e)=>{
+            listen(e);
+          })
         }
       }
     },

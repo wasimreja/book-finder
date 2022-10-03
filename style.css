@@ -92,3 +92,8 @@ h1 {
     padding: 7px 20px;
     border: 0px;
 }
+
+.result button{
+	background: black;
+	color: white;
+}
