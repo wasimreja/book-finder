@@ -60,12 +60,12 @@ function search(e) {
           //Author
 
           var p = document.createElement("h6");
-          var author = document.createTextNode(`by ${res.items[i].volumeInfo.authors[0]}`);
+          var author = document.createTextNode(`by ${res.items[i].volumeInfo.authors[0] ? res.items[i].volumeInfo.authors[0] : 'No title'}`);
           p.appendChild(author);
 
           // Description
           var par = document.createElement("p");
-          var desc = document.createTextNode(res.items[i].volumeInfo.description);
+          var desc = document.createTextNode(res.items[i].volumeInfo.description ? res.items[i].volumeInfo.description : 'No description');
           par.appendChild(desc);
 
           // Button
