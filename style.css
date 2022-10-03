@@ -54,6 +54,29 @@
 	font-family: 'Comfortaa', cursive;
 }
 
+
+.labelres{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.1rem;
+	font-weight: bold;
+	color: #403e3e;
+}
+
+.count{
+	width: 150px;
+	border: none;
+	border-radius: 10px;
+	padding: 5px;
+	outline: none;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.2rem;
+}
+
+.count:focus{
+	outline: none;
+}
+
 .results {
 	padding: 5% 15% 5% 15%;
 	text-align: center;

@@ -1,16 +1,24 @@
-function search(e) {
-  e.preventDefault();
-  var search = document.getElementById("input").value;
 
-  document.getElementById("input").value = "";
-  document.activeElement.blur(); // this removes focus on the input bar after search
 
-  console.log("Working");
+let retfield = document.querySelector('.count')
+retfield.addEventListener('keydown',(e)=>{
+  if(e.key === 'Enter'){
+    console.log("Working")
+    const number = Number(e.target.value)
+    getresult(number)
+  }
+})
+
+
+//get the results from the api
+
+const getresult = (number)=>{
+
   $.ajax({
     url:
       "https://www.googleapis.com/books/v1/volumes?q=" +
       search +
-      "&maxResults=20",
+      `&maxResults=${Number(number)}`,
     dataType: "json",
 
     success: function (res) {
@@ -74,6 +82,27 @@ function search(e) {
     maxResults: 30,
     type: "GET",
   });
+
 }
+
+
+function search(e) {
+  e.preventDefault();
+  var search = document.getElementById("input").value;
+
+  document.getElementById("input").value = "";
+  document.activeElement.blur(); // this removes focus on the input bar after search
+
+  let num = document.querySelector('.count').value  // get the return value from the input field
+
+  console.log("Working");
+  
+  if(!num){
+    getresult(1)  //if nothing provided by user return just 1 result
+  }else{
+    getresult(num)   //if value provided then return that many results
+  }
+}
+
 
 document.querySelector(".search-form").addEventListener("submit", search);
