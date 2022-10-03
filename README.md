@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
+   <img src="img/Man-Reading-a-Book-Vector-Illustration.png" alt="hacktoberfest-banner" width="640" height="320" />
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
