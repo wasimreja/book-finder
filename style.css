@@ -125,6 +125,7 @@ h1 {
     color: #f2f2f2;
   }
   .result {
+    background-color: rgb(22, 21, 21);
     box-shadow: 0 2px 8px 0 rgba(238, 238, 238, 0.1);
     color: #f2f2f2;
   }
