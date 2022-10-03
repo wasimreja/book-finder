@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap');
 
+
 .header {
 	margin-top: 4rem;
 	text-align: center;
@@ -91,4 +92,38 @@ h1 {
 	border-radius: 28px;
     padding: 7px 20px;
     border: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #36f7ed;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #0075ff;
+}
+::-webkit-scrollbar-track {
+  background: #282f32;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #4b4d4e;
+}
+::-webkit-scrollbar-track:active {
+  background: #282f32;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
