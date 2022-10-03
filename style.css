@@ -56,7 +56,6 @@
 
 .results {
 	padding: 5% 15% 5% 15%;
-	text-align: center;
 	font-family: 'Comfortaa', cursive;
 	font-weight: 300;
 	font-size: 1rem;
@@ -66,9 +65,10 @@
 .result {
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 	transition: 0.3s;
+	background: #efefef;
 	border-radius: 5px;
-	padding: 2% 0 2%  0;
-	margin-bottom: 1rem;
+	padding: 3%;
+	margin-bottom: 1.5rem;
 }
 
 .result:hover {
@@ -83,4 +83,12 @@ img {
 h1 {
 	font-family: 'Comfortaa', cursive;
 	color: #403e3e;
+}
+
+.result a {
+	color: white;
+    background: #eba544;
+	border-radius: 28px;
+    padding: 7px 20px;
+    border: 0px;
 }
