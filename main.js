@@ -14,6 +14,11 @@ retfield.addEventListener('keydown',(e)=>{
 
 const getresult = (number)=>{
 
+  var search = document.getElementById("input").value;
+
+  document.getElementById("input").value = "";
+  document.activeElement.blur(); 
+
   $.ajax({
     url:
       "https://www.googleapis.com/books/v1/volumes?q=" +
@@ -88,10 +93,10 @@ const getresult = (number)=>{
 
 function search(e) {
   e.preventDefault();
-  var search = document.getElementById("input").value;
+  // var search = document.getElementById("input").value;
 
-  document.getElementById("input").value = "";
-  document.activeElement.blur(); // this removes focus on the input bar after search
+  // document.getElementById("input").value = "";
+  // document.activeElement.blur(); // this removes focus on the input bar after search
 
   let num = document.querySelector('.count').value  // get the return value from the input field
 
