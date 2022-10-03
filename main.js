@@ -1,8 +1,6 @@
 function search(e) {
   e.preventDefault();
   var search = document.getElementById("input").value;
-
-  document.getElementById("input").value = "";
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   console.log("Working");
