@@ -1,13 +1,15 @@
 function listen(e) {
 
+  console.log("HI")
   const div = e.target.parentElement;
   var text = div.children[2].innerText;
   const Book = div.children[0].innerText ;
   const Author = div.children[1].innerText ;
 
-  var message = `The name of the Book is ${Book}  . It is Written ${Author}. ${text}` ;
+  var message = `The name of the Book is ${Book}  . It is Written ${Author} .  ${text}` ;
 
 
+  console.log(text);
   let synth = speechSynthesis;
   synth.cancel();
 
@@ -67,7 +69,7 @@ function search(e) {
           imgDiv.classList.add("offset-md-2");
 
           var img = document.createElement("IMG");
-          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
+          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail ;
           img.classList.add("w-100");
 
           imgDiv.appendChild(img);
