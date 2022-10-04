@@ -87,6 +87,7 @@ function search(e) {
           div.appendChild(textDiv);
           div.appendChild(imgDiv);
           document.getElementById("results").appendChild(div);
+          document.getElementById("results").scrollIntoView();
         }
       }
     },
