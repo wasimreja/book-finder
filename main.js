@@ -1,8 +1,6 @@
 function search(e) {
   e.preventDefault();
   var search = document.getElementById("input").value;
-
-  document.getElementById("input").value = "";
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   console.log("Working");
@@ -18,6 +16,8 @@ function search(e) {
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
+
+
       for (var i = 0; i < res.items.length; i++) {
         // Card
         var card = document.createElement("DIV");
@@ -27,10 +27,12 @@ function search(e) {
         //Card content
         var card_content = document.createElement("DIV");
 
-        // Title
-        var h1 = document.createElement("H1");
-        var title = document.createTextNode(res.items[i].volumeInfo.title);
-        h1.appendChild(title);
+
+          // Image
+          var imgDiv = document.createElement("DIV");
+          imgDiv.classList.add("col-md-2");
+          imgDiv.classList.add("offset-md-2");
+
 
         //Author
 
@@ -70,6 +72,7 @@ function search(e) {
         card.appendChild(card_content);
 
         document.getElementById("results").appendChild(card);
+
       }
     },
     maxResults: 30,
