@@ -16,79 +16,63 @@ function search(e) {
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
-      if (res.totalItems == 0) {
-        var div = document.createElement("DIV");
-        var h1 = document.createElement("H1");
-        var error_res = document.createTextNode("Book Not Found !");
-        h1.appendChild(error_res);
-        div.appendChild(h1);
-        document.getElementById("results").appendChild(div);
-      }
-      else {
-        for (var i = 0; i < res.items.length; i++) {
-          // console.log(
-          //   res.items[i].volumeInfo.title +
-          //     " " +
-          //     res.items[i].volumeInfo.subtitle +
-          //     " " +
-          //     res.items[i].volumeInfo.authors +
-          //     " " +
-          //     res.items[i].volumeInfo.imageLinks.smallThumbnail
-          // );
 
-          // DIV
-          var div = document.createElement("DIV");
+
+      for (var i = 0; i < res.items.length; i++) {
+        // Card
+        var card = document.createElement("DIV");
+        card.style.backgroundImage = `url(${res.items[i].volumeInfo.imageLinks.thumbnail})`;
+        card.classList.add("result");
+
+        //Card content
+        var card_content = document.createElement("DIV");
+
 
           // Image
           var imgDiv = document.createElement("DIV");
           imgDiv.classList.add("col-md-2");
           imgDiv.classList.add("offset-md-2");
 
-          var img = document.createElement("IMG");
-          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
-          img.classList.add("w-100");
 
-          imgDiv.appendChild(img);
+        //Author
 
-          // Title
-          var textDiv = document.createElement("DIV");
-          textDiv.classList.add("col-md-8");
-          var h1 = document.createElement("H1");
-          var title = document.createTextNode(res.items[i].volumeInfo.title);
-          h1.appendChild(title);
-
-          //Author
-
+        if (
+          res.items[i].volumeInfo.authors &&
+          res.items[i].volumeInfo.authors.length > 0
+        ) {
           var p = document.createElement("h6");
-          var author = document.createTextNode(`by ${res.items[i].volumeInfo.authors[0] ? res.items[i].volumeInfo.authors[0] : 'No title'}`);
+          var author = document.createTextNode(
+            `by ${res.items[i].volumeInfo.authors[0]}`
+          );
           p.appendChild(author);
-
-          // Description
-          var par = document.createElement("p");
-          var desc = document.createTextNode(res.items[i].volumeInfo.description ? res.items[i].volumeInfo.description : 'No description');
-          par.appendChild(desc);
-
-          // Button
-          var btn = document.createElement("a");
-          btn.innerHTML = "READ NOW";
-          btn.href = res.items[i].volumeInfo.previewLink
-          btn.target = "blank"
-
-          btn.classList.add("btn");
-          btn.classList.add("btn-outline-secondary");
-          div.classList.add("result");
-          div.classList.add("row");
-
-          textDiv.appendChild(h1);
-          textDiv.appendChild(p);
-          textDiv.appendChild(par);
-          textDiv.appendChild(btn);
-
-          div.appendChild(textDiv);
-          div.appendChild(imgDiv);
-          document.getElementById("results").appendChild(div);
-          document.getElementById("results").scrollIntoView();
         }
+
+        // Description
+        var par = document.createElement("p");
+        var desc = document.createTextNode(
+          res.items[i].volumeInfo.description ?? ""
+        );
+        par.appendChild(desc);
+        par.classList.add("card-desc");
+
+        // Button
+        var btn = document.createElement("a");
+        btn.innerHTML = "Read";
+        btn.href = res.items[i].volumeInfo.previewLink;
+        btn.target = "blank";
+
+        btn.classList.add("btn");
+        btn.classList.add("btn-outline-secondary");
+
+        card_content.appendChild(h1);
+        card_content.appendChild(par);
+        card_content.appendChild(btn);
+        card_content.classList.add("card-content-container");
+
+        card.appendChild(card_content);
+
+        document.getElementById("results").appendChild(card);
+
       }
     },
     maxResults: 30,
