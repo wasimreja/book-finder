@@ -3,7 +3,6 @@ function search(e) {
   var search = document.getElementById("input").value;
   document.activeElement.blur(); // this removes focus on the input bar after search
 
-  console.log("Working");
   $.ajax({
     url:
       "https://www.googleapis.com/books/v1/volumes?q=" +
@@ -26,16 +25,6 @@ function search(e) {
       }
       else {
         for (var i = 0; i < res.items.length; i++) {
-          // console.log(
-          //   res.items[i].volumeInfo.title +
-          //     " " +
-          //     res.items[i].volumeInfo.subtitle +
-          //     " " +
-          //     res.items[i].volumeInfo.authors +
-          //     " " +
-          //     res.items[i].volumeInfo.imageLinks.smallThumbnail
-          // );
-
           // DIV
           var div = document.createElement("DIV");
 

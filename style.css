@@ -34,18 +34,20 @@
 }
 
 .illustration {
-	width: 20rem;
+	width: 25rem;
 }
 
 .title {
-	font-size: 7em;
-	font-family: 'Josefin Sans', sans-serif;
+	font-size: 1em;
+	font-family:cursive;
 	font-weight: 300;
-	color: #403e3e;
+	color: #17507c;
 }
 
 .finder {
+	
 	font-weight: lighter;
+	font-family: cursive;
 }
 
 .search {
