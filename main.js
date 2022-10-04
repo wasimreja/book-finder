@@ -104,6 +104,7 @@ function search(e) {
             } );
             i = 1;
           }
+          document.getElementById("results").scrollIntoView();
         }
       }
     },
