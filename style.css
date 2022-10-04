@@ -67,10 +67,7 @@
   }
 }
 
-body{
-	margin-top: -87px !important;
-	margin-bottom: 0 !important;
-}
+
 header {
 	min-height: 120vh;
   width: 100%;
@@ -94,6 +91,7 @@ header {
 .search {
   margin: 0 auto;
   width: 50%;
+  margin-top: -32%;
   font-family: "Comfortaa", cursive;
 }
 
