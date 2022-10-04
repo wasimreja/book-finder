@@ -32,16 +32,24 @@
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
-.illustration {
-	width: 20rem;
+body{
+	margin-top: -87px !important;
+	margin-bottom: 0 !important;
+}
+header {
+	min-height: 120vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("./img/front-view-stacked-books-ladders-education-day.jpg");
+  position: relative;
+  background-size: cover;
+  
 }
 
 .title {
 	font-size: 7em;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
-	color: #403e3e;
+	color: #fff;
 }
 
 .finder {
