@@ -9,12 +9,69 @@
 	  -o-animation: fadein 2s; /* Opera < 12.1 */
 		 animation: fadein 2s;
 }
-
+  
+  .header-top {
+	overflow: hidden;
+	background-color: #403e3e;
+	padding: 20px 10px;
+  }
+  
+  .header-top a {
+	float: left;
+	color: #eba544;
+	text-align: center;
+	padding: 12px;
+	text-decoration: none;
+	font-size: 18px; 
+	line-height: 25px;
+	border-radius: 4px;
+	font-weight: 300;
+	border-radius: 10px;
+  }
+  
+  .header-top a.logo {
+	font-size: 25px;
+	font-weight: bold;
+  }
+  
+  .header-top a:hover {
+	color: white;
+	text-decoration: none;
+  }
+  
+  .header-top a.active {
+	background-color: #eba544;
+	color: white;
+  }
+  .header-top a.active:hover{
+	background-color: #eba544;
+	color: black;
+	font-family: sans-serif;
+	font-weight: 300;
+  }
+  .header-right {
+	float: right;
+  }
+  
+  @media screen and (max-width: 500px) {
+	.header a {
+	  float: none;
+	  display: block;
+	  text-align: left;
+	}
+	
+	.header-right {
+	  float: none;
+	}
+  }
+ 
+.stickheader:hover{
+	color:#eba544;
+}
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 /* Firefox < 16 */
 @-moz-keyframes fadein {
     from { opacity: 0; }
