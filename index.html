@@ -22,7 +22,12 @@
     />
   </head>
 
-  <body>
+  <body class="bg">
+    <div class="mode">
+    <img id="icon" src="img/moon.png" />
+  </div>
+  <br>
+    
     <header class="header">
       <img
         src="img/Man-Reading-a-Book-Vector-Illustration.svg"
@@ -67,5 +72,20 @@
     
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script>
+        var icon=document.getElementById("icon");
+
+        icon.onclick=function(){
+          document.body.classList.toggle("dark-theme");
+          if(document.body.classList.contains("dark-theme"))
+          {
+            icon.src="img/sun.png";
+          }
+          else
+          {
+            icon.src="img/moon.png";
+          }
+        }
+    </script>
   </body>
 </html>
