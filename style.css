@@ -66,16 +66,19 @@
     opacity: 100;
   }
 }
-
-.illustration {
-  width: 20rem;
+header {
+	min-height: 120vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),url("./img/backg.jpg");
+  position: relative;
+  background-size: cover;
 }
 
 .title {
   font-size: 7em;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
-  color: #403e3e;
+  color: #fff;
 }
 
 .finder {
