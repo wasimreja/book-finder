@@ -105,6 +105,7 @@ h1 {
   color: #403e3e;
 }
 
+/* Applies Dark theme automatically */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: rgb(22, 21, 21) !important;
