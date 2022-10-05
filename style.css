@@ -37,6 +37,36 @@
 	width: 20rem;
 }
 
+#navbar {
+	overflow: hidden;
+	background-color: #f2f2f2;
+	padding: 14px;
+	text-align: center;
+	font-weight: 200;
+  }
+
+  #navbar a {
+	margin: auto;
+	align-items: center;
+	color: #333;
+	text-align: center;
+	padding: 14px;
+	text-decoration: none;
+  }
+  .content {
+	padding: 16px;
+  }
+  .sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+  }
+  .sticky + .content {
+	padding-top: 60px;
+  }
+
+  
+
 .title {
 	font-size: 7em;
 	font-family: 'Josefin Sans', sans-serif;
