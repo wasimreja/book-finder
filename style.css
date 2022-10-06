@@ -1,5 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap');
 
+#nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #d2cbcb;
+
+}
+.text {
+position: center;
+	font-size: 1.5rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color: #403e3e;
+}
+
+.find {
+	font-weight: lighter;
+	font-size: 1.5rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	color: #403e3e;
+}
+
 .header {
 	margin-top: 4rem;
 	text-align: center;
@@ -94,6 +118,10 @@ h1 {
 }
 
 .result button{
-	background: black;
 	color: white;
+    background: #eba544;
+	border-radius: 28px;
+    padding: 7px 20px;
+    border: 0px;
+	margin-left: 5px;
 }

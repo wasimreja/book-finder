@@ -102,8 +102,7 @@ function search(e) {
           speech.classList.add('listen');
           speech.classList.add('btn');
           speech.classList.add('btn-outline-secondary');
-          speech.classList.add('rounded');
-          speech.innerText = 'Listen' ;
+          speech.innerText = 'LISTEN NOW' ;
 
           btn.classList.add("btn");
           btn.classList.add("btn-outline-secondary");
@@ -119,6 +118,7 @@ function search(e) {
           div.appendChild(textDiv);
           div.appendChild(imgDiv);
           document.getElementById("results").appendChild(div);
+          document.getElementById("results").scrollIntoView();
         }
 
         const buttons = document.querySelectorAll('.listen');
