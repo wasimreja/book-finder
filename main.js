@@ -94,7 +94,7 @@ function search(e) {
 
           // Button
           var btn = document.createElement("a");
-          btn.innerHTML = "READ NOW";
+          btn.innerHTML = "READ";
           btn.href = res.items[i].volumeInfo.previewLink
           btn.target = "blank"
 
@@ -102,7 +102,7 @@ function search(e) {
           speech.classList.add('listen');
           speech.classList.add('btn');
           speech.classList.add('btn-outline-secondary');
-          speech.innerText = 'LISTEN NOW' ;
+          speech.innerText = 'LISTEN' ;
 
           btn.classList.add("btn");
           btn.classList.add("btn-outline-secondary");
