@@ -116,3 +116,12 @@ h1 {
     padding: 7px 20px;
     border: 0px;
 }
+
+.result button{
+	color: white;
+    background: #eba544;
+	border-radius: 28px;
+    padding: 7px 20px;
+    border: 0px;
+	margin-left: 10px;
+}
