@@ -41,7 +41,8 @@
 	overflow: hidden;
 	background-color: #f2f2f2;
 	padding: 14px;
-	text-align: center;
+	text-align: right;
+	font-family: 'Comfortaa', cursive;
 	font-weight: 200;
   }
 
@@ -50,9 +51,11 @@
 	align-items: center;
 	color: #333;
 	text-align: center;
+	font-weight: 300;
 	padding: 14px;
 	text-decoration: none;
   }
+
   .content {
 	padding: 16px;
   }
