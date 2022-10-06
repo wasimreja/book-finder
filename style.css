@@ -4,6 +4,29 @@
   scroll-behavior: smooth;
 }
 
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #d2cbcb;
+}
+.text {
+  position: center;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  color: #403e3e;
+}
+
+.find {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  color: #403e3e;
+}
+
 .header {
   margin-top: 4rem;
   text-align: center;
@@ -76,7 +99,6 @@
 
 .results {
   padding: 5% 15% 5% 15%;
-  text-align: center;
   font-family: "Comfortaa", cursive;
   font-weight: 300;
   font-size: 1rem;
@@ -86,9 +108,10 @@
 .result {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  background: #efefef;
   border-radius: 5px;
-  padding: 2% 0 2% 0;
-  margin-bottom: 1rem;
+  padding: 3%;
+  margin-bottom: 1.5rem;
 }
 
 .result:hover {
@@ -120,4 +143,21 @@ h1 {
 
 .visible {
   visibility: visible;
+}
+
+.result a {
+  color: white;
+  background: #eba544;
+  border-radius: 28px;
+  padding: 7px 20px;
+  border: 0px;
+}
+
+.result button {
+  color: white;
+  background: #eba544;
+  border-radius: 28px;
+  padding: 7px 20px;
+  border: 0px;
+  margin-left: 10px;
 }
