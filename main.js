@@ -78,7 +78,7 @@ function search(e) {
           var title = document.createTextNode(res.items[i].volumeInfo.title);
           h1.appendChild(title);
 
-          //Author
+          //Author and publication year
           if (res.items[i].volumeInfo.authors) {
             var p = document.createElement("h6");
             var author = document.createTextNode(
@@ -86,7 +86,7 @@ function search(e) {
                 res.items[i].volumeInfo.authors[0]
                   ? res.items[i].volumeInfo.authors[0]
                   : "No title"
-              }`,
+              } - ${new Date(res.items[i].volumeInfo.publishedDate).toISOString().split('-')[0]}`,
             );
             p.appendChild(author);
           }
