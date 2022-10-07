@@ -1,5 +1,4 @@
 function listen(e) {
-  console.log("HI");
   const div = e.target.parentElement;
   var text = div.children[2].innerText;
   const Book = div.children[0].innerText;
@@ -60,15 +59,17 @@ function search(e) {
           var div = document.createElement("DIV");
 
           // Image
-          var imgDiv = document.createElement("DIV");
-          imgDiv.classList.add("col-md-2");
-          imgDiv.classList.add("offset-md-2");
+          if (res.items[i].volumeInfo.imageLinks) {
+            var imgDiv = document.createElement("DIV");
+            imgDiv.classList.add("col-md-2");
+            imgDiv.classList.add("offset-md-2");
 
-          var img = document.createElement("IMG");
-          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
-          img.classList.add("w-100");
+            var img = document.createElement("IMG");
+            img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
+            img.classList.add("w-100");
 
-          imgDiv.appendChild(img);
+            imgDiv.appendChild(img);
+          }
 
           // Title
           var textDiv = document.createElement("DIV");
@@ -78,23 +79,24 @@ function search(e) {
           h1.appendChild(title);
 
           //Author
-
-          var p = document.createElement("h6");
-          var author = document.createTextNode(
-            `by ${
-              res.items[i].volumeInfo.authors[0]
-                ? res.items[i].volumeInfo.authors[0]
-                : "No title"
-            }`
-          );
-          p.appendChild(author);
+          if (res.items[i].volumeInfo.authors) {
+            var p = document.createElement("h6");
+            var author = document.createTextNode(
+              `by ${
+                res.items[i].volumeInfo.authors[0]
+                  ? res.items[i].volumeInfo.authors[0]
+                  : "No title"
+              }`,
+            );
+            p.appendChild(author);
+          }
 
           // Description
           var par = document.createElement("p");
           var desc = document.createTextNode(
             res.items[i].volumeInfo.description
               ? res.items[i].volumeInfo.description
-              : "No description"
+              : "No description",
           );
           par.appendChild(desc);
 
@@ -131,6 +133,7 @@ function search(e) {
 
         for (let button of buttons) {
           button.addEventListener("click", (e) => {
+            console.log("clickesd");
             listen(e);
           });
         }
