@@ -125,3 +125,42 @@ h1 {
     border: 0px;
 	margin-left: 10px;
 }
+
+/* Applies Dark theme automatically */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(22, 21, 21) !important;
+  }
+  .search-form,
+  .search-form input,
+  .search-form input:focus {
+    color: #f2f2f2;
+    background-color: #403e3e !important;
+  }
+  .search-form input::placeholder {
+    color: #cccbcb;
+  }
+  h1 {
+    color: #f2f2f2;
+  }
+  .title {
+    color: #f2f2f2;
+  }
+  .result {
+    background-color: rgb(22, 21, 21);
+    box-shadow: 0 2px 8px 0 rgba(238, 238, 238, 0.1);
+    color: #f2f2f2;
+  }
+
+  .result:hover {
+    box-shadow: 0 4px 16px 0 rgba(238, 238, 238, 0.1);
+  }
+
+  #nav {
+    background-color: #302e2e;
+    border-bottom: 1px solid #787373
+  }
+  #nav > div > a > span {
+    color: #f2f2f2;
+  }
+}
