@@ -90,6 +90,23 @@ header {
   width: 50%;
   font-family: "Comfortaa", cursive;
 }
+.input-group-append i{
+  background-color: #49484A;
+  color: white;
+  display: inline-block;
+  border-radius: 36px;
+  border: 2px solid #49484A;
+  padding: 5px;
+  text-align: center;
+  width: 50px;
+  cursor: pointer;
+box-shadow: inset 0 0 0 0 blue;
+transition: ease-in-out 0.9s;
+}
+.input-group-append i:hover{
+  background: #7c7c7c6b;
+  box-shadow: inset 50px 0 0 0 blue;
+}
 
 .results {
   text-align: center;
