@@ -125,3 +125,56 @@ h1 {
     border: 0px;
 	margin-left: 10px;
 }
+
+
+#return-to-top{
+	border: none;
+	text-decoration: none;
+	position: fixed;
+	display: flex;
+	bottom: 5%; 
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	background: rgb(219, 211, 211);
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+	-webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+#return-to-top i {
+	color: #fff;
+	margin: 0;
+	position: relative;
+	font-size: 19px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+	background: rgb(73, 122, 255);
+	bottom: 6%;
+	width: 55px;
+	height: 55px;
+}
+
+#return-to-top:hover i {
+	font-size: 25px;
+}
+
+#return-to-top.active {
+	bottom:  -1%; 
+	pointer-events: auto;
+	opacity: 1;
+}
