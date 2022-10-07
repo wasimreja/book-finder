@@ -178,3 +178,7 @@ h1 {
 	pointer-events: auto;
 	opacity: 1;
 }
+
+.special1 {
+  opacity: 0.0;
+}
