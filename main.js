@@ -147,15 +147,6 @@ function search(e) {
 document.querySelector(".search-form").addEventListener("submit", search);
 
 const scroll = document.getElementById("return-to-top");
-function toTop() {
-  window.scrollTo({
-    top:0,
-    left:0,
-    behavior:"smooth"
-  })
-}
-scroll.onclick=toTop;
-
 window.onscroll = () => scrollFunction();
 function scrollFunction() {
   if (document.body.scrollTop || document.documentElement.scrollTop > 20){

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap');
 
+html{
+	scroll-behavior: smooth;
+}
+
 #nav{
 	position: fixed;
 	top: 0;
