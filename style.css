@@ -90,6 +90,11 @@ header {
   width: 50%;
   font-family: "Comfortaa", cursive;
 }
+
+.search-form {
+  background-color: #f8f9fa;
+}
+
 .input-group-append i{
   background-color: #49484A;
   color: white;
@@ -103,9 +108,13 @@ header {
 box-shadow: inset 0 0 0 0 blue;
 transition: ease-in-out 0.9s;
 }
+.input-group input {
+  margin: 5px;
+}
 .input-group-append i:hover{
   background: #7c7c7c6b;
   box-shadow: inset 50px 0 0 0 blue;
+
 }
 
 .results {
@@ -235,4 +244,51 @@ h1 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   color: #403e3e;
+}
+
+/* Applies Dark theme automatically */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(22, 21, 21) !important;
+  }
+  .search-form,
+  .search-form input,
+  .search-form input:focus {
+    color: #f2f2f2;
+    background-color: #403e3e !important;
+  }
+  .search-form {
+    pointer-events: auto;
+    box-shadow: 0 1px 10px rgba(225, 225, 225, 0.3);
+    transition: box-shadow 0.5s;
+  }
+  .search-form:active, .search-form:focus, .search-form:focus-within, .search-form:hover {
+    box-shadow: 0 1px 10px rgba(225, 225, 225, 0.8);
+  }
+  .search-form input::placeholder {
+    color: #cccbcb;
+  }
+  h1 {
+    color: #f2f2f2;
+  }
+  .title {
+    color: #f2f2f2;
+  }
+  .result {
+    background-color: rgb(22, 21, 21);
+    box-shadow: 0 2px 8px 0 rgba(238, 238, 238, 0.1);
+    color: #f2f2f2;
+  }
+
+  .result:hover {
+    box-shadow: 0 4px 16px 0 rgba(238, 238, 238, 0.1);
+  }
+
+  #nav {
+    background-color: #302e2e;
+    border-bottom: 1px solid #787373
+  }
+  #nav > div > a > span {
+    color: #f2f2f2;
+  }
 }
