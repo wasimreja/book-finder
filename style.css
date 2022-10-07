@@ -125,3 +125,7 @@ h1 {
     border: 0px;
 	margin-left: 10px;
 }
+
+#button-addon1>i:hover{
+	color:#403e3e;
+}
