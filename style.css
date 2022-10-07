@@ -6,7 +6,7 @@
 	width: 100%;
 	height: auto;
 	border-bottom: 1px solid #d2cbcb;
-
+	z-index: 100;
 }
 .text {
 position: center;
