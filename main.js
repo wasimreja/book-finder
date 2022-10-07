@@ -1,10 +1,10 @@
 function listen(e) {
   const div = e.target.parentElement;
   var text = div.children[2].innerText;
-  const Book = div.children[0].innerText;
-  const Author = div.children[1].innerText;
+  const book = div.children[0].innerText;
+  const author = div.children[1].innerText;
 
-  var message = `The name of the Book is ${Book}  . It is Written ${Author} .  ${text}`;
+  var message = `The name of the book is ${book}  . It is written by ${author} .  ${text}`;
 
   console.log(text);
   let synth = speechSynthesis;
@@ -37,9 +37,9 @@ function search(e) {
         myNode.removeChild(myNode.firstChild);
       }
       if (res.totalItems == 0) {
-        var div = document.createElement("DIV");
-        var h1 = document.createElement("H1");
-        var error_res = document.createTextNode("Book Not Found !");
+        var div = document.createElement("div");
+        var h1 = document.createElement("h1");
+        var error_res = document.createTextNode("Book Not Found!");
         h1.appendChild(error_res);
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
@@ -56,15 +56,15 @@ function search(e) {
           // );
 
           // DIV
-          var div = document.createElement("DIV");
+          var div = document.createElement("div");
 
           // Image
           if (res.items[i].volumeInfo.imageLinks) {
-            var imgDiv = document.createElement("DIV");
+            var imgDiv = document.createElement("div");
             imgDiv.classList.add("col-md-2");
             imgDiv.classList.add("offset-md-2");
 
-            var img = document.createElement("IMG");
+            var img = document.createElement("img");
             img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
             img.classList.add("w-100");
 
@@ -72,9 +72,9 @@ function search(e) {
           }
 
           // Title
-          var textDiv = document.createElement("DIV");
+          var textDiv = document.createElement("div");
           textDiv.classList.add("col-md-8");
-          var h1 = document.createElement("H1");
+          var h1 = document.createElement("h1");
           var title = document.createTextNode(res.items[i].volumeInfo.title);
           h1.appendChild(title);
 
@@ -133,7 +133,7 @@ function search(e) {
 
         for (let button of buttons) {
           button.addEventListener("click", (e) => {
-            console.log("clickesd");
+            console.log("clicked");
             listen(e);
           });
         }
