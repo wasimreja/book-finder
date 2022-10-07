@@ -1,13 +1,11 @@
 function listen(e) {
-
-  console.log("HI")
+  console.log("HI");
   const div = e.target.parentElement;
   var text = div.children[2].innerText;
-  const Book = div.children[0].innerText ;
-  const Author = div.children[1].innerText ;
+  const Book = div.children[0].innerText;
+  const Author = div.children[1].innerText;
 
-  var message = `The name of the Book is ${Book}  . It is Written ${Author} .  ${text}` ;
-
+  var message = `The name of the Book is ${Book}  . It is Written ${Author} .  ${text}`;
 
   console.log(text);
   let synth = speechSynthesis;
@@ -16,10 +14,9 @@ function listen(e) {
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
     const voices = synth.getVoices();
-    speech.lang = 'en-US' ;
+    speech.lang = "en-US";
     synth.speak(speech);
   }, 1000);
-
 }
 
 function search(e) {
@@ -47,8 +44,7 @@ function search(e) {
         h1.appendChild(error_res);
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
-      }
-      else {
+      } else {
         for (var i = 0; i < res.items.length; i++) {
           // console.log(
           //   res.items[i].volumeInfo.title +
@@ -69,7 +65,7 @@ function search(e) {
           imgDiv.classList.add("offset-md-2");
 
           var img = document.createElement("IMG");
-          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail ;
+          img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
           img.classList.add("w-100");
 
           imgDiv.appendChild(img);
@@ -84,25 +80,35 @@ function search(e) {
           //Author
 
           var p = document.createElement("h6");
-          var author = document.createTextNode(`by ${res.items[i].volumeInfo.authors[0] ? res.items[i].volumeInfo.authors[0] : 'No title'}`);
+          var author = document.createTextNode(
+            `by ${
+              res.items[i].volumeInfo.authors[0]
+                ? res.items[i].volumeInfo.authors[0]
+                : "No title"
+            }`
+          );
           p.appendChild(author);
 
           // Description
           var par = document.createElement("p");
-          var desc = document.createTextNode(res.items[i].volumeInfo.description ? res.items[i].volumeInfo.description : 'No description');
+          var desc = document.createTextNode(
+            res.items[i].volumeInfo.description
+              ? res.items[i].volumeInfo.description
+              : "No description"
+          );
           par.appendChild(desc);
 
           // Button
           var btn = document.createElement("a");
           btn.innerHTML = "READ";
-          btn.href = res.items[i].volumeInfo.previewLink
-          btn.target = "blank"
+          btn.href = res.items[i].volumeInfo.previewLink;
+          btn.target = "blank";
 
-          const speech = document.createElement('button');
-          speech.classList.add('listen');
-          speech.classList.add('btn');
-          speech.classList.add('btn-outline-secondary');
-          speech.innerText = 'LISTEN' ;
+          const speech = document.createElement("button");
+          speech.classList.add("listen");
+          speech.classList.add("btn");
+          speech.classList.add("btn-outline-secondary");
+          speech.innerText = "LISTEN";
 
           btn.classList.add("btn");
           btn.classList.add("btn-outline-secondary");
@@ -121,13 +127,12 @@ function search(e) {
           document.getElementById("results").scrollIntoView();
         }
 
-        const buttons = document.querySelectorAll('.listen');
+        const buttons = document.querySelectorAll(".listen");
 
-        for( let button of buttons)
-        {
-          button.addEventListener('click', (e)=>{
+        for (let button of buttons) {
+          button.addEventListener("click", (e) => {
             listen(e);
-          })
+          });
         }
       }
     },
@@ -137,3 +142,13 @@ function search(e) {
 }
 
 document.querySelector(".search-form").addEventListener("submit", search);
+
+const scroll = document.getElementById("return-to-top");
+function toTop() {
+  window.scrollTo({
+    top:0,
+    left:0,
+    behavior:"smooth"
+  })
+}
+scroll.onclick=toTop;
