@@ -1,8 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap');
 
-body {
-  background-color: #fff !important;
+#nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #d2cbcb;
+
 }
+.text {
+position: center;
+	font-size: 1.5rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color: #403e3e;
+}
+
+.find {
+	font-weight: lighter;
+	font-size: 1.5rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	color: #403e3e;
+}
+
 .header {
 	margin-top: 4rem;
 	text-align: center;
@@ -14,63 +35,47 @@ body {
 }
 
 @keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Firefox < 16 */
 @-moz-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Opera < 12.1 */
 @-o-keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 .illustration {
-  width: 20rem;
+	width: 20rem;
 }
 
 .title {
-  font-size: 7em;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  color: #403e3e;
+	font-size: 7em;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 300;
+	color: #403e3e;
 }
 
 .finder {
-  font-weight: lighter;
+	font-weight: lighter;
 }
 
 .search {
-  margin: 0 auto;
-  width: 50%;
-  font-family: "Comfortaa", cursive;
+	margin: 0 auto;
+	width: 50%;
+	font-family: 'Comfortaa', cursive;
 }
 
 .results {
@@ -79,7 +84,6 @@ body {
 	font-weight: 300;
 	font-size: 1rem;
 	color: #403e3e;
-
 }
 
 .result {
@@ -92,48 +96,17 @@ body {
 }
 
 .result:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 img {
-  margin: 5px auto;
-  width: 20%;
+	margin: 5px auto;
+	width: 20%
 }
 
 h1 {
-  font-family: "Comfortaa", cursive;
-  color: #403e3e;
-}
-
-/* Applies Dark theme automatically */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: rgb(22, 21, 21) !important;
-  }
-  .search-form,
-  .search-form input,
-  .search-form input:focus {
-    color: #f2f2f2;
-    background-color: #403e3e !important;
-  }
-  .search-form input::placeholder {
-    color: #cccbcb;
-  }
-  h1 {
-    color: #f2f2f2;
-  }
-  .title {
-    color: #f2f2f2;
-  }
-  .result {
-    background-color: rgb(22, 21, 21);
-    box-shadow: 0 2px 8px 0 rgba(238, 238, 238, 0.1);
-    color: #f2f2f2;
-  }
-
-  .result:hover {
-    box-shadow: 0 4px 16px 0 rgba(238, 238, 238, 0.1);
-  }
+	font-family: 'Comfortaa', cursive;
+	color: #403e3e;
 }
 
 .result a {
@@ -142,4 +115,13 @@ h1 {
 	border-radius: 28px;
     padding: 7px 20px;
     border: 0px;
+}
+
+.result button{
+	color: white;
+    background: #eba544;
+	border-radius: 28px;
+    padding: 7px 20px;
+    border: 0px;
+	margin-left: 10px;
 }
