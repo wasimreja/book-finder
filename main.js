@@ -1,10 +1,10 @@
 function listen(e) {
   const div = e.target.parentElement;
-  var text = div.children[2].innerText;
+  const text = div.children[2].innerText;
   const book = div.children[0].innerText;
   const author = div.children[1].innerText;
 
-  var message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
+  const message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
 
   console.log(text);
   let synth = speechSynthesis;
@@ -19,33 +19,31 @@ function listen(e) {
 
 function search(e) {
   e.preventDefault();
-  var search = document.getElementById("input").value;
+  const search = document.getElementById("input").value;
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   console.log("Working");
   $.ajax({
     url:
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      search +
-      "&maxResults=20",
+      `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
     dataType: "json",
 
     success: function (res) {
-      var myNode = document.getElementById("results");
+      const myNode = document.getElementById("results");
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
       if (res.totalItems == 0) {
-        var div = document.createElement("div");
-        var h1 = document.createElement("h1");
-        var error_res = document.createTextNode("Book Not Found!");
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        const error_res = document.createTextNode("Book Not Found!");
         h1.appendChild(error_res);
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
       } else {
-        for (var i = 0; i < res.items.length; i++) {
+        for (let i = 0; i < res.items.length; i++) {
           // DIV
-          var div = document.createElement("div");
+          const div = document.createElement("div");
 
           // Image
           if (res.items[i].volumeInfo.imageLinks) {
@@ -53,7 +51,7 @@ function search(e) {
             imgDiv.classList.add("col-md-2");
             imgDiv.classList.add("offset-md-2");
 
-            var img = document.createElement("img");
+            const img = document.createElement("img");
             img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
             img.classList.add("w-100");
 
@@ -61,16 +59,16 @@ function search(e) {
           }
 
           // Title
-          var textDiv = document.createElement("div");
+          const textDiv = document.createElement("div");
           textDiv.classList.add("col-md-8");
-          var h1 = document.createElement("h1");
-          var title = document.createTextNode(res.items[i].volumeInfo.title);
+          const h1 = document.createElement("h1");
+          const title = document.createTextNode(res.items[i].volumeInfo.title);
           h1.appendChild(title);
 
           //Author
           if (res.items[i].volumeInfo.authors) {
             var p = document.createElement("h6");
-            var author = document.createTextNode(
+            const author = document.createTextNode(
               `by ${
                 res.items[i].volumeInfo.authors[0]
                   ? res.items[i].volumeInfo.authors[0]
@@ -81,8 +79,8 @@ function search(e) {
           }
 
           // Description
-          var par = document.createElement("p");
-          var desc = document.createTextNode(
+          const par = document.createElement("p");
+          const desc = document.createTextNode(
             res.items[i].volumeInfo.description
               ? res.items[i].volumeInfo.description
               : "No description",
@@ -90,7 +88,7 @@ function search(e) {
           par.appendChild(desc);
 
           // Button
-          var btn = document.createElement("a");
+          const btn = document.createElement("a");
           btn.innerHTML = "READ";
           btn.href = res.items[i].volumeInfo.previewLink;
           btn.target = "blank";
