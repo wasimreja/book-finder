@@ -1,10 +1,10 @@
 function listen(e) {
   const div = e.target.parentElement;
-  var text = div.children[2].innerText;
-  const Book = div.children[0].innerText;
-  const Author = div.children[1].innerText;
+  const text = div.children[2].innerText;
+  const book = div.children[0].innerText;
+  const author = div.children[1].innerText;
 
-  var message = `The name of the Book is ${Book}  . It is Written ${Author} .  ${text}`;
+  const message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
 
   console.log(text);
   let synth = speechSynthesis;
@@ -12,7 +12,6 @@ function listen(e) {
 
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
-    const voices = synth.getVoices();
     speech.lang = "en-US";
     synth.speak(speech);
   }, 1000);
@@ -20,52 +19,37 @@ function listen(e) {
 
 function search(e) {
   e.preventDefault();
-  var search = document.getElementById("input").value;
+  const search = document.getElementById("input").value;
   if (search === '') return
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   console.log("Working");
   $.ajax({
-    url:
-      "https://www.googleapis.com/books/v1/volumes?q=" +
-      search +
-      "&maxResults=20",
+    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
     dataType: "json",
 
     success: function (res) {
-      var myNode = document.getElementById("results");
+      const myNode = document.getElementById("results");
       while (myNode.firstChild) {
         myNode.removeChild(myNode.firstChild);
       }
       if (res.totalItems == 0) {
-        var div = document.createElement("DIV");
-        var h1 = document.createElement("H1");
-        var error_res = document.createTextNode("Book Not Found !");
-        h1.appendChild(error_res);
+        const div = document.createElement("div");
+        const h1 = document.createElement("h1");
+        h1.textContent = "Book Not Found!";
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
       } else {
-        for (var i = 0; i < res.items.length; i++) {
-          // console.log(
-          //   res.items[i].volumeInfo.title +
-          //     " " +
-          //     res.items[i].volumeInfo.subtitle +
-          //     " " +
-          //     res.items[i].volumeInfo.authors +
-          //     " " +
-          //     res.items[i].volumeInfo.imageLinks.smallThumbnail
-          // );
-
+        for (let i = 0; i < res.items.length; i++) {
           // DIV
-          var div = document.createElement("DIV");
+          const div = document.createElement("div");
 
           // Image
           if (res.items[i].volumeInfo.imageLinks) {
-            var imgDiv = document.createElement("DIV");
-            imgDiv.classList.add("col-md-2");
-            imgDiv.classList.add("offset-md-2");
+            var imgDiv = document.createElement("div");
+            imgDiv.classList.add("col-md-2", "offset-md-2");
 
-            var img = document.createElement("IMG");
+            const img = document.createElement("img");
             img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
             img.classList.add("w-100");
 
@@ -73,68 +57,58 @@ function search(e) {
           }
 
           // Title
-          var textDiv = document.createElement("DIV");
+          const textDiv = document.createElement("div");
           textDiv.classList.add("col-md-8");
-          var h1 = document.createElement("H1");
-          var title = document.createTextNode(res.items[i].volumeInfo.title);
-          h1.appendChild(title);
+          const h1 = document.createElement("h1");
+          h1.textContent = res.items[i].volumeInfo.title;
 
           //Author
           if (res.items[i].volumeInfo.authors) {
             var p = document.createElement("h6");
-            var author = document.createTextNode(
+            const author = document.createTextNode(
               `by ${
                 res.items[i].volumeInfo.authors[0]
                   ? res.items[i].volumeInfo.authors[0]
                   : "No title"
-              }`,
+              }`
             );
             p.appendChild(author);
           }
 
           // Description
-          var par = document.createElement("p");
-          var desc = document.createTextNode(
+          const par = document.createElement("p");
+          const desc = document.createTextNode(
             res.items[i].volumeInfo.description
               ? res.items[i].volumeInfo.description
-              : "No description",
+              : "No description"
           );
           par.appendChild(desc);
 
           // Button
-          var btn = document.createElement("a");
+          const btn = document.createElement("a");
           btn.innerHTML = "READ";
           btn.href = res.items[i].volumeInfo.previewLink;
           btn.target = "blank";
 
           const speech = document.createElement("button");
-          speech.classList.add("listen");
-          speech.classList.add("btn");
-          speech.classList.add("btn-outline-secondary");
-          speech.innerText = "LISTEN";
+          speech.classList.add("listen", "btn", "btn-outline-secondary");
+          speech.textContent = "LISTEN";
 
-          btn.classList.add("btn");
-          btn.classList.add("btn-outline-secondary");
-          div.classList.add("result");
-          div.classList.add("row");
+          btn.classList.add("btn", "btn-outline-secondary");
+          div.classList.add("result", "row");
 
-          textDiv.appendChild(h1);
-          textDiv.appendChild(p);
-          textDiv.appendChild(par);
-          textDiv.appendChild(btn);
-          textDiv.appendChild(speech);
+          textDiv.append(h1, p, par, btn, speech);
 
-          div.appendChild(textDiv);
-          div.appendChild(imgDiv);
+          div.append(textDiv, imgDiv);
           document.getElementById("results").appendChild(div);
           document.getElementById("results").scrollIntoView();
         }
 
         const buttons = document.querySelectorAll(".listen");
 
-        for (let button of buttons) {
+        for (const button of buttons) {
           button.addEventListener("click", (e) => {
-            console.log("clickesd");
+            console.log("clicked");
             listen(e);
           });
         }
