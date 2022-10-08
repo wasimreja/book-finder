@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
 
+html {
+	scroll-behavior: smooth;
+}
+
 #nav {
 	position: fixed;
 	top: 0;
@@ -166,6 +170,68 @@ h1 {
 	margin-left: 10px;
 }
 
+#input:focus {
+	border-color: rgba(100, 100, 100, 1) !important;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+#return-to-top {
+	border: none;
+	text-decoration: none;
+	position: fixed;
+	display: flex;
+	bottom: 5%;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	right: 5%;
+	width: 50px;
+	height: 50px;
+	background: rgb(219, 211, 211);
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#return-to-top i {
+	color: #fff;
+	margin: 0;
+	position: relative;
+	font-size: 19px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+	background: rgb(208, 197, 197);
+	bottom: 6%;
+	width: 55px;
+	height: 55px;
+}
+
+#return-to-top:hover i {
+	font-size: 25px;
+}
+
+#return-to-top.active {
+	bottom: -1%;
+	pointer-events: auto;
+	opacity: 1;
+}
+
+.special1 {
+	opacity: 0;
+}
 #input:focus {
 	border-color: rgba(100, 100, 100, 1) !important;
 	-webkit-box-shadow: none !important;
