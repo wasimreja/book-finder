@@ -146,3 +146,14 @@ function search(e) {
 }
 
 document.querySelector(".search-form").addEventListener("submit", search);
+
+const scroll = document.getElementById("return-to-top");
+window.onscroll = () => scrollFunction();
+function scrollFunction() {
+  if (document.body.scrollTop || document.documentElement.scrollTop > 20){
+    scroll.classList.remove("special1")
+  }else{
+    scroll.classList.add("special1")
+  } 
+}
+
