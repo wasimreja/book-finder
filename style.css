@@ -31,7 +31,7 @@ position: center;
 	-moz-animation: fadein 2s; /* Firefox < 16 */
 	 -ms-animation: fadein 2s; /* Internet Explorer */
 	  -o-animation: fadein 2s; /* Opera < 12.1 */
-		 animation: fadein 2s;
+	animation: fadein 2s;
 }
 
 @keyframes fadein {
@@ -55,6 +55,10 @@ position: center;
 @-o-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
+}
+
+.bg-light {
+	overflow: hidden;
 }
 
 .illustration {
@@ -124,4 +128,10 @@ h1 {
     padding: 7px 20px;
     border: 0px;
 	margin-left: 10px;
+
 }
+
+#input:focus {border-color:rgba(100,100,100,1)!important;
+	-webkit-box-shadow: none!important;
+		-moz-box-shadow: none!important;
+		box-shadow: none!important;
