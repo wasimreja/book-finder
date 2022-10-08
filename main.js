@@ -24,8 +24,7 @@ function search(e) {
 
   console.log("Working");
   $.ajax({
-    url:
-      `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
+    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
     dataType: "json",
 
     success: function (res) {
@@ -36,8 +35,7 @@ function search(e) {
       if (res.totalItems == 0) {
         const div = document.createElement("div");
         const h1 = document.createElement("h1");
-        const error_res = document.createTextNode("Book Not Found!");
-        h1.appendChild(error_res);
+        h1.textContent = "Book Not Found!";
         div.appendChild(h1);
         document.getElementById("results").appendChild(div);
       } else {
@@ -48,8 +46,7 @@ function search(e) {
           // Image
           if (res.items[i].volumeInfo.imageLinks) {
             var imgDiv = document.createElement("div");
-            imgDiv.classList.add("col-md-2");
-            imgDiv.classList.add("offset-md-2");
+            imgDiv.classList.add("col-md-2", "offset-md-2");
 
             const img = document.createElement("img");
             img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
@@ -62,8 +59,7 @@ function search(e) {
           const textDiv = document.createElement("div");
           textDiv.classList.add("col-md-8");
           const h1 = document.createElement("h1");
-          const title = document.createTextNode(res.items[i].volumeInfo.title);
-          h1.appendChild(title);
+          h1.textContent = res.items[i].volumeInfo.title;
 
           //Author
           if (res.items[i].volumeInfo.authors) {
@@ -73,7 +69,7 @@ function search(e) {
                 res.items[i].volumeInfo.authors[0]
                   ? res.items[i].volumeInfo.authors[0]
                   : "No title"
-              }`,
+              }`
             );
             p.appendChild(author);
           }
@@ -83,7 +79,7 @@ function search(e) {
           const desc = document.createTextNode(
             res.items[i].volumeInfo.description
               ? res.items[i].volumeInfo.description
-              : "No description",
+              : "No description"
           );
           par.appendChild(desc);
 
@@ -94,31 +90,22 @@ function search(e) {
           btn.target = "blank";
 
           const speech = document.createElement("button");
-          speech.classList.add("listen");
-          speech.classList.add("btn");
-          speech.classList.add("btn-outline-secondary");
-          speech.innerText = "LISTEN";
+          speech.classList.add("listen", "btn", "btn-outline-secondary");
+          speech.textContent = "LISTEN";
 
-          btn.classList.add("btn");
-          btn.classList.add("btn-outline-secondary");
-          div.classList.add("result");
-          div.classList.add("row");
+          btn.classList.add("btn", "btn-outline-secondary");
+          div.classList.add("result", "row");
 
-          textDiv.appendChild(h1);
-          textDiv.appendChild(p);
-          textDiv.appendChild(par);
-          textDiv.appendChild(btn);
-          textDiv.appendChild(speech);
+          textDiv.append(h1, p, par, btn, speech);
 
-          div.appendChild(textDiv);
-          div.appendChild(imgDiv);
+          div.append(textDiv, imgDiv);
           document.getElementById("results").appendChild(div);
           document.getElementById("results").scrollIntoView();
         }
 
         const buttons = document.querySelectorAll(".listen");
 
-        for (let button of buttons) {
+        for (const button of buttons) {
           button.addEventListener("click", (e) => {
             console.log("clicked");
             listen(e);
