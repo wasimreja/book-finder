@@ -4,7 +4,7 @@ function listen(e) {
   const book = div.children[0].innerText;
   const author = div.children[1].innerText;
 
-  var message = `The name of the book is ${book}  . It is written by ${author} .  ${text}`;
+  var message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
 
   console.log(text);
   let synth = speechSynthesis;
@@ -12,7 +12,6 @@ function listen(e) {
 
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
-    const voices = synth.getVoices();
     speech.lang = "en-US";
     synth.speak(speech);
   }, 1000);
@@ -45,16 +44,6 @@ function search(e) {
         document.getElementById("results").appendChild(div);
       } else {
         for (var i = 0; i < res.items.length; i++) {
-          // console.log(
-          //   res.items[i].volumeInfo.title +
-          //     " " +
-          //     res.items[i].volumeInfo.subtitle +
-          //     " " +
-          //     res.items[i].volumeInfo.authors +
-          //     " " +
-          //     res.items[i].volumeInfo.imageLinks.smallThumbnail
-          // );
-
           // DIV
           var div = document.createElement("div");
 
