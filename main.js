@@ -1,12 +1,12 @@
 function listen(e) {
-  const div = e.target.parentElement;
-  const text = div.children[2].innerText;
-  const book = div.children[0].innerText;
-  const author = div.children[1].innerText;
+  const bookCard = e.target.parentElement;
+  const bookDescription = bookCard.children[2].innerText;
+  const bookName = bookCard.children[0].innerText;
+  const authorName = bookCard.children[1].innerText;
 
-  const message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
+  const message = `The name of the book is ${bookName}  . It is written ${authorName} .  ${bookDescription}`;
 
-  console.log(text);
+  console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
 
@@ -28,85 +28,88 @@ function search(e) {
     dataType: "json",
 
     success: function (res) {
-      const myNode = document.getElementById("results");
-      while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
+      const resultsContainer = document.getElementById("results");
+      while (resultsContainer.firstChild) {
+        resultsContainer.removeChild(resultsContainer.firstChild);
       }
-      if (res.totalItems == 0) {
-        const div = document.createElement("div");
-        const h1 = document.createElement("h1");
-        h1.textContent = "Book Not Found!";
-        div.appendChild(h1);
-        document.getElementById("results").appendChild(div);
+      let bookNotFound = res.totalItems === 0;
+      if (bookNotFound) {
+        const errorBlock = document.createElement("div");
+        const errorMessage = document.createElement("h1");
+        errorMessage.textContent = "Book Not Found!";
+        errorBlock.appendChild(errorMessage);
+        document.getElementById("results").appendChild(errorBlock);
       } else {
         for (let i = 0; i < res.items.length; i++) {
           // DIV
-          const div = document.createElement("div");
+          const bookCard = document.createElement("div");
 
           // Image
           if (res.items[i].volumeInfo.imageLinks) {
-            var imgDiv = document.createElement("div");
-            imgDiv.classList.add("col-md-2", "offset-md-2");
+            var bookImageContainer = document.createElement("div");
+            bookImageContainer.classList.add("col-md-2", "offset-md-2");
 
-            const img = document.createElement("img");
-            img.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
-            img.classList.add("w-100");
+            const bookImage = document.createElement("img");
+            bookImage.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
+            bookImage.classList.add("w-100");
 
-            imgDiv.appendChild(img);
+            bookImageContainer.appendChild(bookImage);
           }
 
           // Title
-          const textDiv = document.createElement("div");
-          textDiv.classList.add("col-md-8");
-          const h1 = document.createElement("h1");
-          h1.textContent = res.items[i].volumeInfo.title;
+          const bookInfo = document.createElement("div");
+          bookInfo.classList.add("col-md-8");
+          const bookTitle = document.createElement("h1");
+          bookTitle.textContent = res.items[i].volumeInfo.title;
 
           //Author
           if (res.items[i].volumeInfo.authors) {
-            var p = document.createElement("h6");
-            const author = document.createTextNode(
-              `by ${
-                res.items[i].volumeInfo.authors[0]
-                  ? res.items[i].volumeInfo.authors[0]
-                  : "No title"
-              }`
-            );
-            p.appendChild(author);
+            var bookAuthor = document.createElement("h6");
+            bookAuthor.textContent = `by ${
+              res.items[i].volumeInfo.authors[0]
+                ? res.items[i].volumeInfo.authors[0]
+                : "No title"
+            }`;
           }
 
           // Description
-          const par = document.createElement("p");
-          const desc = document.createTextNode(
+          const bookDescription = document.createElement("p");
+          bookDescription.textContent = `${
             res.items[i].volumeInfo.description
               ? res.items[i].volumeInfo.description
               : "No description"
-          );
-          par.appendChild(desc);
+          }`;
 
           // Button
-          const btn = document.createElement("a");
-          btn.innerHTML = "READ";
-          btn.href = res.items[i].volumeInfo.previewLink;
-          btn.target = "blank";
+          const bookPreviewLink = document.createElement("a");
+          bookPreviewLink.innerHTML = "READ";
+          bookPreviewLink.href = res.items[i].volumeInfo.previewLink;
+          bookPreviewLink.target = "blank";
 
-          const speech = document.createElement("button");
-          speech.classList.add("listen", "btn", "btn-outline-secondary");
-          speech.textContent = "LISTEN";
+          const speechButton = document.createElement("button");
+          speechButton.classList.add("listen", "btn", "btn-outline-secondary");
+          speechButton.textContent = "LISTEN";
 
-          btn.classList.add("btn", "btn-outline-secondary");
-          div.classList.add("result", "row");
+          bookPreviewLink.classList.add("btn", "btn-outline-secondary");
+          bookCard.classList.add("result", "row");
 
-          textDiv.append(h1, p, par, btn, speech);
+          bookInfo.append(
+            bookTitle,
+            bookAuthor,
+            bookDescription,
+            bookPreviewLink,
+            speechButton
+          );
 
-          div.append(textDiv, imgDiv);
-          document.getElementById("results").appendChild(div);
+          bookCard.append(bookInfo, bookImageContainer);
+          document.getElementById("results").appendChild(bookCard);
           document.getElementById("results").scrollIntoView();
         }
 
-        const buttons = document.querySelectorAll(".listen");
+        const speechButtons = document.querySelectorAll(".listen");
 
-        for (const button of buttons) {
-          button.addEventListener("click", (e) => {
+        for (const speechButton of speechButtons) {
+          speechButton.addEventListener("click", (e) => {
             console.log("clicked");
             listen(e);
           });
