@@ -172,7 +172,7 @@ h1 {
 }
 
 #return-to-top:hover {
-	background: rgb(73, 122, 255);
+	background: rgb(208, 197, 197);
 	bottom: 6%;
 	width: 55px;
 	height: 55px;
@@ -195,3 +195,4 @@ h1 {
 	-webkit-box-shadow: none!important;
 		-moz-box-shadow: none!important;
 		box-shadow: none!important;
+}
