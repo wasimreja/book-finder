@@ -1,57 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="upgrade-insecure-requests"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Finder</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    <header class="header">
-      <img
-        src="img/Man-Reading-a-Book-Vector-Illustration.svg"
-        alt="Man Reading a Book"
-        class="illustration"
-      />
-      <h1 class="title" style="font-size: 7em">
-        Book
-        <p class="finder" style="display: inline-block">Finder</p>
-      </h1>
-    </header>
-    <main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Finder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-light" id="nav">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#header">
+        <span class="text">Book</span><span class="find">Finder</span>
+
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <header class="header">
+    <img src="img/Man-Reading-a-Book-Vector-Illustration.svg" alt="Man Reading a Book" class="illustration" />
+    <h1 class="title" style="font-size: 7em">
+      Book
+      <p class="finder" style="display: inline-block">Finder</p>
+    </h1>
+  </header>
+  <main>
     <div class="search">
       <form class="search-form">
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-5">
           <div class="input-group">
-            <input
-              type="search"
-              id="input"
-              placeholder="Find the book you want to read next!"
-              aria-describedby="button-addon1"
-              class="form-control border-0 bg-light"
-            />
+            <input type="search" id="input" placeholder="Find the book you want to read next!"
+              aria-describedby="button-addon1" class="form-control border-0 bg-light" />
             <div class="input-group-append">
-              <button
-                id="button-addon1"
-                type="submit"
-                class="btn btn-link text-primary"
-              >
+              <button id="button-addon1" type="submit" class="btn btn-link text-primary">
                 <i class="fa fa-search"></i>
               </button>
             </div>
@@ -60,12 +50,14 @@
       </form>
     </div>
   </main>
-   <section>
-    <div id="results" class="results"></div>
-    </section>
-    </body>
-    
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src="main.js"></script>
-  </body>
+  <section>
+    <div id="results" class="results container">
+    </div>
+  </section>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+
 </html>
