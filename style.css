@@ -299,3 +299,47 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+
+.footer {
+	position: relative;
+	bottom: 0;
+	left:0;
+	height: 10vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, .8);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer__links {
+	padding-left: 15px;
+	display: flex;
+	align-items: center;
+}
+
+.footer__link {
+	color: rgb(255, 255, 255);
+	transition: color .2s ease-in;
+}
+
+.footer__link:hover {
+	color:rgba(255, 255, 255, .5);
+	text-decoration: none;
+}
+
+.footer__link:nth-child(2) {
+	margin-left: 20px;
+}
+
+.footer__copyright {
+	color:#fff;
+	padding-right: 20px;
+}
+
+@media screen and (max-width:590px) {
+	.footer__copyright {
+		padding-left: 15px;
+	}
+}
