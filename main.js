@@ -7,7 +7,7 @@ function listen(e) {
 	const message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
 
 	console.log(text);
-	let synth = speechSynthesis;
+	const synth = speechSynthesis;	
 	synth.cancel();
 
 	setTimeout(() => {
@@ -43,10 +43,11 @@ function search(e) {
 				for (let i = 0; i < res.items.length; i++) {
 					// DIV
 					const div = document.createElement("div");
+					let imgDiv, p;
 
 					// Image
 					if (res.items[i].volumeInfo.imageLinks) {
-						var imgDiv = document.createElement("div");
+						imgDiv = document.createElement("div");
 						imgDiv.classList.add("col-md-2", "offset-md-2");
 
 						const img = document.createElement("img");
@@ -64,7 +65,7 @@ function search(e) {
 
 					//Author
 					if (res.items[i].volumeInfo.authors) {
-						var p = document.createElement("h6");
+						p = document.createElement("h6");
 						const author = document.createTextNode(
 							`by ${
 								res.items[i].volumeInfo.authors[0]
@@ -76,28 +77,28 @@ function search(e) {
 					}
 
 					// Description
-					var par = document.createElement("p");
+					const par = document.createElement("p");
 					par.classList.add("description");
-					var desc = res.items[i].volumeInfo.description
+					const desc = res.items[i].volumeInfo.description
 						? res.items[i].volumeInfo.description
 						: "No description";
 
-					var shortPar = document.createElement("span");
+					const shortPar = document.createElement("span");
 					shortPar.classList.add("short-description");
-					var shortDesc = document.createTextNode(desc.substring(0, 100));
+					const shortDesc = document.createTextNode(desc.substring(0, 100));
 					shortPar.appendChild(shortDesc);
 
-					var remainingPar = document.createElement("span");
+					const remainingPar = document.createElement("span");
 					remainingPar.classList.add("remaining-description");
-					var remainingDesc = document.createTextNode(desc.substring(100));
+					const remainingDesc = document.createTextNode(desc.substring(100));
 					remainingPar.appendChild(remainingDesc);
 
-					var readMoreBtn = document.createElement("span");
+					const readMoreBtn = document.createElement("span");
 					readMoreBtn.classList.add("read-more-btn");
-					var readMoreBtnText = document.createTextNode(" ...Read More");
+					const readMoreBtnText = document.createTextNode(" ...Read More");
 					readMoreBtn.appendChild(readMoreBtnText);
 					readMoreBtn.addEventListener("click", (e) => {
-						var remainingDescription = e.target.parentNode.querySelector(
+						const remainingDescription = e.target.parentNode.querySelector(
 							".remaining-description"
 						);
 						remainingDescription.classList.toggle(
@@ -130,9 +131,17 @@ function search(e) {
 					btn.classList.add("btn", "btn-outline-secondary");
 					div.classList.add("result", "row");
 
-					textDiv.append(h1, p, par, btn, speech);
+					textDiv.append(h1);
+					if (p) {
+						textDiv.append(p);
+					}
+					textDiv.append(par, btn, speech);
 
-					div.append(textDiv, imgDiv);
+					div.append(textDiv);
+					if (imgDiv) {
+						div.append(imgDiv);
+					}
+
 					document.getElementById("results").appendChild(div);
 					document.getElementById("results").scrollIntoView();
 				}
