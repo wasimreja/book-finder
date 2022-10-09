@@ -27,6 +27,14 @@ html {
 	font-weight: 300;
 	color: #403e3e;
 }
+.about {
+	padding: 5px;
+	font-size: 1.3rem;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 300;
+	color: #403e3e;
+	text-decoration: none !important;
+}
 
 .header {
 	margin-top: 4rem;
