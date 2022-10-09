@@ -1,4 +1,3 @@
-function listen(e) {
   const bookCard = e.target.parentElement;
   const bookDescription = bookCard.children[2].innerText;
   const bookName = bookCard.children[0].innerText;
@@ -119,6 +118,14 @@ function search(e) {
     maxResults: 30,
     type: "GET",
   });
-}
-
 document.querySelector(".search-form").addEventListener("submit", search);
+
+const scroll = document.getElementById("return-to-top");
+window.onscroll = () => scrollFunction();
+function scrollFunction() {
+	if (document.body.scrollTop || document.documentElement.scrollTop > 20) {
+		scroll.classList.remove("special1");
+	} else {
+		scroll.classList.add("special1");
+	}
+}
