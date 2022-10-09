@@ -2,24 +2,30 @@
 
 html{
 	scroll-behavior: smooth;
+	
 }
 
 #nav{
-	position: fixed;
+	position:fixed;
+    margin:auto;
 	top: 0;
 	width: 100%;
+    
 	height: auto;
-	border-bottom: 1px solid #d2cbcb;
-	z-index: 100;
-}
-.text {
-position: center;
-	font-size: 1.5rem;
-	font-family: 'Josefin Sans', sans-serif;
-	font-weight: 600;
-	color: #403e3e;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+	box-shadow:0px 10px 15px rgba(22, 22, 22, 0.4);
+	z-index:100;
 }
 
+.text {
+position: center;
+	font-size: 2rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color: #fd6c6c;
+}
 .find {
 	font-weight: lighter;
 	font-size: 1.5rem;
@@ -37,6 +43,7 @@ position: center;
 	  -o-animation: fadein 2s; /* Opera < 12.1 */
 	animation: fadein 2s;
 }
+
 
 @keyframes fadein {
     from { opacity: 0; }
@@ -73,7 +80,11 @@ position: center;
 	font-size: 7em;
 	font-family: 'Josefin Sans', sans-serif;
 	font-weight: 300;
-	color: #403e3e;
+	color:  #fd6c6c;
+}
+.title p {
+	
+	color:  #403e3e;
 }
 
 .finder {
@@ -84,6 +95,12 @@ position: center;
 	margin: 0 auto;
 	width: 50%;
 	font-family: 'Comfortaa', cursive;
+	
+	
+}
+.search .bg-light{
+	border:2px solid rgb(159, 159, 159);
+	padding-left:5px;
 }
 
 .results {
@@ -105,6 +122,7 @@ position: center;
 
 .result:hover {
 	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	background: #cccccc;
 }
 
 img {
@@ -196,3 +214,23 @@ h1 {
 		-moz-box-shadow: none!important;
 		box-shadow: none!important;
 }
+/*scroll bar UI*/
+::-webkit-scrollbar {
+	width: 15px;
+	
+  }
+  
+ 
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px grey;
+	border-radius: 2px;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+	background: #fd6c6c;
+	border-radius: 10px;
+	box-shadow:2px 2px 5px rgb(61, 61, 61);
+	
+  }
+  /*scrollbar*/
