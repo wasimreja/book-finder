@@ -13,13 +13,17 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 </head>
 
-<body>
-  <nav class="navbar navbar-expand-lg bg-light" id="nav">
+<body class="bg">
+  <nav id="nav">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.html">
         <span class="text">Book</span><span class="find">Finder</span>
 
       </a>
+      <div class="mode">
+        <img class="logo" id="icon" src="img/moon.png" />
+  
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -36,10 +40,10 @@
   <main>
     <div class="search">
       <form class="search-form">
-        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-5">
+        <div class="p-1 rounded rounded-pill shadow-sm mb-5">
           <div class="input-group">
             <input type="search" id="input" placeholder="Find the book you want to read next!"
-              aria-describedby="button-addon1" class="form-control border-0 bg-light" />
+              aria-describedby="button-addon1" class="form-control border-0 " />
             <div class="input-group-append">
               <button id="button-addon1" type="submit" class="btn btn-link text-primary">
                 <i class="fa fa-search"></i>

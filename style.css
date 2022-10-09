@@ -3,7 +3,20 @@
 html {
 	scroll-behavior: smooth;
 }
-
+:root{
+	--primary-color: #fff;
+	--nav-color:#f4f1f1;
+	--secondary-color : #403e3e;
+	--extra-color:#efefef;
+	--logo-color:rgb(190, 193, 190);
+}
+.dark-theme{
+	--primary-color: #151111;
+	--nav-color:#454448;
+	--secondary-color : #fcf4f4;
+	--extra-color:#2B2B2B;
+	--logo-color:#000;
+}
 #nav {
 	position: fixed;
 	top: 0;
@@ -11,21 +24,27 @@ html {
 	height: auto;
 	border-bottom: 1px solid #d2cbcb;
 	z-index: 100;
+	background-color: var(--nav-color);
 }
 .text {
 	position: center;
 	font-size: 1.5rem;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 600;
-	color: #403e3e;
+	color:var(--secondary-color);
 }
+.bg{
+	background-color: var(--primary-color);
+	transition: background 500ms;
+}
+
 
 .find {
 	font-weight: lighter;
 	font-size: 1.5rem;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
-	color: #403e3e;
+	color: var(--secondary-color);
 }
 
 .header {
@@ -89,7 +108,7 @@ html {
 	font-size: 7em;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
-	color: #403e3e;
+	color: var(--secondary-color);
 }
 
 .finder {
@@ -101,13 +120,26 @@ html {
 	width: 50%;
 	font-family: "Comfortaa", cursive;
 }
+.search-form{
+	background-color: var(--nav-color);
+	border-radius: 25px;
+}
+
+.input-group input[type=search]{
+	/*background-color: var(--nav-color);*/
+	background:transparent;
+	color:var(--secondary-color) ;
+    border: none;
+    outline: none;
+	border-radius: 25px;
+}
 
 .results {
 	padding: 5% 15% 5% 15%;
 	font-family: "Comfortaa", cursive;
 	font-weight: 300;
 	font-size: 1rem;
-	color: #403e3e;
+	color: var(--secondary-color);
 }
 
 .read-more-btn {
@@ -133,7 +165,7 @@ html {
 .result {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
-	background: #efefef;
+	background: var(--extra-color);
 	border-radius: 5px;
 	padding: 3%;
 	margin-bottom: 1.5rem;
@@ -150,7 +182,7 @@ img {
 
 h1 {
 	font-family: "Comfortaa", cursive;
-	color: #403e3e;
+	color: var(--secondary-color)
 }
 
 .result a {
@@ -176,7 +208,21 @@ h1 {
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
 }
+.mode{
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	
+}
 
+#icon{
+	width: 25px;
+	cursor: pointer;
+}
+.logo:hover{
+	background-color: var(--logo-color);
+	border-radius: 5rem;
+}
 #return-to-top {
 	border: none;
 	text-decoration: none;
@@ -201,7 +247,7 @@ h1 {
 }
 
 #return-to-top i {
-	color: #fff;
+	color: var(--primary-color);
 	margin: 0;
 	position: relative;
 	font-size: 19px;
