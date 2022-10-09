@@ -7,7 +7,7 @@ function listen(e) {
 	const message = `The name of the book is ${book}  . It is written ${author} .  ${text}`;
 
 	console.log(text);
-	const synth = speechSynthesis;	
+	const synth = speechSynthesis;
 	synth.cancel();
 
 	setTimeout(() => {
