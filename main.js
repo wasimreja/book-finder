@@ -27,6 +27,12 @@ function search(e) {
 	$.ajax({
 		url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
 		dataType: "json",
+		beforeSend: function(){
+			$('.whirly-loader').show();
+		  },
+		  complete: function(){
+			$('.whirly-loader').hide();
+		  },	  
 
 		success: function (res) {
 			const myNode = document.getElementById("results");
