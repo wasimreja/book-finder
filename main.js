@@ -39,13 +39,29 @@ function search(e) {
       while (resultsContainer.firstChild) {
         resultsContainer.removeChild(resultsContainer.firstChild);
       }
+
       let bookNotFound = res.totalItems === 0;
+
       if (bookNotFound) {
-        const errorBlock = document.createElement("div");
-        const errorMessage = document.createElement("h1");
-        errorMessage.textContent = "Book Not Found!";
-        errorBlock.appendChild(errorMessage);
-        document.getElementById("results").appendChild(errorBlock);
+        // const errorBlock = document.createElement("div");
+        // const errorMessage = document.createElement("h1");
+        // errorMessage.textContent = "Book Not Found!";
+        // errorBlock.appendChild(errorMessage);
+        // document.getElementById("results").appendChild(errorBlock);
+
+        let notfound = document.createElement("DIV");
+        notfound.innerHTML = `
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-page">
+            <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
+            <div>
+              <p class="fs-3"> <span class="text-danger">Opps!</span> Book not found.</p>
+              <p class="lead">The book you’re looking for doesn’t exist.</p>
+            </div>
+        </div>
+        `;
+
+        document.getElementById("results").appendChild(notfound);
+        
       } else {
         for (let i = 0; i < res.items.length; i++) {
           // DIV
