@@ -11,16 +11,16 @@
 
 ## About The Project
 
-Are you a Book Lover, who wants to read but don't have the time to search for them in Google? 🤔
-Don't Worry, we've got you covered 😉
+Are you a Book Lover, who wants to read but don't have the time to search for them in Google? 🤔 <br />
+Don't Worry, we've got you covered 😉 <br />
 
 - Book Finder Application is the perfect place, where you can simply search for the book/audiobook you want.
 - Once you search for the book, the application will use "Google Books API" to retrieve information about it.
 - You can find the links from where you can read the book or you can directly listen to them in the website.
 
-Isn't it handy? 😋
-So what are you waiting for? 🤨
-Try your hands right now by clicking on this [link](https://book-finder.onrender.com/). 🥳
+Isn't it handy? 😋 <br />
+So what are you waiting for? 🤨 <br />
+Try your hands right now by clicking on this [link](https://book-finder.onrender.com/). 🥳 <br />
 
 ## Features
 
