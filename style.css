@@ -22,9 +22,9 @@ html {
 	top: 0;
 	width: 100%;
 	height: auto;
-	border-bottom: 1px solid #d2cbcb;
 	z-index: 100;
 	background-color: var(--nav-color);
+	padding: 5px 5px;
 }
 .text {
 	position: center;
