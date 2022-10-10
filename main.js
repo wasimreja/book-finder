@@ -149,6 +149,7 @@ function search(e) {
 
           bookPreviewLink.classList.add("btn", "btn-outline-secondary");
           bookCard.classList.add("result", "row");
+          bookCard.setAttribute('data-aos', 'fade-right');
 
           bookInfo.append(
             bookTitle,
