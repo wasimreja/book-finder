@@ -352,3 +352,22 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+.mode button{
+	padding: 2px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50px;
+	border: 0;
+	outline: none;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mode button{
+	background-color: #111;
+}
+.mode button img{
+	color: white;
+}
