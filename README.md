@@ -11,13 +11,23 @@
 
 ## About The Project
 
-A book finder application which implements the Google Books API to retrieve information about a book that the user searches for.
+Are you a Book Lover, who wants to read but don't have the time to search for them in Google? 🤔
+Don't Worry, we've got you covered 😉
+
+- Book Finder Application is the perfect place, where you can simply search for the book/audiobook you want.
+- Once you search for the book, the application will use "Google Books API" to retrieve information about it.
+- You can find the links from where you can read the book or you can directly listen to them in the website.
+
+Isn't it handy? 😋
+So what are you waiting for? 🤨
+Try your hands right now by clicking on this [link](https://book-finder.onrender.com/). 🥳
 
 ## Features
 
-- Allow the user to search books by title, author and ISBN number.
-- Allow user to read the preview of the book.
+- Allows the user to search books by title, author and ISBN number.
+- Allows user to read the preview of the book.
 - Generate picture of book along with external link to see a preview of the book on Google Books.
+- Along with the books for reading, audiobooks are also available.
 
 ## Tech Stack
 
