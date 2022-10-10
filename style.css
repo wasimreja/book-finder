@@ -21,7 +21,7 @@ html {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: auto;
+	height: 72px;
 	z-index: 100;
 	background-color: var(--nav-color);
 	padding: 5px 5px;
@@ -218,12 +218,12 @@ h1 {
 .mode{
 	float: right;
 	margin-right: 5px;
-	margin-top: 5px;
+	margin-top: -53px;
 	
 }
 
 #icon{
-	width: 25px;
+	width: 30px;
 	cursor: pointer;
 }
 .logo:hover{
@@ -352,3 +352,98 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+
+.searchdiscription{
+	margin-top: 4rem;
+	text-align: center;
+	transform: translate(9px,-39px);
+	font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+}
+
+
+:root {
+	--color-light: rgb(203 213 225);
+	--color-mid: white;
+	--color-dark: rgb(71 85 105);
+  }
+  #wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	inset: 0;
+  }
+  
+  .iconDiv {
+	height: 36px;
+	width: 36px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 4px;
+	padding: 4px;
+	border-radius: 8px;
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	overflow: hidden;
+	cursor: pointer;
+	transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+	
+  }
+  .iconSVG {
+	height: 36px;
+	aspect-ratio: 1 / 1;
+  }
+  .iconDiv:hover,
+  .iconDiv:focus-visible {
+	width: 142px;
+	background-color: var(--color-mid);
+	transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
+  }
+  .iconDiv:focus-visible {
+	outline: 1px solid var(--color-mid);
+	outline-offset: 4px;
+  }
+  .iconDiv:active {
+	opacity: 0.9;
+  }
+  .iconDiv::after {
+	content: attr(tooltip);
+	margin-left: 12px;
+	-webkit-animation: fadeIn 600ms linear forwards;
+			animation: fadeIn 600ms linear forwards;
+  }
+  .spacer {
+	flex-grow: 1;
+  }
+  .divider {
+	height: 36px;
+	width: 1px;
+	margin: 24px 18px;
+	background-color: var(--color-dark);
+  }
+  
+  @-webkit-keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  @keyframes fadeIn {
+	0% {
+	  opacity: 0;
+	}
+	50% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
