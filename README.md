@@ -28,6 +28,7 @@ Try your hands right now by clicking on this [link](https://book-finder.onrender
 - Allows user to read the preview of the book.
 - Generate picture of book along with external link to see a preview of the book on Google Books.
 - Along with the books for reading, audiobooks are also available.
+- Regularly Updated, to provide you with latest features right in the application.
 
 ## Tech Stack
 
