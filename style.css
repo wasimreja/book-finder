@@ -111,6 +111,12 @@ html {
 	color: var(--secondary-color);
 }
 
+@media only screen and (max-width: 400px) {
+	.title {
+		font-size: 6em;
+	}
+}
+
 .finder {
 	font-weight: lighter;
 }
@@ -120,6 +126,13 @@ html {
 	width: 50%;
 	font-family: "Comfortaa", cursive;
 }
+
+@media only screen and (max-width: 400px) {
+	.search {
+		width: 90%;
+	}
+}
+
 .search-form{
 	background-color: var(--nav-color);
 	border-radius: 25px;
@@ -178,6 +191,20 @@ html {
 .illustration, .img-results {
 	margin: 5px auto;
 	width: 20%
+}
+
+@media only screen and (max-width: 400px) {
+	.illustration, .img-results {
+		width: 70%;
+	}
+
+	.col-md-8 {
+		padding-bottom: 15px;
+	}
+
+	.col-md-8 h1 {
+		font-size: 1.75rem;
+	}
 }
 
 h1 {
