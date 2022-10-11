@@ -4,8 +4,8 @@ html {
 	scroll-behavior: smooth;
 }
 :root{
-	--primary-color: #fff;
-	--nav-color:#f4f1f1;
+	--primary-color: rgb(232, 104, 160);
+	--nav-color:#6c8ff6;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
 	--logo-color:rgb(190, 193, 190);
@@ -128,10 +128,16 @@ html {
 .input-group input[type=search]{
 	/*background-color: var(--nav-color);*/
 	background:transparent;
-	color:var(--secondary-color) ;
+	/* color:var(--secondary-color) ; */
+	color: black;
     border: none;
     outline: none;
 	border-radius: 25px;
+	font-weight: 700;
+}
+.input-group input[type=search]::placeholder{
+	color: black;
+
 }
 
 .results {
@@ -143,7 +149,7 @@ html {
 }
 
 .read-more-btn {
-	color: #eba544;
+	color: rgb(232, 104, 160);
 	font-weight: 500;
 	cursor: pointer;
 	transition: all 0.25s ease-in-out;
@@ -219,7 +225,7 @@ h1 {
 	float: right;
 	margin-right: 5px;
 	margin-top: 5px;
-	
+	/* padding: 4px; */
 }
 
 #icon{
