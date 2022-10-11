@@ -195,10 +195,12 @@ icon.onclick=function(){
 document.body.classList.toggle("dark-theme");
 if(document.body.classList.contains("dark-theme"))
   {
+      icon.classList.add("cust");
       icon.src="img/sun.png";
   }
   else
     {
+      icon.classList.remove("cust");
        icon.src="img/moon.png";
     }
 }
