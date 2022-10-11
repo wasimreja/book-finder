@@ -74,6 +74,7 @@ function search(e) {
 
             const bookImage = document.createElement("img");
             bookImage.src = res.items[i].volumeInfo.imageLinks.smallThumbnail;
+            bookImage.alt = `${res.items[i].volumeInfo.title} book`;
             bookImage.classList.add("w-100");
 
             bookImageContainer.appendChild(bookImage);
