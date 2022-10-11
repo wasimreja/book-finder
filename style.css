@@ -120,6 +120,13 @@ html {
 	width: 50%;
 	font-family: "Comfortaa", cursive;
 }
+
+@media only screen and (max-width: 400px) {
+	.search {
+		width: 90%;
+	}
+}
+
 .search-form{
 	background-color: var(--nav-color);
 	border-radius: 25px;
@@ -178,6 +185,12 @@ html {
 .illustration, .img-results {
 	margin: 5px auto;
 	width: 20%
+}
+
+@media only screen and (max-width: 400px) {
+	.illustration, .img-results {
+		width: 50%;
+	}
 }
 
 h1 {
