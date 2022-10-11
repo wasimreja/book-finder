@@ -111,6 +111,12 @@ html {
 	color: var(--secondary-color);
 }
 
+@media only screen and (max-width: 400px) {
+	.title {
+		font-size: 6em;
+	}
+}
+
 .finder {
 	font-weight: lighter;
 }
@@ -189,7 +195,15 @@ html {
 
 @media only screen and (max-width: 400px) {
 	.illustration, .img-results {
-		width: 50%;
+		width: 70%;
+	}
+
+	.col-md-8 {
+		padding-bottom: 15px;
+	}
+
+	.col-md-8 h1 {
+		font-size: 1.75rem;
 	}
 }
 
