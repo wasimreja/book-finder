@@ -200,3 +200,12 @@ icon.onclick = function () {
     localStorage.setItem("theme", "light");
   }
 };
+
+const initIcon = () => {
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "img/sun.png";
+  } else {
+    icon.src = "img/moon.png";
+  }
+};
+window.onload = initIcon();
