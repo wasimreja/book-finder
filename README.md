@@ -1,23 +1,29 @@
 <p align="center">
-   <img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
+<img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
 <div align="center">
-    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-    <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
-    <img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
 </div>
 
 ## About The Project
 
-A book finder application which implements the Google Books API to retrieve information about a book that the user searches for.
+Book Finder is your go-to place for all kinds of book related searches, need to read a book but don't know where to find it?
+
+We got your back! Started in 2022, we are an open-source free search engine with over a million books and more to find out.
+Here you won't just be able to read books but also listen to them.
+
+So what are you waiting for? Search your favourite book right now!
 
 ## Features
 
-- Allow the user to search books by title, author and ISBN number.
-- Allow user to read the preview of the book.
+- Allows user to search books by title, author and ISBN number.
+- Allows user to read the preview of the book.
 - Generate picture of book along with external link to see a preview of the book on Google Books.
+- Along with the books for reading, audiobooks are also available.
 
 ## Tech Stack
 
@@ -103,8 +109,14 @@ git push -u origin <your_branch_name>
 
 **15.** And you are done creating a pull request to this project. Be patient while your PR is reviewed.
 
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
 ## Contributors
 
+Thanks to these wonderful people ✨
+
 <a href="https://github.com/wasimreja/book-finder/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wasimreja/book-finder" />
+<img src="https://contrib.rocks/image?repo=wasimreja/book-finder" />
 </a>

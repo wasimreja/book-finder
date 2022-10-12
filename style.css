@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;600&display=swap');
 html {
 	scroll-behavior: smooth;
 }
@@ -7,23 +6,15 @@ html {
 	--primary-color: #fff;
 	--nav-color:#f4f1f1;
 	--secondary-color : #403e3e;
-	--extra-color:#e0e0e0;
-    --resulttheme-color: #c1c1c1;
-    --result-color:rgb(148, 148, 148);
+	--extra-color:#efefef;
 	--logo-color:rgb(190, 193, 190);
-    --placeholder-color:rgb(108, 108, 108);
-   
 }
 .dark-theme{
-	--primary-color: #2e2e2e;
-	--nav-color:#757575;
+	--primary-color: #151111;
+	--nav-color:#454448;
 	--secondary-color : #fcf4f4;
-	--extra-color:#363636;
+	--extra-color:#2B2B2B;
 	--logo-color:#000;
-    --resulttheme-color: #424242;
-    --result-color:rgb(132, 132, 132);
-    --placeholder-color:rgb(131, 67, 67);
-
 }
 #nav {
 	position: fixed;
@@ -33,16 +24,13 @@ html {
 	z-index: 100;
 	background-color: var(--nav-color);
 	padding: 5px 5px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-	box-shadow:0px 10px 15px rgba(22, 22, 22, 0.4);
 }
 .text {
 	position: center;
 	font-size: 1.5rem;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 600;
-	color:#fd6d6d;
+	color:var(--secondary-color);
 }
 .bg{
 	background-color: var(--primary-color);
@@ -53,7 +41,7 @@ html {
 .find {
 	font-weight: lighter;
 	font-size: 1.5rem;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 300;
 	color: var(--secondary-color);
 }
@@ -112,21 +100,24 @@ html {
 }
 
 .illustration {
-	width: 20rem;
+	width: 25rem;
 }
 
 .title {
-	font-size: 7em;
-	font-family: "Josefin Sans", sans-serif;
+	font-size: 6em;
+	font-family: "Raleway", sans-serif;
 	font-weight: 300;
-	color: #fd6d6d;
+	color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 400px) {
+	.title {
+		font-size: 6em;
+	}
 }
 
 .finder {
-    font-family: "Josefin Sans", sans-serif;
 	font-weight: lighter;
-    color: var(--secondary-color);
-
 }
 
 .search {
@@ -134,14 +125,20 @@ html {
 	width: 50%;
 	font-family: "Comfortaa", cursive;
 }
+
+@media only screen and (max-width: 400px) {
+	.search {
+		width: 90%;
+	}
+}
+
 .search-form{
 	background-color: var(--nav-color);
 	border-radius: 25px;
-   
 }
 
 .input-group input[type=search]{
-	
+	/*background-color: var(--nav-color);*/
 	background:transparent;
 	color:var(--secondary-color) ;
     border: none;
@@ -154,7 +151,7 @@ html {
 	font-family: "Comfortaa", cursive;
 	font-weight: 300;
 	font-size: 1rem;
-	color: var(--result-color);
+	color: var(--secondary-color);
 }
 
 .read-more-btn {
@@ -188,12 +185,25 @@ html {
 
 .result:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    background:var(--resulttheme-color);
 }
 
 .illustration, .img-results {
-	margin: 5px auto;
-	width: 20%
+	margin: 8px auto;
+	width: 35%
+}
+
+@media only screen and (max-width: 400px) {
+	.illustration, .img-results {
+		width: 80%;
+	}
+
+	.col-md-8 {
+		padding-bottom: 15px;
+	}
+
+	.col-md-8 h1 {
+		font-size: 1.75rem;
+	}
 }
 
 h1 {
@@ -233,8 +243,8 @@ h1 {
 }
 .mode{
 	float: right;
-	margin-right: 5px;
-	margin-top: 5px;
+	margin-right: 10px;
+	margin-top: 10px;
 	
 }
 
@@ -273,7 +283,7 @@ h1 {
 	color: var(--primary-color);
 	margin: 0;
 	position: relative;
-	font-size: 19px;
+	font-size: 20px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;
@@ -368,23 +378,3 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
-/*scroll bar UI*/
-::-webkit-scrollbar {
-	width: 15px;
-	
-  }
-  
- 
-  ::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px grey;
-	border-radius: 2px;
-  }
-  
-
-  ::-webkit-scrollbar-thumb {
-	background: #fd6c6c;
-	border-radius: 10px;
-	box-shadow:2px 2px 5px rgb(61, 61, 61);
-	
-  }
-  /*scrollbar*/

@@ -20,7 +20,7 @@ function listen(e) {
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
-  if (search === "") return;
+  if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   console.log("Working");
@@ -149,6 +149,7 @@ function search(e) {
 
           bookPreviewLink.classList.add("btn", "btn-outline-secondary");
           bookCard.classList.add("result", "row");
+          bookCard.setAttribute('data-aos', 'fade-up');
 
           bookInfo.append(
             bookTitle,
