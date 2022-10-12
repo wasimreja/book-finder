@@ -61,7 +61,6 @@ function search(e) {
         `;
 
         document.getElementById("results").appendChild(notfound);
-        
       } else {
         for (let i = 0; i < res.items.length; i++) {
           // DIV
@@ -149,7 +148,7 @@ function search(e) {
 
           bookPreviewLink.classList.add("btn", "btn-outline-secondary");
           bookCard.classList.add("result", "row");
-          bookCard.setAttribute('data-aos', 'fade-up');
+          bookCard.setAttribute("data-aos", "fade-up");
 
           bookInfo.append(
             bookTitle,
@@ -190,15 +189,14 @@ function scrollFunction() {
     scroll.classList.add("special1");
   }
 }
-var icon=document.getElementById("icon");
-icon.onclick=function(){
-document.body.classList.toggle("dark-theme");
-if(document.body.classList.contains("dark-theme"))
-  {
-      icon.src="img/sun.png";
+var icon = document.getElementById("icon");
+icon.onclick = function () {
+  document.body.classList.toggle("dark-theme");
+  if (document.body.classList.contains("dark-theme")) {
+    icon.src = "img/sun.png";
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.src = "img/moon.png";
+    localStorage.setItem("theme", "light");
   }
-  else
-    {
-       icon.src="img/moon.png";
-    }
-}
+};
