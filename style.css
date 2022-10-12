@@ -178,14 +178,14 @@ html {
 .search-form input:focus + label, 
 .search-form input:not(:placeholder-shown) + label {
 	top: 0;
-	background-color: #fff;
+	background-color: var(--primary-color);
 	font-size: 0.899rem;
 }
 
 .input-group{
 	display: flex;
 	justify-content: space-between;
-	border: 1px solid black;
+	border: 1px solid var(--secondary-color);
 	border-radius: 25px;
 	padding: .25rem;
 }
