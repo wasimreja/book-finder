@@ -236,6 +236,13 @@ h1 {
 	margin-left: 10px;
 }
 
+.result button::after {
+	font-family: "Font Awesome 6 Free";
+	font-weight: 600;
+	content: " \f028";
+}
+
+
 #input:focus {
 	border-color: rgba(100, 100, 100, 1) !important;
 	-webkit-box-shadow: none !important;
