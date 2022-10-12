@@ -16,6 +16,16 @@
 </head>
 
 <body class="bg">
+  <script>
+    // this script need to in body but before html content to avoid flickering
+    const localTheme = localStorage?.getItem("theme");
+    if (localTheme === "dark") {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  </script>
+
   <nav id="nav">
     <div class="container-fluid">
       <a class="navbar-brand" href="/index.html">
