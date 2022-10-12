@@ -1,34 +1,29 @@
 <p align="center">
-   <img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
+<img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
 <div align="center">
-    <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-    <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
-    <img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
+<img src="https://forthebadge.com/images/badges/open-source.svg" />
 </div>
 
 ## About The Project
 
-Are you a Book Lover, who wants to read but don't have the time to search for them in Google? 🤔 <br />
-Don't Worry, we've got you covered 😉 <br />
+Book Finder is your go-to place for all kinds of book related searches, need to read a book but don't know where to find it?
 
-- Book Finder Application is the perfect place, where you can simply search for the book/audiobook you want.
-- Once you search for the book, the application will use "Google Books API" to retrieve information about it.
-- You can find the links from where you can read the book or you can directly listen to them in the website.
+We got your back! Started in 2022, we are an open-source free search engine with over a million books and more to find out.
+Here you won't just be able to read books but also listen to them.
 
-Isn't it handy? 😋 <br />
-So what are you waiting for? 🤨 <br />
-Try your hands right now by clicking on this [link](https://book-finder.onrender.com/). 🥳 <br />
+So what are you waiting for? Search your favourite book right now!
 
 ## Features
 
-- Allows the user to search books by title, author and ISBN number.
+- Allows user to search books by title, author and ISBN number.
 - Allows user to read the preview of the book.
 - Generate picture of book along with external link to see a preview of the book on Google Books.
 - Along with the books for reading, audiobooks are also available.
-- Regularly Updated, to provide you with latest features right in the application.
 
 ## Tech Stack
 
@@ -114,8 +109,14 @@ git push -u origin <your_branch_name>
 
 **15.** And you are done creating a pull request to this project. Be patient while your PR is reviewed.
 
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
 ## Contributors
 
+Thanks to these wonderful people ✨
+
 <a href="https://github.com/wasimreja/book-finder/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=wasimreja/book-finder" />
+<img src="https://contrib.rocks/image?repo=wasimreja/book-finder" />
 </a>
