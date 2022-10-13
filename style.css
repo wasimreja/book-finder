@@ -9,8 +9,6 @@ html {
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
 	--logo-color:rgb(190, 193, 190);
-    --scroller-color: #726363;
-    --scroller-hover-color: #2B2B2B;
 }
 .dark-theme{
 	--primary-color: #151111;
@@ -18,12 +16,10 @@ html {
 	--secondary-color : #fcf4f4;
 	--extra-color:#2B2B2B;
 	--logo-color:#000;
-    --scroller-color: rgb(190, 193, 190);
-    --scroller-hover-color: #ffffff;
 }
 
 ::-webkit-scrollbar {
-  width: 24px;
+  width: 20px;
 }
 
 ::-webkit-scrollbar-track {
@@ -31,16 +27,14 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--scroller-color);
+  background-color: #d6dee1;
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
-  height: 10vh;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--scroller-hover-color);
-  height: 15vh;
+  background-color: #a8bbbf;
 }
 
 #nav {
