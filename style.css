@@ -36,10 +36,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #a8bbbf;
 }
-#foot{
-	text-align: center;
-	background-color: var(--nav-color);
-}
 
 #nav {
 	position: fixed;
