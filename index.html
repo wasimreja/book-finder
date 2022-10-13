@@ -17,7 +17,7 @@
 
 <body class="bg">
   <script>
-    // this script need to in body but before html content to avoid flickering
+    // this script needs to be in body, but before html content to avoid flickering.
     const localTheme = localStorage?.getItem("theme");
     if (localTheme === "dark") {
       document.body.classList.add("dark-theme");
