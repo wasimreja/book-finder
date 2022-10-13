@@ -378,3 +378,7 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+
+.fa-search:hover{
+	transform: scale(1.2);
+}
