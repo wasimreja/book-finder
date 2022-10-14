@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;600&display=swap');
 html {
 	scroll-behavior: smooth;
 }
@@ -49,7 +48,7 @@ html {
 .text {
 	position: center;
 	font-size: 1.5rem;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 600;
 	color:var(--secondary-color);
 }
@@ -62,7 +61,7 @@ html {
 .find {
 	font-weight: lighter;
 	font-size: 1.5rem;
-	font-family: "Josefin Sans", sans-serif;
+	font-family: "Raleway", sans-serif;
 	font-weight: 300;
 	color: var(--secondary-color);
 }
@@ -126,8 +125,8 @@ html {
 }
 
 .title {
-	font-size: 7em;
-	font-family: "Josefin Sans", sans-serif;
+	font-size: 6em;
+	font-family: "Raleway", sans-serif;
 	font-weight: 300;
 	color: var(--secondary-color);
 }
@@ -285,6 +284,7 @@ html {
 @media only screen and (max-width: 400px) {
 	.illustration {
 		width: 70%;
+
 	}
 
 	.col-md-8 {
@@ -333,8 +333,8 @@ h1 {
 }
 .mode{
 	float: right;
-	margin-right: 5px;
-	margin-top: 5px;
+	margin-right: 10px;
+	margin-top: 10px;
 	
 }
 
@@ -373,7 +373,7 @@ h1 {
 	color: var(--primary-color);
 	margin: 0;
 	position: relative;
-	font-size: 19px;
+	font-size: 20px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	-ms-transition: all 0.3s ease;
