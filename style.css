@@ -37,6 +37,20 @@ html {
   background-color: #a8bbbf;
 }
 
+.mode{
+	display: flex;
+    align-content: flex-end;
+}
+
+.about{
+	margin-left: 45px;
+	margin-right: 45px;
+	font-size: 1.3rem;
+}
+.home{
+	font-size: 1.3rem;
+}
+
 #nav {
 	position: fixed;
 	top: 0;
