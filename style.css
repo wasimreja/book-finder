@@ -18,12 +18,12 @@ html {
 	--logo-color:#000;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
+/* Scroll bar */
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: #E3E2E9;
+    border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -36,6 +36,7 @@ html {
 ::-webkit-scrollbar {
     width: 20px;
 }
+
 #nav {
 	position: fixed;
 	top: 0;
