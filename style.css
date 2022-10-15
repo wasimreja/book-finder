@@ -18,13 +18,11 @@ html {
 	--logo-color:#000;
 }
 
-/* Scroll bar */
-
 ::-webkit-scrollbar {
-    width: .60rem;
-    background-color: #E3E2E9;
-    border-radius: .5rem;
+  width: 20px;
+  background-color: transparent;
 }
+
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(138 78 255);
@@ -36,7 +34,6 @@ html {
 ::-webkit-scrollbar {
     width: 20px;
 }
-
 #nav {
 	position: fixed;
 	top: 0;
