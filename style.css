@@ -11,10 +11,10 @@ html {
 	--logo-color:rgb(190, 193, 190);
 }
 .dark-theme{
-	--primary-color: #333333;
-	--nav-color:#454448;
+	--primary-color: #161f32;
+	--nav-color:#27272b;
 	--secondary-color : #fcf4f4;
-	--extra-color:#2B2B2B;
+	--extra-color:#170016;
 	--logo-color:#000;
 }
 
@@ -27,7 +27,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
+  background-color: rgb(138 78 255);
   border-radius: 20px;
   border: 6px solid transparent;
   background-clip: content-box;
@@ -53,6 +53,11 @@ html {
 	font-weight: 600;
 	color:var(--secondary-color);
 }
+
+#button-addon1 {
+    color: rgb(138 78 255) !important;
+}
+
 .bg{
 	background-color: var(--primary-color);
 	transition: background 500ms;
@@ -230,7 +235,7 @@ h1 {
 
 .result a {
 	color: white;
-	background: #eba544;
+	background: rgb(138 78 255);
 	border-radius: 28px;
 	padding: 7px 20px;
 	border: 0px;
@@ -245,7 +250,7 @@ h1 {
 
 .result button {
 	color: white;
-	background: #eba544;
+	background: rgb(138 78 255);
 	border-radius: 28px;
 	padding: 7px 20px;
 	border: 0px;
@@ -309,7 +314,7 @@ h1 {
 }
 
 #return-to-top:hover {
-	background: rgb(208, 197, 197);
+	background: #eba544;
 	bottom: 6%;
 	width: 55px;
 	height: 55px;
