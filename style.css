@@ -8,14 +8,12 @@ html {
 	--nav-color:#f4f1f1;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
-	--logo-color:rgb(190, 193, 190);
 }
 .dark-theme{
 	--primary-color: #151111;
 	--nav-color:#454448;
 	--secondary-color : #fcf4f4;
 	--extra-color:#2B2B2B;
-	--logo-color:#000;
 }
 
 /* Scroll bar */
@@ -263,13 +261,10 @@ h1 {
 }
 
 #icon{
-	width: 25px;
+	width: 24px;
 	cursor: pointer;
 }
-.logo:hover{
-	background-color: var(--logo-color);
-	border-radius: 5rem;
-}
+
 #return-to-top {
 	border: none;
 	text-decoration: none;
