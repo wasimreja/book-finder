@@ -302,6 +302,27 @@ h1 {
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+.foot{
+
+	font-family : 'Comfortaa', cursive;
+	padding: 1rem 1rem;
+	background-color: #26272b;
+	color: #737373;
+	text-align: center;
+    transition: all 0.3s linear ;
+	
+
+}
+.link a{
+	text-decoration: none;
+	color: white;
+
+}
+.link a:hover{
+	color: #bfbfbf;
+
+
+}
 
 #return-to-top i {
 	color: var(--primary-color);
