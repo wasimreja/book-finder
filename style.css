@@ -18,23 +18,20 @@ html {
 	--logo-color:#000;
 }
 
-::-webkit-scrollbar {
-  width: 20px;
-}
+/* Scroll bar */
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
+::-webkit-scrollbar {
+    width: .60rem;
+    background-color: #E3E2E9;
+    border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #d6dee1;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
+    background-color: #C8C6D2;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #a8bbbf;
+    background-color: #A19FAD;
 }
 
 #nav {
