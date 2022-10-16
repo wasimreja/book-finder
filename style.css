@@ -256,12 +256,14 @@ h1 {
 .mode{
 	float: right;
 	margin-right: 5px;
-	margin-top: 5px;
+	/* margin-top: 5px; */
 	
 }
 
+
 #icon{
 	width: 24px;
+	height: 24px;
 	cursor: pointer;
 }
 
