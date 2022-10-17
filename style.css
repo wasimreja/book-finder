@@ -132,7 +132,7 @@ html {
 }
 
 @media only screen and (max-width: 400px) {
-	.title {
+	.title  {
 		font-size: 6em;
 	}
 }
@@ -148,6 +148,8 @@ html {
 }
 .description{
 	font-family: "Comfortaa", cursive;
+	color: var(--secondary-color);
+
 }
 
 @media only screen and (max-width: 400px) {
