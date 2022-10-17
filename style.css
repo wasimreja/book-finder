@@ -119,6 +119,10 @@ html {
 	width: 20rem;
 	margin: 5px auto;
 }
+.illustration-about {
+	width: 100%;
+	margin: 5px auto;
+}
 
 .title {
 	font-size: 7em;
@@ -140,6 +144,9 @@ html {
 .search {
 	margin: 0 auto;
 	width: 50%;
+	font-family: "Comfortaa", cursive;
+}
+.description{
 	font-family: "Comfortaa", cursive;
 }
 
@@ -257,7 +264,10 @@ h1 {
 	float: right;
 	margin-right: 5px;
 	/* margin-top: 5px; */
-	
+}
+.mode span{
+	font-family: "Comfortaa", cursive;
+	font-size: 16px;
 }
 
 
@@ -265,6 +275,7 @@ h1 {
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
+	margin-top:-5px;
 }
 
 #return-to-top {
