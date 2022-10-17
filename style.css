@@ -8,14 +8,12 @@ html {
 	--nav-color:#f4f1f1;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
-	--logo-color:rgb(190, 193, 190);
 }
 .dark-theme{
 	--primary-color: #161f32;
 	--nav-color:#27272b;
 	--secondary-color : #fcf4f4;
-	--extra-color:#170016;
-	--logo-color:#000;
+	--extra-color:#2B2B2B;8
 }
 
 ::-webkit-scrollbar {
@@ -126,6 +124,10 @@ html {
 	width: 20rem;
 	margin: 5px auto;
 }
+.illustration-about {
+	width: 100%;
+	margin: 5px auto;
+}
 
 .title {
 	font-size: 7em;
@@ -147,6 +149,9 @@ html {
 .search {
 	margin: 0 auto;
 	width: 50%;
+	font-family: "Comfortaa", cursive;
+}
+.description{
 	font-family: "Comfortaa", cursive;
 }
 
@@ -263,18 +268,21 @@ h1 {
 .mode{
 	float: right;
 	margin-right: 5px;
-	margin-top: 5px;
-	
+	/* margin-top: 5px; */
+}
+.mode span{
+	font-family: "Comfortaa", cursive;
+	font-size: 16px;
 }
 
+
 #icon{
-	width: 25px;
+	width: 24px;
+	height: 24px;
 	cursor: pointer;
+	margin-top:-5px;
 }
-.logo:hover{
-	background-color: var(--logo-color);
-	border-radius: 5rem;
-}
+
 #return-to-top {
 	border: none;
 	text-decoration: none;
