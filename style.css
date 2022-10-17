@@ -122,6 +122,8 @@ html {
 .illustration-about {
 	width: 100%;
 	margin: 5px auto;
+	max-width: 28rem;
+	display: block;
 }
 
 .title {
@@ -134,6 +136,16 @@ html {
 @media only screen and (max-width: 400px) {
 	.title  {
 		font-size: 6em;
+	}
+}
+
+.title-about{
+	font-size: 4em;
+}
+
+@media only screen and (max-width: 400px) {
+	.title-about  {
+		font-size: 3em;
 	}
 }
 
