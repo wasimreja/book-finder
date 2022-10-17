@@ -35,7 +35,7 @@ So what are you waiting for? Search your favourite book right now!
 
 ## Screenshot
 
-![Screenshot 2022-04-14 at 00-40-47 Book Finder](https://user-images.githubusercontent.com/77227201/163253504-ef7ec61c-0ae2-4d73-b758-bfea1ead257f.png)
+![Screenshot 2022-10-17 at 00-40-47 Book Finder](https://user-images.githubusercontent.com/77227201/163253504-ef7ec61c-0ae2-4d73-b758-bfea1ead257f.png)
 
 ## Getting Started
 
