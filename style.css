@@ -137,6 +137,16 @@ html {
 	}
 }
 
+.title-about{
+	font-size: 4em;
+}
+
+@media only screen and (max-width: 400px) {
+	.title-about  {
+		font-size: 3em;
+	}
+}
+
 .finder {
 	font-weight: lighter;
 }
