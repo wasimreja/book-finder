@@ -400,3 +400,9 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+
+@media screen and (max-width: 400px) {
+	.fix-nav-bug{
+		display: flex;
+	}
+}
