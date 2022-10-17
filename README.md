@@ -11,10 +11,12 @@
 
 ## About The Project
 
-Book Finder is your go-to place for all kinds of book related searches, need to read a book but don't know where to find it?
+Are you spending more time searching for a book than actually reading it. We know how tiring that can be and we got your back! 
+We have something that is exactly for the likes for the likes of you.
 
-We got your back! Started in 2022, we are an open-source free search engine with over a million books and more to find out.
-Here you won't just be able to read books but also listen to them.
+Book-finder will help you find a book according to your taste so you can start reading as soon as possible.
+Started in 2022, we are an open-source free search engine with over a million books and more to find out.
+Here you won't just be able to read books but also listen to them!!!
 
 So what are you waiting for? Search your favourite book right now!
 
