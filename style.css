@@ -195,13 +195,7 @@ html {
 .remaining-description--show {
 	display: inline;
 }
-.c1{
-	color:var(--secondary-color);
-	display: flex;
-	justify-content: center;
-	margin: 30px;
-	padding: 20px;
-}
+
 
 .result {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -269,8 +263,15 @@ h1 {
 	float: right;
 	margin-right: 5px;
 	margin-top: 5px;
-	
 }
+
+
+.foot a:hover {
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+
 
 #icon{
 	width: 25px;
@@ -305,24 +306,21 @@ h1 {
 .foot{
 
 	font-family : 'Comfortaa', cursive;
-	padding: 1rem 1rem;
+	padding: 2rem 2rem;
 	background-color: #26272b;
 	color: #737373;
 	text-align: center;
-    transition: all 0.3s linear ;
+
 	
 
 }
-.link a{
-	text-decoration: none;
-	color: white;
 
-}
-.link a:hover{
+ a:hover{
 	color: #bfbfbf;
 
 
 }
+
 
 #return-to-top i {
 	color: var(--primary-color);
