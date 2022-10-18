@@ -352,7 +352,69 @@ h1 {
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
 }
+.hamburger{
+	display: none;
+	cursor: pointer;
+}
+.bar{
+	display: block;
+	width: 25px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.nav-menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+}
+@media(max-width:807px){
+	.logo{
+		margin-top: 5px;
+		margin-right: 5px;
 
+	}
+	.hamburger{
+	display: block;
+	margin-top: 5px;
+	margin-left: 5px;
+	}
+	.bar{
+		background-color: var(--secondary-color);
+		margin-top: 5px;
+	}
+	.hamburger.active .bar:nth-child(2){
+	opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+	transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3){
+	transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-menu{
+		position:fixed;
+		top: -100%;
+		gap: 0;
+		flex-direction: column;
+		background-color: var(--nav-color);
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+	}
+	.nav-item{
+		margin: 3px 0;
+	}
+	.nav-menu.active{
+		top:56px;
+		left: 0;
+	}
+}
 .whirly-loader{
 	margin-left: 50%;
    }
