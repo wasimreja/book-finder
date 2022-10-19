@@ -285,6 +285,7 @@ h1 {
 }
 
 
+
 #icon{
 	width: 20px;
 	height: 20px;
@@ -474,4 +475,19 @@ h1 {
 	-ms-transform-origin: 50% 50%;
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
+}
+.foot a:hover {
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+.foot a { 
+	color: #737373; 
+}
+.foot{
+	background-color: #26272b;
+	color:#737373;
+	text-align: center;
+	font-family: "Comfortaa", cursive;
+	padding: 2rem 2rem;
 }
