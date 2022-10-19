@@ -2,6 +2,8 @@
 
 html {
 	scroll-behavior: smooth;
+	position:relative; 
+  min-height: 100%;
 }
 :root{
 	--primary-color: #fff;
@@ -50,6 +52,7 @@ html {
 }
 .bg{
 	background-color: var(--primary-color);
+	
 	transition: background 500ms;
 }
 
@@ -313,6 +316,7 @@ h1 {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	z-index: 3;
 }
 
 #return-to-top i {
@@ -490,4 +494,7 @@ h1 {
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
+	position: absolute;
+	bottom: 0%;
+	width: 100%;
 }
