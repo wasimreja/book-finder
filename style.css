@@ -8,12 +8,15 @@ html {
 	--nav-color:#f4f1f1;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
+	--new-color:#7e9ea047;
 }
 .dark-theme{
 	--primary-color: #151111;
 	--nav-color:#454448;
 	--secondary-color : #fcf4f4;
 	--extra-color:#2B2B2B;
+	--new-color:#dbd2d28d;
+
 }
 
 /* Scroll bar */
@@ -59,6 +62,7 @@ html {
 	font-size: 1.5rem;
 	font-family: "Josefin Sans", sans-serif;
 	font-weight: 300;
+	margin-right:10px;
 	color: var(--secondary-color);
 }
 
@@ -290,6 +294,7 @@ h1 {
 	width: 20px;
 	height: 20px;
 	cursor: pointer;
+	margin-left:10px;
 }
 
 #return-to-top {
@@ -490,4 +495,27 @@ h1 {
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
+}
+
+
+/* Highlight text in  */
+.nav-link:hover {
+	filter: grayscale(0%) opacity(1);
+    transform: scale(1.2);
+	background-color:var(--new-color);
+	color: var(--secondary-color);
+  }
+
+ 
+
+  .nav-link:before
+{
+    position: absolute;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
 }
