@@ -8,6 +8,7 @@ html {
 	--nav-color:#f4f1f1;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
+	--pink: #ff4081;
 }
 .dark-theme{
 	--primary-color: #151111;
@@ -32,6 +33,8 @@ html {
     background-color: #A19FAD;
 }
 
+/* Nav ber */
+
 #nav {
 	position: fixed;
 	top: 0;
@@ -41,6 +44,35 @@ html {
 	background-color: var(--nav-color);
 	padding: 5px 5px;
 }
+
+  
+li a {
+  text-decoration: none;
+  padding-right: 3em;
+  position: relative;
+  transition: all ease-in-out 250ms;
+}
+
+li a::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 0.2em;
+  width: 0%;
+  background-color: var(--pink);
+  bottom: .5em;
+  transition: all ease-in-out 250ms;
+}
+  
+li a:hover::after {
+  width: 70%;
+}
+
+.find:hover {
+  color: var(--pink);
+}
+
+
 .text {
 	position: center;
 	font-size: 1.5rem;
