@@ -75,6 +75,13 @@ html {
 	animation: fadein 2s;
 }
 
+footer{
+	height:fit-content;
+	margin-top: 1.5rem;
+	width:100%;
+	background-color: #26272b;
+}
+
 @keyframes fadein {
 	from {
 		opacity: 0;
@@ -489,12 +496,11 @@ h1 {
 	color: #737373; 
 }
 .foot{
-	background-color: #26272b;
+
 	color:#737373;
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
-	position: absolute;
 	bottom: 0%;
 	width: 100%;
 }
