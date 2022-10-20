@@ -2,7 +2,7 @@
 
 html {
 	scroll-behavior: smooth;
-	position:relative; 
+	position:relative;
   min-height: 100%;
 }
 :root{
@@ -52,7 +52,7 @@ html {
 }
 .bg{
 	background-color: var(--primary-color);
-	
+
 	transition: background 500ms;
 }
 
@@ -480,13 +480,23 @@ h1 {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
 }
+
+.social-icon{
+  margin: 10px 20px;
+	font-size: 1.5em;
+}
+
+.social-icon:hover{
+	color: white;
+}
+
 .foot a:hover {
     color: #bfbfbf;
     text-decoration: none;
     transition: all 0.3s linear;
 }
-.foot a { 
-	color: #737373; 
+.foot a {
+	color: #737373;
 }
 .foot{
 	background-color: #26272b;
