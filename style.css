@@ -293,7 +293,10 @@ h1 {
 	font-family: "Comfortaa", cursive;
 	font-size: 16px;
 }
-
+.mode span:hover{
+	color: #eba544;
+	transition: all 0.3s linear;
+}
 
 
 #icon{
