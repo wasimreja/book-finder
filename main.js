@@ -19,12 +19,61 @@ function listen(e) {
   console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
+  // ADD PLAY , PAUSED & STOP BUTTON
+  // const displayStyle = e.style.display;
+  var prevPlayBtn = document.getElementById("play-paused-btn");
+  if(prevPlayBtn !== null)
+  {
+    prevPlayBtn.remove();
+  }
+  var prevStopBtn = document.getElementById("stop-btn");
+  if(prevStopBtn !== null)
+  {
+    prevStopBtn.remove();
+  }
 
+  const pausedPlayButton = document.createElement("button");
+        pausedPlayButton.classList.add("listen", "btn", "btn-outline-secondary");
+        pausedPlayButton.id = "play-paused-btn";
+        pausedPlayButton.textContent = "PAUSE";
+        pausedPlayButton.addEventListener("click",()=>{
+          const amIPaused = synth.paused;
+          if(amIPaused)
+          {
+            synth.resume();
+            pausedPlayButton.textContent = "PAUSE";
+          }
+          else
+          {
+            synth.pause();
+            pausedPlayButton.textContent = "RESUME";
+          }
+        })
+  const stopButton = document.createElement("button");
+        stopButton.classList.add("listen", "btn", "btn-outline-secondary");
+        stopButton.id = "stop-btn";
+        stopButton.textContent = "STOP";
+        stopButton.addEventListener("click",()=>{
+          pausedPlayButton.style.display = "none";
+          stopButton.style.display = "none";
+          // e.style.display = displayStyle;
+          synth.cancel();
+        })
+  bookCard.append(
+    pausedPlayButton,
+    stopButton
+  )
+  // e.style.display = "none";
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
     speech.lang = "en-US";
+    speech.onend= ()=>{
+      pausedPlayButton.style.display = "none";
+      stopButton.style.display = "none";
+    }
     synth.speak(speech);
   }, 1000);
+  
 }
 
 function search(e) {
@@ -155,10 +204,11 @@ function search(e) {
           const speechButton = document.createElement("button");
           speechButton.classList.add("listen", "btn", "btn-outline-secondary");
           speechButton.textContent = "LISTEN";
-
+          
           bookPreviewLink.classList.add("btn", "btn-outline-secondary");
           bookCard.classList.add("result", "row");
           bookCard.setAttribute("data-aos", "fade-up");
+
 
           bookInfo.append(
             bookTitle,
