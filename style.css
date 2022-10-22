@@ -15,11 +15,11 @@ html {
 }
 
 .dark-theme {
-  --primary-color: #323339;
+  --primary-color: #151515;
   --secondary-color: #fcf4f4;
-  --nav-color: #26272b;
-  --search-bar-color: #3e4046;
-  --result-card-color: #3e3f47;
+  --nav-color: #1f1f1f;
+  --search-bar-color: #222222;
+  --result-card-color: #222222;
 }
 
 /* Scroll bar */
@@ -82,7 +82,7 @@ footer {
   height: fit-content;
   margin-top: 1.5rem;
   width: 100%;
-  background-color: #26272b;
+  background-color: #111111;
 }
 
 @keyframes fadein {
