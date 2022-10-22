@@ -8,12 +8,14 @@ html {
 :root{
 	--primary-color: #fff;
 	--nav-color:#f4f1f1;
+	--search-bar-color: #f4f1f1;
 	--secondary-color : #403e3e;
 	--extra-color:#efefef;
 }
 .dark-theme{
 	--primary-color: #323339;
 	--nav-color: #26272b;
+	--search-bar-color: #3E4046;
 	--secondary-color : #fcf4f4;
 	--extra-color:#2B2B2B;
 }
@@ -181,7 +183,7 @@ footer{
 }
 
 .search-form{
-	background-color: var(--nav-color);
+	background-color: var(--search-bar-color);
 	border-radius: 25px;
 }
 
