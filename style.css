@@ -1,8 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;500;600&display=swap');
 html {
-  scroll-behavior: smooth;
-  position: relative;
+	scroll-behavior: smooth;
+	position: relative;
   min-height: 100%;
 }
 
@@ -48,11 +47,16 @@ html {
 }
 
 .text {
-  position: center;
-  font-size: 1.5rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
-  color: var(--secondary-color);
+	position: center;
+	font-size: 1.5rem;
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+	color:var(--secondary-color);
+}
+.bg{
+	background-color: var(--primary-color);
+
+	transition: background 500ms;
 }
 
 .bg {
@@ -61,11 +65,11 @@ html {
 }
 
 .find {
-  font-weight: lighter;
-  font-size: 1.5rem;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  color: var(--secondary-color);
+	font-weight: lighter;
+	font-size: 1.5rem;
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	color: var(--secondary-color);
 }
 
 .header {
@@ -141,10 +145,10 @@ footer {
 }
 
 .title {
-  font-size: 7em;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-  color: var(--secondary-color);
+	font-size: 6em;
+	font-family: "Raleway", sans-serif;
+	font-weight: 300;
+	color: var(--secondary-color);
 }
 
 @media only screen and (max-width: 400px) {
@@ -184,17 +188,91 @@ footer {
   }
 }
 
-.search-form {
-  background-color: var(--search-bar-color);
-  border-radius: 25px;
+#material-input{
+	width: 92%;
 }
 
-.input-group input[type="search"] {
-  background: transparent;
-  color: var(--secondary-color);
-  border: none;
-  outline: none;
-  border-radius: 25px;
+@media only screen and (max-width: 1030px) {
+	#material-input{
+		width: 85%;
+	}
+}
+#material-input #input{
+	padding-top: 14px;
+	margin: 0;
+
+}
+.search-form{
+	background-color: none;
+	border-radius: 25px;
+	width: 100%;
+}
+
+.search-form input{
+	width: 100%;
+	height: 30px;
+	box-sizing: border-box;
+	outline: none;
+}
+
+.search-form input::placeholder{
+	opacity: 0;
+}
+
+.search-form label{
+	position: absolute;
+	margin-left: 12px;
+    padding-left: 3px;
+	top:50%;
+	color: grey;
+	transform: translateY(-50%);
+	transition: .1s ease,top .3s ease,transform .1s ease-in-out;
+}
+
+.search-form input:focus + label, 
+.search-form input:not(:placeholder-shown) + label {
+	top: 0;
+	background-color: var(--primary-color);
+	font-size: 0.899rem;
+}
+
+.input-group{
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid var(--secondary-color);
+	border-radius: 25px;
+	padding: .25rem;
+}
+
+@media only screen and (max-width: 760px) {
+	.input-group,
+	.search-form input:focus + label, 
+	.search-form input:not(:placeholder-shown) + label{
+		font-size: 0.767rem;
+	}
+
+	.search{
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 350px) {
+	.input-group,
+	.search-form input:focus + label, 
+	.search-form input:not(:placeholder-shown) + label{
+		font-size: 0.7rem;
+	}
+
+	.search{
+		width: 100%;
+	}
+}
+.input-group input[type=search]{
+	/*background-color: var(--nav-color);*/
+	background:transparent;
+	color:var(--secondary-color) ;
+    border: none;
+    outline: none;
+	border-radius: 25px;
 }
 
 .results {
@@ -239,9 +317,10 @@ footer {
 }
 
 @media only screen and (max-width: 400px) {
-  .illustration {
-    width: 70%;
-  }
+	.illustration {
+		width: 70%;
+
+	}
 
   .col-md-8 {
     padding-bottom: 15px;
@@ -287,10 +366,18 @@ h1 {
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
+.mode{
+	float: right;
 
-.mode {
-  float: right;
-  margin-right: 5px;
+
+	margin-right: 10px;
+	margin-top: 10px;
+	
+
+}
+.mode span{
+	font-family: "Comfortaa", cursive;
+	font-size: 16px;
 }
 
 .mode span {
@@ -334,15 +421,15 @@ h1 {
 }
 
 #return-to-top i {
-  color: var(--primary-color);
-  margin: 0;
-  position: relative;
-  font-size: 19px;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+	color: var(--primary-color);
+	margin: 0;
+	position: relative;
+	font-size: 20px;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 #return-to-top:hover {
@@ -502,6 +589,25 @@ h1 {
 	-ms-transform-origin: 50% 50%;
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
+
+}
+
+.social-icon{
+  margin: 10px 20px;
+	font-size: 1.5em;
+}
+
+.social-icon:hover{
+	color: white;
+}
+
+.foot a:hover {
+    color: #bfbfbf;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+.foot a {
+	color: #737373;
 }
 
 .foot {
@@ -511,14 +617,4 @@ h1 {
 	padding: 2rem 2rem;
 	bottom: 0%;
 	width: 100%;
-}
-
-.foot a {
-  color: #737373;
-}
-
-.foot a:hover {
-  color: #bfbfbf;
-  text-decoration: none;
-  transition: all 0.3s linear;
 }
