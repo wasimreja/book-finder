@@ -1,12 +1,12 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-hamburger.addEventListener("click" , () => {
-hamburger.classList.toggle("active");
-navMenu.classList.toggle("active");
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
 })
-document.querySelectorAll(".nav-link").forEach(n=>n.addEventListener( " click" , () => {
-hamburger.classList.remove("active");
-navMenu.classList.remove("active");
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener(" click", () => {
+  hamburger.classList.remove("active");
+  navMenu.classList.remove("active");
 }))
 function listen(e) {
   const bookCard = e.target.parentElement;
@@ -19,61 +19,58 @@ function listen(e) {
   console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
-  // ADD PLAY , PAUSED & STOP BUTTON
-  // const displayStyle = e.style.display;
-  var prevPlayBtn = document.getElementById("play-paused-btn");
-  if(prevPlayBtn !== null)
-  {
-    prevPlayBtn.remove();
-  }
-  var prevStopBtn = document.getElementById("stop-btn");
-  if(prevStopBtn !== null)
-  {
-    prevStopBtn.remove();
-  }
 
-  const pausedPlayButton = document.createElement("button");
-        pausedPlayButton.classList.add("listen", "btn", "btn-outline-secondary");
-        pausedPlayButton.id = "play-paused-btn";
-        pausedPlayButton.textContent = "PAUSE";
-        pausedPlayButton.addEventListener("click",()=>{
-          const amIPaused = synth.paused;
-          if(amIPaused)
-          {
-            synth.resume();
-            pausedPlayButton.textContent = "PAUSE";
-          }
-          else
-          {
-            synth.pause();
-            pausedPlayButton.textContent = "RESUME";
-          }
-        })
-  const stopButton = document.createElement("button");
-        stopButton.classList.add("listen", "btn", "btn-outline-secondary");
-        stopButton.id = "stop-btn";
-        stopButton.textContent = "STOP";
-        stopButton.addEventListener("click",()=>{
-          pausedPlayButton.style.display = "none";
-          stopButton.style.display = "none";
-          // e.style.display = displayStyle;
-          synth.cancel();
-        })
-  bookCard.append(
-    pausedPlayButton,
-    stopButton
-  )
-  // e.style.display = "none";
   setTimeout(() => {
+
+    // ADD PLAY , PAUSED & STOP BUTTON
+    var prevPlayBtn = document.getElementById("play-paused-btn");
+    if (prevPlayBtn !== null) {
+      prevPlayBtn.remove();
+    }
+    var prevStopBtn = document.getElementById("stop-btn");
+    if (prevStopBtn !== null) {
+      prevStopBtn.remove();
+    }
+    e.target.textContent = "\u21BB"
+    const pausedPlayButton = document.createElement("button");
+    pausedPlayButton.classList.add( "btn");
+    pausedPlayButton.id = "play-paused-btn";
+
+    pausedPlayButton.textContent = "\u23F8 ";
+    pausedPlayButton.addEventListener("click", () => {
+      const amIPaused = synth.paused;
+      if (amIPaused) {
+        synth.resume();
+        pausedPlayButton.textContent = "\u23F8 ";
+      }
+      else {
+        synth.pause();
+        pausedPlayButton.textContent = "\u23F5 ";
+      }
+    })
+    const stopButton = document.createElement("button");
+    stopButton.classList.add( "btn", "btn-outline-secondary");
+    stopButton.id = "stop-btn";
+    stopButton.textContent = "\u23F9 ";
+    stopButton.addEventListener("click", () => {
+      synth.cancel();
+    })
+    bookCard.append(
+      pausedPlayButton,
+      stopButton
+    )
+
+
     const speech = new SpeechSynthesisUtterance(message);
     speech.lang = "en-US";
-    speech.onend= ()=>{
+    speech.onend = () => {
       pausedPlayButton.style.display = "none";
       stopButton.style.display = "none";
+      e.target.textContent = "LISTEN"
     }
     synth.speak(speech);
-  }, 1000);
-  
+  }, 500);
+
 }
 
 function search(e) {
@@ -146,11 +143,10 @@ function search(e) {
           //Author
           if (res.items[i].volumeInfo.authors) {
             var bookAuthor = document.createElement("h6");
-            bookAuthor.textContent = `by ${
-              res.items[i].volumeInfo.authors[0]
-                ? res.items[i].volumeInfo.authors[0]
-                : "No title"
-            }`;
+            bookAuthor.textContent = `by ${res.items[i].volumeInfo.authors[0]
+              ? res.items[i].volumeInfo.authors[0]
+              : "No title"
+              }`;
           }
 
           // Description
@@ -204,7 +200,7 @@ function search(e) {
           const speechButton = document.createElement("button");
           speechButton.classList.add("listen", "btn", "btn-outline-secondary");
           speechButton.textContent = "LISTEN";
-          
+
           bookPreviewLink.classList.add("btn", "btn-outline-secondary");
           bookCard.classList.add("result", "row");
           bookCard.setAttribute("data-aos", "fade-up");
