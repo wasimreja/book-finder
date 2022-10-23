@@ -67,6 +67,14 @@ function listen(e) {
       pausedPlayButton.style.display = "none";
       stopButton.style.display = "none";
       e.target.textContent = "LISTEN"
+      var prevPlayBtn = document.getElementById("play-paused-btn");
+      if (prevPlayBtn !== null) {
+        prevPlayBtn.remove();
+      }
+      var prevStopBtn = document.getElementById("stop-btn");
+      if (prevStopBtn !== null) {
+        prevStopBtn.remove();
+      }
     }
     synth.speak(speech);
   }, 500);
