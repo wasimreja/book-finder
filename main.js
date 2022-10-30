@@ -219,3 +219,6 @@ const initIcon = () => {
   }
 };
 window.onload = initIcon();
+
+
+window.onload = getElementById('preloader').style.display = none;
