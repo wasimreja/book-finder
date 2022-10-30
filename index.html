@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find the book you want to read next!" />
   <title>Book Finder</title>
   <link rel="shortcut icon" href="img/reading.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -40,7 +41,7 @@
           <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
         </li>
       </ul>
-      <img class="logo" id="icon" src="img/moon.png" />
+      <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
       <div class="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -65,7 +66,7 @@
             <input type="search" id="input" placeholder="Find the book you want to read next!"
               aria-describedby="button-addon1" class="form-control border-0 " />
             <div class="input-group-append">
-              <button id="button-addon1" type="submit" class="btn btn-link text-primary">
+              <button id="button-addon1" type="submit" class="btn btn-link text-primary" aria-label="Search">
                 <i class="fa fa-search"></i>
               </button>
             </div>
@@ -80,8 +81,8 @@
     </div>
   </section>
   
-  <a href="#" id="return-to-top" class="special1" > 
-    <i class="fa fa-arrow-up" ></i>
+  <a href="#" id="return-to-top" class="special1" aria-label="Go to Top"> 
+    <i class="fa fa-arrow-up"></i>
   </a>
   <footer>
     <div class="foot">
