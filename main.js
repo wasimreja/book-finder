@@ -1,13 +1,15 @@
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
-hamburger.addEventListener("click" , () => {
-hamburger.classList.toggle("active");
-navMenu.classList.toggle("active");
-})
-document.querySelectorAll(".nav-link").forEach(n=>n.addEventListener( " click" , () => {
-hamburger.classList.remove("active");
-navMenu.classList.remove("active");
-}))
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+document.querySelectorAll(".nav-link").forEach((n) =>
+  n.addEventListener(" click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+  })
+);
 function listen(e) {
   const bookCard = e.target.parentElement;
   const bookDescription = bookCard.children[2].innerText;
@@ -16,7 +18,7 @@ function listen(e) {
 
   const message = `The name of the book is ${bookName}  . It is written ${authorName} .  ${bookDescription}`;
 
-  console.log(bookDescription);
+  // console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
 
@@ -33,7 +35,7 @@ function search(e) {
   if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
 
-  console.log("Working");
+  // console.log("Working");
   $.ajax({
     url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
     dataType: "json",
@@ -177,7 +179,7 @@ function search(e) {
 
         for (const speechButton of speechButtons) {
           speechButton.addEventListener("click", (e) => {
-            console.log("clicked");
+            // console.log("clicked");
             listen(e);
           });
         }
