@@ -66,8 +66,8 @@ function search(e) {
         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-page">
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
-              <p class="fs-3"> <span class="text-danger">Opps!</span> Book not found.</p>
-              <p class="lead">The book you’re looking for doesn’t exist.</p>
+              <p class="fs-3 text-light"> <span class="text-danger">Opps!</span> Book not found.</p>
+              <p class="lead text-white">The book you’re looking for doesn’t exist.</p>
             </div>
         </div>
         `;
