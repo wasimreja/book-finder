@@ -10,7 +10,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-function listen(e) {
+function listen(e,pause) {
   const bookCard = e.target.parentElement;
   const bookDescription = bookCard.children[2].innerText;
   const bookName = bookCard.children[0].innerText;
@@ -21,7 +21,9 @@ function listen(e) {
   // console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
-
+  if(pause){
+    synth.pause();
+  }
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
     speech.lang = "en-US";
@@ -176,11 +178,18 @@ function search(e) {
         }
 
         const speechButtons = document.querySelectorAll(".listen");
-
         for (const speechButton of speechButtons) {
+          let isOn = false;
           speechButton.addEventListener("click", (e) => {
+            console.log(e);
             // console.log("clicked");
-            listen(e);
+            isOn = !isOn;
+            if(isOn){
+              listen(e,false);
+            }
+            else{
+              listen(e,true);
+            }
           });
         }
       }
