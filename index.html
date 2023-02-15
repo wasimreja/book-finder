@@ -20,13 +20,28 @@
   <script>
     // this script need to in body but before html content to avoid flickering
     const localTheme = localStorage?.getItem("theme");
+    
     if (localTheme === "dark") {
       document.body.classList.add("dark-theme");
+      <div class="alert alert-light alert-dismissible fade show" role="alert">
+  <strong>Hurrah!!</strong>You can search any book using Title name, Author name and ISBN number.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
     } else {
       document.body.classList.remove("dark-theme");
+      <div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong>Hurrah!!</strong>You can search any book using Title name, Author name and ISBN number.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
     }
   </script>
+  
 
+  
 <nav id="nav">
   <div class="container-fluid align-items-center">
     <a class="navbar-brand" href="index.html">
