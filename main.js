@@ -28,7 +28,7 @@ function listen(e) {
     synth.speak(speech);
   }, 1000);
 }
-
+var icon = document.getElementById("icon");
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
@@ -63,7 +63,8 @@ function search(e) {
 
         let notfound = document.createElement("DIV");
         notfound.innerHTML = `
-        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-page">
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-page"
+             color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
               <p class="fs-3"> <span class="text-danger">Opps!</span> Book not found.</p>
@@ -201,7 +202,7 @@ function scrollFunction() {
     scroll.classList.add("special1");
   }
 }
-var icon = document.getElementById("icon");
+
 icon.onclick = function () {
   document.body.classList.toggle("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
