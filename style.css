@@ -523,3 +523,23 @@ h1 {
   text-decoration: none;
   transition: all 0.3s linear;
 }
+
+.socials{
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon{
+  height: 53px;
+  padding: 10px;
+  background: transparent;
+  background-color: var(--search-bar-color);
+  border: none;
+  outline: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
