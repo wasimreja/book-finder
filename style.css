@@ -505,16 +505,34 @@ h1 {
 
 .foot {
 	color: #737373;
-	text-align: center;
 	font-family: "Comfortaa", cursive;
-	padding: 2rem 2rem;
-	bottom: 0%;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #e3e2e9;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  padding: 2rem;
+
+          
+}
+.icons {
+  padding: 1rem;
+
+
+}
+.icons i{
+  padding: 0.5rem;
+  background-color:#403e3e;
+  border-radius: 50%;
+  margin: auto 0.2rem;
+  color:#737373;
+}
+.foot a{
+  color:#737373;
 }
 
-.foot a {
-  color: #737373;
-}
+
 
 .foot a:hover {
   color: #bfbfbf;
