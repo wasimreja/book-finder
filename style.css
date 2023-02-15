@@ -504,7 +504,9 @@ h1 {
 }
 
 .foot {
-	color: #737373;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+	/* color: #737373; */
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
