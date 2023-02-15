@@ -1,5 +1,7 @@
 <p align="center">
 <img src="https://tipseason.com/assets/images/hacktoberfest-banner.jpg" alt="hacktoberfest-banner" width="640" height="320" />
+<br><br>
+<img src="https://d33wubrfki0l68.cloudfront.net/710cb0d537d2e7fa6246445c0977ecc994f05f5a/6a3b4/assets/img/jwoc_logo.svg" alt="jwoc" width="300" />
 </p>
 <h1 align="center">Book Finder</h1>
 <h3 align="center">Find the book you want to read next!</h3>
