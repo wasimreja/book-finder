@@ -80,6 +80,8 @@ html {
 
 footer {
   height: fit-content;
+  position: absolute;
+  bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
   background-color: #26272b;
