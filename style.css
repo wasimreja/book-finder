@@ -522,3 +522,13 @@ h1 {
   text-decoration: none;
   transition: all 0.3s linear;
 }
+.social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 25px;
+ 
+}
+.social-icon img{
+  padding: 9px;
+}
