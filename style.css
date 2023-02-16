@@ -12,6 +12,7 @@ html {
   --nav-color: #f4f1f1;
   --search-bar-color: #f4f1f1;
   --result-card-color: #efefef;
+  --footer-color:#f4f1f1;
 }
 
 .dark-theme {
@@ -20,6 +21,7 @@ html {
   --nav-color: #26272b;
   --search-bar-color: #3e4046;
   --result-card-color: #3e3f47;
+  --footer-color:#26272b;
 }
 
 /* Scroll bar */
