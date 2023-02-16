@@ -138,7 +138,7 @@ footer {
 .illustration-about {
   width: 100%;
   margin: 5px auto;
-  max-width: 28rem;
+  max-width: 15rem;
   display: block;
 }
 
@@ -522,4 +522,10 @@ h1 {
   color: #bfbfbf;
   text-decoration: none;
   transition: all 0.3s linear;
+}
+
+.col-lg-7 {
+  background-color: var(--nav-color);
+  padding-bottom: 44px;
+  border-radius: 30px;
 }
