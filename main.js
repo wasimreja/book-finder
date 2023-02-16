@@ -10,7 +10,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-function listen(e) {
+function listen(e,pause) {
   const bookCard = e.target.parentElement;
   const bookDescription = bookCard.children[2].innerText;
   const bookName = bookCard.children[0].innerText;
@@ -21,7 +21,9 @@ function listen(e) {
   // console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
-
+  if(pause){
+    synth.pause();
+  }
   setTimeout(() => {
     const speech = new SpeechSynthesisUtterance(message);
     speech.lang = "en-US";
@@ -70,8 +72,8 @@ function search(e) {
              color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
-              <p class="fs-3"> <span class="text-danger">Opps!</span> Book not found.</p>
-              <p class="lead">The book you’re looking for doesn’t exist.</p>
+              <p class="fs-3 text-light"> <span class="text-danger">Opps!</span> Book not found.</p>
+              <p class="lead text-white">The book you’re looking for doesn’t exist.</p>
             </div>
         </div>
         `;
@@ -178,13 +180,26 @@ function search(e) {
           document.getElementById("results").appendChild(bookCard);
           document.getElementById("results").scrollIntoView();
         }
-
         const speechButtons = document.querySelectorAll(".listen");
-
         for (const speechButton of speechButtons) {
+          let isOn = false;
           speechButton.addEventListener("click", (e) => {
-            // console.log("clicked");
-            listen(e);
+            console.log(e);
+            console.log(speechButton.textContent);
+            if(speechButton.textContent=='LISTEN'){
+              speechButton.textContent='STOP';
+            }
+            else{
+              speechButton.textContent='LISTEN';
+            }
+            isOn = !isOn;
+            if(isOn){
+              listen(e,false);
+            }
+            else{
+              listen(e,true);
+              
+            }
           });
         }
       }
