@@ -252,6 +252,12 @@ footer {
   .col-md-8 h1 {
     font-size: 1.75rem;
   }
+
+  footer{
+    position: relative;
+    bottom: 0;
+  }
+
 }
 
 h1 {
@@ -438,6 +444,11 @@ h1 {
     top: 56px;
     left: 0;
   }
+  footer{
+    position: relative;
+    bottom: 0;
+  }
+
 }
 
 .whirly-loader {
