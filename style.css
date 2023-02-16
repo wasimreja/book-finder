@@ -84,7 +84,7 @@ footer {
   bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
-  background-color: #FF2400;
+  background-color: #fca567;
 }
 
 @keyframes fadein {
@@ -506,7 +506,7 @@ h1 {
 }
 
 .foot {
-	color: #27231F;
+	color: #737373;
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
