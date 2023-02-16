@@ -506,7 +506,7 @@ h1 {
 }
 
 .foot {
-	color: #737373;
+	color: #27231F;
 	text-align: center;
 	font-family: "Comfortaa", cursive;
 	padding: 2rem 2rem;
@@ -521,4 +521,5 @@ h1 {
 .foot a:hover {
   color: #bfbfbf;
   text-decoration: none;
+  transition: all 0.3s linear;
 }
