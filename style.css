@@ -80,6 +80,8 @@ html {
 
 footer {
   height: fit-content;
+  position: absolute;
+  bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
   background-color: #26272b;
@@ -518,19 +520,36 @@ h1 {
 }
 .icons {
   padding: 1rem;
+ 
 
 
 }
 .icons i{
-  padding: 0.5rem;
+  padding: 1rem 1.8rem 2rem 1rem;
   background-color:#33353d;
   border-radius: 50%;
   margin: auto 0.2rem;
   color: #818a91;
+  height: 40px;
+  width: 40px;
+  transition: all 0.2s linear;
+ 
 }
 .foot a{
   color:#737373;
 }
+.instagram :hover{
+  background-color: #ea2c59;
+}
+.twitter :hover{
+  background-color: #00aced;
+}
+.linkedin :hover{
+  background-color: #007bb6;
+}
+
+
+
 
 
 

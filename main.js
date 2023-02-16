@@ -32,7 +32,10 @@ var icon = document.getElementById("icon");
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
-  if (search.trim() === "") return;
+  if (search.trim() === "") {
+    alert("Please enter something in the search box!!!");
+    return;
+  }
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   // console.log("Working");
