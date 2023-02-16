@@ -176,19 +176,25 @@ function search(e) {
           document.getElementById("results").appendChild(bookCard);
           document.getElementById("results").scrollIntoView();
         }
-
         const speechButtons = document.querySelectorAll(".listen");
         for (const speechButton of speechButtons) {
           let isOn = false;
           speechButton.addEventListener("click", (e) => {
             console.log(e);
-            // console.log("clicked");
+            console.log(speechButton.textContent);
+            if(speechButton.textContent=='LISTEN'){
+              speechButton.textContent='STOP';
+            }
+            else{
+              speechButton.textContent='LISTEN';
+            }
             isOn = !isOn;
             if(isOn){
               listen(e,false);
             }
             else{
               listen(e,true);
+              
             }
           });
         }
