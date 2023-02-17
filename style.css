@@ -178,6 +178,7 @@ footer {
 .description {
   font-family: "Comfortaa", cursive;
   color: var(--secondary-color);
+  
 }
 
 @media only screen and (max-width: 400px) {
