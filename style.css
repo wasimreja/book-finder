@@ -442,6 +442,7 @@ h1 {
 
 .whirly-loader {
   margin-left: 50%;
+  margin-bottom:10%;
 }
 
 @-moz-keyframes whirly-loader {
