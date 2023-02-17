@@ -524,33 +524,38 @@ h1 {
 
 
 }
-.icons i{
-  padding: 1rem 1.8rem 2rem 1rem;
-  background-color:#33353d;
-  border-radius: 50%;
-  margin: auto 0.2rem;
-  color: #818a91;
-  height: 40px;
-  width: 40px;
-  transition: all 0.2s linear;
+
+  .icons i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    border-radius: 100%;
+    background-color: #33353d;
+    color: #818a91;
+    display: inline-block;
+    text-align: center;
+    transition: all .2s linear;
  
 }
 .foot a{
   color:#737373;
 }
-.instagram :hover{
-  background-color: #ea2c59;
-}
-.twitter :hover{
+
+.twitter :hover {
   background-color: #00aced;
+  color: #fff;
 }
+
 .linkedin :hover{
   background-color: #007bb6;
+  color: #fff;
 }
 
-
-
-
+.instagram :hover{
+  background-color: #ea2c59;
+  color: #fff;
+}
 
 
 .foot a:hover {
