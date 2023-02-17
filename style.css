@@ -22,6 +22,7 @@ html {
   --search-bar-color: #3e4046;
   --result-card-color: #3e3f47;
   --footer-color:#26272b;
+  background-color: var(--footer-color);
 }
 
 /* Scroll bar */
