@@ -178,12 +178,22 @@ footer {
 .description {
   font-family: "Comfortaa", cursive;
   color: var(--secondary-color);
-  
+
 }
 
 @media only screen and (max-width: 400px) {
   .search {
     width: 90%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .container .col-lg-7{
+    bottom: 1rem;
+    height: 36rem;
+    
+  }
+  .header{
+    margin-top: 1rem;
   }
 }
 
