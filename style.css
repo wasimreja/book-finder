@@ -198,7 +198,29 @@ footer {
   outline: none;
   border-radius: 25px;
 }
+.container .col-lg-7{
+  background-color:var(--nav-color);
+  padding-bottom: 40px;
+  border-radius: 30px;
 
+}
+.button-start {
+  color:#eba544;
+  transition: all 0.25s ease-in-out;
+}
+.button-start:hover{
+  color:#b88236;
+  text-decoration: none;
+  transition: all 0.25s ease-in-out;
+}
+.container .col-lg-12 a {
+
+padding-left: 3em;
+ 
+}
+.container .col-lg-12{
+text-align: center;
+}
 .results {
   padding: 5% 15% 5% 15%;
   font-family: "Comfortaa", cursive;
@@ -523,4 +545,27 @@ h1 {
   color: #bfbfbf;
   text-decoration: none;
   transition: all 0.3s linear;
+}
+.icons i {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  border-radius: 100%;
+  color: #818a91;
+  display: inline-block;
+  text-align: center;
+  transition: all .2s linear;
+}
+.linkedin :hover{
+  background-color: #007bb6;
+  color: #fff;
+}
+.twitter :hover {
+  background-color: #00aced;
+  color: #fff;
+}
+.instagram :hover{
+  background-color: #ea2c59;
+  color: #fff;
 }

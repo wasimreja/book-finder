@@ -26,78 +26,90 @@
     }
   </script>
 
-<nav id="nav">
-  <div class="container-fluid align-items-center">
-    <a class="navbar-brand" href="index.html">
-      <span class="text">Book</span><span class="find">Finder</span>
-    </a>    
-    <div class="mode d-flex align-items-center">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
-        </li>
-      </ul>
-      <img class="logo" id="icon" src="img/moon.png" />
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <nav id="nav">
+    <div class="container-fluid align-items-center">
+      <a class="navbar-brand" href="index.html">
+        <span class="text">Book</span><span class="find">Finder</span>
+      </a>
+      <div class="mode d-flex align-items-center">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
+          </li>
+        </ul>
+        <img class="logo" id="icon" src="img/moon.png" />
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
 
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
   <div class="container pt-5">
-  <div class="row align-items-end pt-5">
-<div class="col-lg-7">
-  <header class="header" id="header" style="text-align: left;">
-    <h1 class="title title-about">
-      About
-      <p class="finder" style="display: inline-block">Us</p>
-    </h1>
-    <div class="description" style="text-align:left;">
-      Book Finder is your go-to place for all kinds of book related searches, need to read a book but don't know where to find it?<br/><br/>
-      We got your back! Started in 2022, we are an open-source free search engine with over a million books and more to find out. Here you won't just be able to read books but also listen to them.<br/><br/>
-      So what are you waiting for? Search your favourite book right now!   
+    <div class="row align-items-end pt-5">
+      <div class="col-lg-5">
+        <div class="">
+          <img src="img/book-reading.png" alt="Reading Book Illustration" class="illustration-about" />
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <header class="header" id="header" style="text-align: left;">
+          <h1 class="title title-about">
+            About
+            <p class="finder" style="display: inline-block">Us</p>
+          </h1>
+          <div class="description" style="text-align:left;">
+            Book Finder is your go-to place for all kinds of book related searches, need to read a book but don't know
+            where to find it?<br /><br />
+            We got your back! Started in 2022, we are an open-source free search engine with over a million books and
+            more to find out. Here you won't just be able to read books but also listen to them.<br /><br />
+            So what are you waiting for? Search your favourite book right now!<br/>
+            <a class="button-start" href="">let's go...</a><br/><br />
+            <a class="icons linkedin" href="#" style="padding-right: 0.5em;"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+            <a class="icons twitter" href="#" style="padding-right: 0.5em;"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a>
+            <a class="icons instagram" href="#" style="padding-right: 0.5em;"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+          </div>
+          <div class="search" id="search-bar">
+            <form class="search-form">
+            </form>
+          </div>
+        </header>
+      </div>
+      <div class="col-lg-12">
+        <header class="header" id="header" style="text-align: center;">
+          <!-- created it just to make it responsive -->
+        </header>
+      </div>
+
     </div>
-    <div class="search" id="search-bar">
-      <form class="search-form">
-      </form>
-    </div>
-  </header>
-</div>
-<div class="col-lg-5">
-    <div class="">
-      <img src="img/book-reading.png" alt="Reading Book Illustration" class="illustration-about" />
-    </div>
-</div>
   </div>
-</div>
   <section>
     <div class="whirly-loader" style="display: none;"></div>
     <div id="results" class="results container">
     </div>
   </section>
-  <a href="#" id="return-to-top" class="special1" > 
-    <i class="fa fa-arrow-up" ></i>
+  <a href="#" id="return-to-top" class="special1">
+    <i class="fa fa-arrow-up"></i>
   </a>
   <footer>
     <div class="foot">
       Made with ❤️ by <a href="https://github.com/wasimreja">Wasim Reja</a>
-  </div> 
-   </footer>
+    </div>
+  </footer>
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
   AOS.init({
-        offset: 200,
-        duration: 1000
-    });
+    offset: 200,
+    duration: 1000
+  });
 </script>
 <script src="main.js"></script>
 </body>
