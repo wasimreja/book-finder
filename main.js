@@ -240,3 +240,23 @@ const initIcon = () => {
   }
 };
 window.onload = initIcon();
+
+
+// const tagCompo= document.getElementById('cardsset')
+
+// fetch('./contributors.json')
+// .then(res => res.json())
+// .then(data => {
+//   // console.log(data.profiles[2].name);
+//   data.profiles.forEach(element => {
+//     tagCompo.insertAdjacentHTML('beforeend', `<div class='card'>
+//       <div class="imgBx">
+//           <img src=${element.avatarUrl} alt="images">
+//       </div>
+//       <div class="details">
+//           <h2>${element.name}</h2>
+//           <a href="https://github.com/${element.github}"><i class="fa fa-github" aria-hidden="true"></i></a>
+//           <a href="https://twitter.com/${element.twitter}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+//       </div></div>`);
+//   });
+// });

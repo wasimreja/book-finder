@@ -523,3 +523,17 @@ h1 {
   text-decoration: none;
   transition: all 0.3s linear;
 }
+
+/* #cardsset{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 6rem;
+}
+
+.test{
+  border: 1px solid blue;
+  padding: 5px;
+} */
