@@ -80,7 +80,7 @@ html {
 
 footer {
   height: fit-content;
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
@@ -132,7 +132,8 @@ footer {
 
 .illustration {
   width: 20rem;
-  margin: 5px auto;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .illustration-about {
@@ -453,7 +454,8 @@ h1 {
 
 .whirly-loader {
   margin-left: 50%;
-  margin-bottom:10%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 @-moz-keyframes whirly-loader {
