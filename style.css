@@ -60,6 +60,14 @@ html {
   transition: background 500ms;
 }
 
+.container {
+  min-height:30vh;
+}
+
+.container1 {
+  min-height: 40vh;
+}
+
 .find {
   font-weight: lighter;
   font-size: 1.5rem;
@@ -80,7 +88,7 @@ html {
 
 footer {
   height: fit-content;
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
