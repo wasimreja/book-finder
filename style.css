@@ -80,7 +80,7 @@ html {
 
 footer {
   height: fit-content;
-  position: absolute;
+  position: relative;
   bottom: 0;
   margin-top: 1.5rem;
   width: 100%;
@@ -132,7 +132,8 @@ footer {
 
 .illustration {
   width: 20rem;
-  margin: 5px auto;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .illustration-about {
@@ -252,6 +253,12 @@ footer {
   .col-md-8 h1 {
     font-size: 1.75rem;
   }
+
+  footer{
+    position: relative;
+    bottom: 0;
+  }
+
 }
 
 h1 {
@@ -438,11 +445,17 @@ h1 {
     top: 56px;
     left: 0;
   }
+  footer{
+    position: relative;
+    bottom: 0;
+  }
+
 }
 
 .whirly-loader {
   margin-left: 50%;
-  margin-bottom:10%;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 @-moz-keyframes whirly-loader {
@@ -508,16 +521,55 @@ h1 {
 
 .foot {
 	color: #737373;
-	text-align: center;
 	font-family: "Comfortaa", cursive;
-	padding: 2rem 2rem;
-	bottom: 0%;
-	width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  padding: 2rem;
+
+          
+}
+.icons {
+  padding: 1rem;
+ 
+
+
 }
 
-.foot a {
-  color: #737373;
+  .icons i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    border-radius: 100%;
+    background-color: #33353d;
+    color: #818a91;
+    display: inline-block;
+    text-align: center;
+    transition: all .2s linear;
+ 
 }
+.foot a{
+  color:#737373;
+}
+
+.twitter :hover {
+  background-color: #00aced;
+  color: #fff;
+}
+
+.linkedin :hover{
+  background-color: #007bb6;
+  color: #fff;
+}
+
+.instagram :hover{
+  background-color: #ea2c59;
+  color: #fff;
+}
+
 
 .foot a:hover {
   color: #bfbfbf;
