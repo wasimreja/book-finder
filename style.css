@@ -576,3 +576,9 @@ h1 {
   text-decoration: none;
   transition: all 0.3s linear;
 }
+
+.col-lg-7 {
+  background-color: var(--nav-color);
+  padding-bottom: 44px;
+  border-radius: 30px;
+}
