@@ -54,6 +54,11 @@ img{
     box-shadow: 0 20px 30px  rgba(0,0,0,.2);
   }
 
+.profilecard:hover {
+    scale: 110%;
+    transition-duration:300ms;
+}
+
 .details{
     margin-bottom: 3rem;
     margin-top: 1rem;
