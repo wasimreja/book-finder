@@ -111,6 +111,10 @@ git push -u origin <your_branch_name>
 
 **15.** And you are done creating a pull request to this project. Be patient while your PR is reviewed.
 
+## Add Name
+
+Once you make your contribution, do not forget to add your name in `contributors.json` file. Further instructions are mentioned there.
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
