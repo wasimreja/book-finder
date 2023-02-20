@@ -1,11 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
-
- header{
-    padding-top: 2rem;
+:root {
+    --primary-color: #fff;
+    --secondary-color: #403e3e;
+    --nav-color: #f4f1f1;
+    --search-bar-color: #f4f1f1;
+    --result-card-color: #efefef;
+  }
+  
+  .dark-theme {
+    --primary-color: #323339;
+    --secondary-color: #fcf4f4;
+    --nav-color: #26272b;
+    --search-bar-color: #3e4046;
+    --result-card-color: #3e3f47;
+  }
+h1{
+    padding-top: 5rem;
 }
 
+
 #cardsset{
-    width: 95%;
+    padding-inline: 1rem;
+    max-width: 90rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 2.1rem;
@@ -14,98 +30,48 @@
     margin-bottom: 1rem;
 }
 
-.card{
-    position: relative;
+img{
+    height: 180px;
+    border-radius: 100%;
+    margin: 3rem;
+}
+
+.username{
+    color: var(--secondary-color);
+    z-index: 10px;
+}
+
+.profilecard{ 
+    background-color: var(--nav-color);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    align-items: center;
     width: 300px;
-    height: 300px;
-    background: #fff;
+    padding: 10px;
     margin: 0 auto;
-    border-radius: 4px;
-    box-shadow:0 2px 10px rgba(0,0,0,.2);
+    box-shadow: 0 20px 30px  rgba(0,0,0,.2);
   }
 
-  /* .card:before,
-  .card:after
-  {
-    content:"";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 4px;
-    background: #fff;
-    transition: 0.5s;
-    z-index:-1;
-  } */
-
-  .card:hover:before{
-  transform: rotate(20deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
-  }
-  .card:hover:after{
-  transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0,0,0,.2);
-  }
-  .card .imgBx{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-  z-index: 1;
-  }
-  
-  .card:hover .imgBx
-  {
-    bottom: 80px;
-  }
-
-  .card .imgBx img{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .card .details{
-      position: absolute;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      height: 60px;
-      text-align: center;
-  }
-
-  .card .details h2{
-   font-family: "Comfortaa", cursive;
-   margin: 0;
-   padding: 0;
-   font-size: 1rem;
-   color: #403e3e;
-  } 
-
-.card .details:hover{
-    opacity: 1;
+.details{
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    display: flex;
+    gap: 20px;
 }
 
-.details a{
-    color: black;
+svg{
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    padding: 10px;
+    scale:120%
 }
 
-@media only screen and (max-width: 450px){
-    #cardsset{
-        width: 85%;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        margin-bottom: 1rem;
-    }
-
-    .card{
-        width: 150px;
-        height: 150px;
-    }
+svg:hover{
+    background-color: var(--primary-color);
+    border-radius: 100%;
+    padding: 10px;
+    scale:140%;
+    transition-duration: 300ms;
 }
