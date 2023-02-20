@@ -432,7 +432,7 @@ h1 {
     transition: 0.3s;
   }
   .nav-item {
-    margin: 3px 0;
+    margin: 1px 0;
   }
   .nav-menu.active {
     top: 56px;
@@ -523,3 +523,36 @@ h1 {
   text-decoration: none;
   transition: all 0.3s linear;
 }
+
+
+
+.goog-te-gadget{
+  color: transparent !important;
+  }
+.VIpgJd-ZVi9od-l4eHX-hSRGPd{
+    display: none;
+}
+#google_translate_element{
+  position: relative;
+  top: 26px;
+}
+.goog-te-combo{
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+
+
+.navbar-brand{
+  margin-top: 18px;
+}
+
+
+
+
+
+
+
+
+
