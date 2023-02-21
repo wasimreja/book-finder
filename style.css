@@ -68,6 +68,10 @@ html {
   color: var(--secondary-color);
 }
 
+.navbar-brand{ 
+  margin-top: 10px;
+}
+
 .header {
   margin-top: 4rem;
   text-align: center;
