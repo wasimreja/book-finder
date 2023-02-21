@@ -44,9 +44,12 @@ html {
   height: auto;
   z-index: 100;
   background-color: var(--nav-color);
-  padding: 20px 5px;
+  padding: 10px 5px;
 }
 
+.navbar-brand{ 
+  margin-top: 15px;
+}
 .text {
   position: center;
   font-size: 1.5rem;
@@ -66,10 +69,6 @@ html {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   color: var(--secondary-color);
-}
-
-.navbar-brand{ 
-  margin-top: 10px;
 }
 
 .header {
@@ -321,7 +320,6 @@ h1 {
   padding: 10px;
   border-radius: 100%;
   cursor: pointer;
-  margin-inline: 10px;
 }
 
 #icon:hover {
@@ -400,9 +398,7 @@ h1 {
   cursor: pointer;
 }
 
-.hamburger:hover {
-  background-color: var(--primary-color);
-}
+
 
 .bar {
   border-radius: 20px;
@@ -419,12 +415,15 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-top: 15px;
   box-sizing: border-box;
   list-style: none;
 }
 
 @media (max-width: 807px) {
+  .navbar-brand{ 
+    margin-top: 8px;
+  }
   .logo {
     margin-top: 5px;
     margin-right: 5px;
@@ -434,6 +433,10 @@ h1 {
     margin-top: 5px;
     margin-left: 5px;
   }
+  .hamburger:hover {
+    background-color: var(--primary-color);
+  }
+
   .bar {
     background-color: var(--secondary-color);
     margin-top: 5px;
