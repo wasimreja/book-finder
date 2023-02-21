@@ -16,7 +16,7 @@
     
   }
 h1{
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
 }
 
@@ -73,23 +73,11 @@ h1{
     gap: 40px;
 }
 
-svg{
-    fill:var(--secondary-color);
-    scale: 200%;
-}
-
-svg:hover{
-    fill:white;
-    background-color: #333;
-    scale:140%;
-    transition-duration: 300ms;
-}
-
 .details >  a {
     color:var(--secondary-color);
     scale:180%;
 }
 
-.details >  a :hover {
+#socials:hover{
     color: #777;
 }

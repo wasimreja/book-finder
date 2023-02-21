@@ -44,7 +44,7 @@ html {
   height: auto;
   z-index: 100;
   background-color: var(--nav-color);
-  padding: 5px 5px;
+  padding: 20px 5px;
 }
 
 .text {
@@ -312,9 +312,16 @@ h1 {
 }
 
 #icon {
-  width: 20px;
-  height: 20px;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 100%;
   cursor: pointer;
+  margin-inline: 10px;
+}
+
+#icon:hover {
+  background-color: var(--primary-color);
 }
 
 #return-to-top {
@@ -382,15 +389,23 @@ h1 {
 }
 
 .hamburger {
+  padding-inline: 8px;
+  padding-block: 5px;
+  border-radius: 5px;;
   display: none;
   cursor: pointer;
 }
 
+.hamburger:hover {
+  background-color: var(--primary-color);
+}
+
 .bar {
+  border-radius: 20px;
   display: block;
   width: 25px;
-  height: 3px;
-  margin: 5px auto;
+  height: 2px;
+  margin: 6px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
