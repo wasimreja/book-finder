@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Josefin+Sans:wght@100;300&display=swap");
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #403e3e;
+    --nav-color: #f4f1f1;
+    --search-bar-color: #f4f1f1;
+    --result-card-color: #efefef;
+}
+
+.dark-theme {
+    --primary-color: #323339;
+    --secondary-color: #fcf4f4;
+    --nav-color: #26272b;
+    --search-bar-color: #3e4046;
+    --result-card-color: #3e3f47;
+}
+
+.col-lg-7 {
+    transition: 0.3s;
+    background: var(--result-card-color);
+    padding-bottom: 31px;
+    border-radius: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@keyframes floating{
+    0% {
+        
+        transform: translateY(0px);
+    }
+    50%{
+       
+        transform: translateY(-20px);
+    }
+    100%{
+        
+        transform: translateY(0px);
+    }
+}
