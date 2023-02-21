@@ -5,6 +5,8 @@
     --nav-color: #f4f1f1;
     --search-bar-color: #f4f1f1;
     --result-card-color: #efefef;
+    --card-color: rgb(211, 211, 211);
+    --card-hover: rgb(190, 190,190);
   }
   
   .dark-theme {
@@ -13,6 +15,9 @@
     --nav-color: #26272b;
     --search-bar-color: #3e4046;
     --result-card-color: #3e3f47;
+    --card-color: #26272b;
+    --card-hover: rgb(69, 69, 69);
+    
   }
 h1{
     padding-top: 5rem;
@@ -33,20 +38,23 @@ h1{
 img{
     height: 180px;
     border-radius: 100%;
-    margin: 3rem;
+    margin: 2rem;
 }
 
 .username{
+    font-family: "Comfortaa", cursive;
+    font-size: 16px;
     color: var(--secondary-color);
     z-index: 10px;
 }
 
 .profilecard{ 
-    background-color: var(--nav-color);
+    font-family: "Comfortaa", cursive;
+    background-color: var(--card-color);
     border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    justify-items: start;
+    justify-items: center;
     align-items: center;
     width: 300px;
     padding: 10px;
@@ -55,28 +63,30 @@ img{
   }
 
 .profilecard:hover {
+    background-color: var(--card-hover);
     scale: 110%;
     transition-duration:300ms;
 }
 
 .details{
+    margin-left: -21px;
     margin-bottom: 3rem;
     margin-top: 1rem;
     display: flex;
-    gap: 20px;
+    gap: 40px;
 }
 
 svg{
+    fill:var(--secondary-color);
     background-color: var(--primary-color);
     border-radius: 100%;
     padding: 10px;
-    scale:120%
+    scale: 120%;
 }
 
 svg:hover{
-    background-color: var(--primary-color);
-    border-radius: 100%;
-    padding: 10px;
+    fill:white;
+    background-color: #333;
     scale:140%;
     transition-duration: 300ms;
 }
