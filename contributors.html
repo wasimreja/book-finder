@@ -7,13 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Finder</title>
+    <link rel="stylesheet" href="contributors.css" />
+
     <link rel="shortcut icon" href="img/reading.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="contributors.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 
 <body class="bg">
@@ -28,32 +30,32 @@
       </script>
 
 <nav id="nav">
-    <div class="container-fluid align-items-center">
-      <a class="navbar-brand" href="index.html">
-        <span class="text">Book</span><span class="find">Finder</span>
-      </a>    
-      <div class="mode d-flex align-items-center">
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
-          </li>
-        </ul>
-        <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-  
-        </div>
+  <div class="container-fluid align-items-center">
+    <a class="navbar-brand" href="index.html">
+      <span class="text">Book</span><span class="find">Finder</span>
+    </a>    
+    <div class="mode d-flex align-items-center">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
+        </li>
+      </ul>
+      <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <section class="Contributors">
     <header class="header" id="header" style="text-align: center;">
@@ -115,15 +117,20 @@
   .then(res => res.json())
   .then(data => {
     data.profiles.forEach(element => {
-      cardsset.insertAdjacentHTML('beforeend', `<div class='card'>
-        <div class="imgBx">
-            <img src=${element.avatarUrl} alt="images">
-        </div>
-        <div class="details">
-            <h2>${element.name}</h2>
-            <a href="https://github.com/${element.github}"><i class="fa fa-github" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/${element.twitter}"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-        </div></div>`);
+      cardsset.insertAdjacentHTML('beforeend', 
+      `<div class='profilecard'>
+          <img class="profilepic" src=${element.avatarUrl} alt="images">
+          <h4 class="username">${element.name}</h4>
+          <div class="details">
+              <a href="https://twitter.com/${element.twitter}">
+                <i class="uil uil-github-alt"></i>
+              </a>
+              <a href="https://github.com/${element.github}">
+                <i class="uil uil-twitter-alt"></i>
+              </a>
+              
+          </div>
+        </div>`);
     });
   });
 
