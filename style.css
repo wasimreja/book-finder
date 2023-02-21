@@ -44,9 +44,12 @@ html {
   height: auto;
   z-index: 100;
   background-color: var(--nav-color);
-  padding: 5px 5px;
+  padding: 10px 5px;
 }
 
+.navbar-brand{ 
+  margin-top: 15px;
+}
 .text {
   position: center;
   font-size: 1.5rem;
@@ -312,9 +315,15 @@ h1 {
 }
 
 #icon {
-  width: 20px;
-  height: 20px;
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+  border-radius: 100%;
   cursor: pointer;
+}
+
+#icon:hover {
+  background-color: var(--primary-color);
 }
 
 #return-to-top {
@@ -382,15 +391,21 @@ h1 {
 }
 
 .hamburger {
+  padding-inline: 8px;
+  padding-block: 5px;
+  border-radius: 5px;;
   display: none;
   cursor: pointer;
 }
 
+
+
 .bar {
+  border-radius: 20px;
   display: block;
   width: 25px;
-  height: 3px;
-  margin: 5px auto;
+  height: 2px;
+  margin: 6px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -400,12 +415,15 @@ h1 {
   justify-content: space-between;
   align-items: center;
   padding: 0;
-  margin: 0;
+  margin-top: 15px;
   box-sizing: border-box;
   list-style: none;
 }
 
 @media (max-width: 807px) {
+  .navbar-brand{ 
+    margin-top: 8px;
+  }
   .logo {
     margin-top: 5px;
     margin-right: 5px;
@@ -415,6 +433,10 @@ h1 {
     margin-top: 5px;
     margin-left: 5px;
   }
+  .hamburger:hover {
+    background-color: var(--primary-color);
+  }
+
   .bar {
     background-color: var(--secondary-color);
     margin-top: 5px;
