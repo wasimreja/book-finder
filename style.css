@@ -179,6 +179,7 @@ footer {
 .description {
   font-family: "Comfortaa", cursive;
   color: var(--secondary-color);
+  padding: 2rem 2rem;
 }
 
 @media only screen and (max-width: 400px) {
@@ -577,8 +578,8 @@ h1 {
   transition: all 0.3s linear;
 }
 
-.col-lg-7 {
+/* .col-lg-7 {
   background-color: var(--nav-color);
-  padding-bottom: 44px;
-  border-radius: 30px;
-}
+  padding-bottom: 31px;
+  border-radius: 20px;
+} */
