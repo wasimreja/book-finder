@@ -25,18 +25,19 @@
     animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 @keyframes floating{
     0% {
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6) ;
+        
         transform: translateY(0px);
     }
     50%{
-        box-shadow: 0 25px 15px 0 rgba(0,0,0,0.2) ;
+       
         transform: translateY(-20px);
     }
     100%{
-        box-shadow: 0 5px 15px 0 rgba(0,0,0,0.6) ;
+        
         transform: translateY(0px);
     }
 }
