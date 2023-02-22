@@ -10,7 +10,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     navMenu.classList.remove("active");
   })
 );
-function listen(e,pause) {
+function listen(e, pause) {
   const bookCard = e.target.parentElement;
   const bookDescription = bookCard.children[2].innerText;
   const bookName = bookCard.children[0].innerText;
@@ -21,7 +21,7 @@ function listen(e,pause) {
   // console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
-  if(pause){
+  if (pause) {
     synth.pause();
   }
   setTimeout(() => {
@@ -34,10 +34,7 @@ var icon = document.getElementById("icon");
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
-  if (search.trim() === "") {
-    alert("Please enter something in the search box!!!");
-    return;
-  }
+  if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
 
   // console.log("Working");
@@ -68,11 +65,11 @@ function search(e) {
 
         let notfound = document.createElement("DIV");
         notfound.innerHTML = `
-        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-page"
+        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-message"
              color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
-              <p class="fs-3 text-light"> <span class="text-danger">Opps!</span> Book not found.</p>
+              <p class="fs-3 text-light"> <span class="text-danger">Oops!</span> Book not found.</p>
               <p class="lead text-white">The book you’re looking for doesn’t exist.</p>
             </div>
         </div>
@@ -186,19 +183,16 @@ function search(e) {
           speechButton.addEventListener("click", (e) => {
             console.log(e);
             console.log(speechButton.textContent);
-            if(speechButton.textContent=='LISTEN'){
-              speechButton.textContent='STOP';
-            }
-            else{
-              speechButton.textContent='LISTEN';
+            if (speechButton.textContent == "LISTEN") {
+              speechButton.textContent = "STOP";
+            } else {
+              speechButton.textContent = "LISTEN";
             }
             isOn = !isOn;
-            if(isOn){
-              listen(e,false);
-            }
-            else{
-              listen(e,true);
-              
+            if (isOn) {
+              listen(e, false);
+            } else {
+              listen(e, true);
             }
           });
         }

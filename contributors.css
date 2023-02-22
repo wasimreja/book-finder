@@ -1,83 +1,90 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Josefin+Sans:wght@100;300&display=swap");
+
 :root {
-    --primary-color: #fff;
-    --secondary-color: #403e3e;
-    --nav-color: #f4f1f1;
-    --search-bar-color: #f4f1f1;
-    --result-card-color: #efefef;
-  }
-  
-  .dark-theme {
-    --primary-color: #323339;
-    --secondary-color: #fcf4f4;
-    --nav-color: #26272b;
-    --search-bar-color: #3e4046;
-    --result-card-color: #3e3f47;
-    
-  }
-h1{
-    padding-top: 5rem;
-    padding-bottom: 2rem;
+  --primary-color: #fff;
+  --secondary-color: #403e3e;
+  --nav-color: #f4f1f1;
+  --search-bar-color: #f4f1f1;
+  --result-card-color: #efefef;
 }
 
-
-#cardsset{
-    padding-inline: 1rem;
-    max-width: 90rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2.1rem;
-    margin: 0 auto;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+.dark-theme {
+  --primary-color: #323339;
+  --secondary-color: #fcf4f4;
+  --nav-color: #26272b;
+  --search-bar-color: #3e4046;
+  --result-card-color: #3e3f47;
 }
 
-.profilepic{
-    height: 180px;
-    border-radius: 100%;
-    margin: 2rem;
+.title {
+  font-size: 4em;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 }
 
-.username{
-    font-family: "Comfortaa", cursive;
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--secondary-color);
+#cardsset {
+  padding-inline: 1rem;
+  max-width: 90rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2.1rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.profilecard{ 
-    font-family: "Comfortaa", cursive;
-    background-color: var(--result-card-color);
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-    width: 300px;
-    padding: 10px;
-    margin: 0 auto;
-    box-shadow: 0 10px 15px  rgba(0,0,0,.2);
-  }
+.profilepic {
+  height: 180px;
+  border-radius: 100%;
+  margin: 2rem;
+}
+
+.username {
+  font-family: "Comfortaa", cursive;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.profilecard {
+  font-family: "Comfortaa", cursive;
+  background-color: var(--result-card-color);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 300px;
+  padding: 10px;
+  margin: 0 auto;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
 
 .profilecard:hover {
-    scale: 110%;
-    transition-duration:300ms;
+  scale: 110%;
+  transition-duration: 300ms;
 }
 
-.details{
-    margin-bottom: 2.5rem;
-    margin-top: 1.5rem;
-    display: flex;
-    justify-items: center;
-    justify-items: center;
-    gap: 40px;
+.details {
+  margin-bottom: 2.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-items: center;
+  justify-items: center;
+  gap: 40px;
 }
 
-.details >  a {
-    color:var(--secondary-color);
-    scale:180%;
+.details > a {
+  color: var(--secondary-color);
+  scale: 180%;
 }
 
-#socials:hover{
-    color: #777;
+#socials:hover {
+  color: #777;
+}
+
+@media only screen and (max-width: 400px) {
+  .title {
+    font-size: 3em;
+  }
 }
