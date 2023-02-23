@@ -69,8 +69,8 @@ function search(e) {
              color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
-              <p class="fs-3 text-light"> <span class="text-danger">Oops!</span> Book not found.</p>
-              <p class="lead text-white">The book you’re looking for doesn’t exist.</p>
+              <p> <span class="text-danger">Oops!</span> Book not found.</p>
+              <p>The book you’re looking for doesn’t exist.</p>
             </div>
         </div>
         `;
