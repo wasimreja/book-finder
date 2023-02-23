@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  position: relative;
+  min-height: 100%;
+  border: 10px white solid;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #403e3e;
+  --nav-color: #f4f1f1;
+  --search-bar-color: #f4f1f1;
+  --result-card-color: #efefef;
+}
+
+.dark-theme {
+  --primary-color: #323339;
+  --secondary-color: #fcf4f4;
+  --nav-color: #26272b;
+  --search-bar-color: #3e4046;
+  --result-card-color: #3e3f47;
+}
+
+.bg {
+  background-color: var(--primary-color);
+  transition: background 500ms;
+}
+
+#logo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+#logo path:nth-child(2){
+  stroke-dasharray: 2265px;
+  stroke-dashoffset: 2265px;
+  animation: animate 2.5s ease forwards;
+}   
+
+#logo path:nth-child(3){
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: animate 2s ease forwards 0.2s;
+}
+
+#logo path:nth-child(4){
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
+  animation: animate 2s ease forwards 0.4s;
+}
+
+#logo path:nth-child(5){
+  stroke-dasharray: 1014px;
+  stroke-dashoffset: 1014px;
+  animation: animate 2.5s ease forwards 0.6s;
+}
+
+#logo path:nth-child(6){
+  stroke-dasharray: 1623px;
+  stroke-dashoffset: 1623px;
+  animation: animate 2s ease forwards 1.0s;
+}
+#logo path:nth-child(7){
+  stroke-dasharray: 434px;
+  stroke-dashoffset: 434px;
+  animation: animate 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(8){
+  stroke-dasharray: 660px;
+  stroke-dashoffset: 660px;
+  animation: animate 2s ease forwards 1.3s;
+}
+
+#logo path:nth-child(9){
+  stroke-dasharray: 854px;
+  stroke-dashoffset: 854px;
+  animation: animate 2s ease forwards 1.5s;
+}
+
+#logo path:nth-child(10){
+  stroke-dasharray: 544px;
+  stroke-dashoffset: 544px;
+  animation: animate 2s ease forwards 1.7s;
+}
+
+#logo path:nth-child(11){
+  stroke-dasharray: 490px;
+  stroke-dashoffset: 490px;
+  animation: animate 1s ease forwards 1.9s;
+}
+
+
+@keyframes animate {
+  to{
+      stroke-dashoffset: 0px;
+  }
+}
