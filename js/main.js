@@ -30,7 +30,7 @@ function listen(e, pause) {
     synth.speak(speech);
   }, 1000);
 }
-var icon = document.getElementById("icon");
+
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
@@ -57,11 +57,6 @@ function search(e) {
       let bookNotFound = res.totalItems === 0;
 
       if (bookNotFound) {
-        // const errorBlock = document.createElement("div");
-        // const errorMessage = document.createElement("h1");
-        // errorMessage.textContent = "Book Not Found!";
-        // errorBlock.appendChild(errorMessage);
-        // document.getElementById("results").appendChild(errorBlock);
 
         let notfound = document.createElement("DIV");
         notfound.innerHTML = `
@@ -69,8 +64,8 @@ function search(e) {
              color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
-              <p> <span class="text-danger">Oops!</span> Book not found.</p>
-              <p>The book you’re looking for doesn’t exist.</p>
+              <p class="lead"> <span class="text-danger">Oops!</span> Book not found.</p>
+              <p class="fs-3">The book you’re looking for doesn’t exist.</p>
             </div>
         </div>
         `;
@@ -215,6 +210,7 @@ function scrollFunction() {
   }
 }
 
+var icon = document.getElementById("icon");
 icon.onclick = function () {
   document.body.classList.toggle("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
