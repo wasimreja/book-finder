@@ -29,15 +29,14 @@ So what are you waiting for? Search your favourite book right now!
 
 ## Tech Stack
 
-- [HTML](https://html.spec.whatwg.org/multipage/)
-- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
-- [JavaScript](https://www.javascript.com/)
-- [Bootstrap](https://getbootstrap.com/)
-- [Google Books API](https://developers.google.com/books/docs/v1/using)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## Screenshot
 
-![Screenshot 2022-10-19 at 17-02-28 Book Finder](https://user-images.githubusercontent.com/77227201/196679719-56ba4365-40aa-488e-924b-d14a12379d48.png)
+![Screenshot 2023-02-25 at 23-48-46 Book Finder](https://user-images.githubusercontent.com/77227201/221373286-b131510b-0bad-496c-bef7-e335bf85ac9c.png)
 
 ## Getting Started
 
