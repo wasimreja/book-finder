@@ -7,6 +7,16 @@
         "twitter": "_wasimreja"
       },
       {
+        "name": "Arjun Choudhury",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/92199877?v=4",
+        "github": "arjunchoudhury07"
+      },
+      {
+        "name": "Sinchan Patra",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/98639351?v=4",
+        "github": "Sinchan26"
+      },
+      {
         "name": "BlizZard",
         "avatarUrl": "https://avatars.githubusercontent.com/u/85601323?v=4",
         "github": "BlizZard-bot"
@@ -17,15 +27,25 @@
         "github": "cu8code"  
       },  
       {
+        "name": "Shreyanka Dan",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/101724719?v=4",
+        "github": "shreyanka155"  
+      },  
+      {
         "name": "Nikhil Aggarwal",
         "avatarUrl": "https://avatars.githubusercontent.com/u/100992874?v=4",
         "github": "DevilzzNikhil"
       },
       {
-        "name": "Nishtha thakkar",
+        "name": "Nishtha Thakkar",
         "avatarUrl": "https://avatars.githubusercontent.com/u/68805896?v=4",
         "github": "nishtha53",
         "twitter": "thakkar_nishtha"
+      },
+      {
+        "name": "Wasim Reja",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/116302870?v=4",
+        "github": "devwasim"
       },
       {
         "name": "Devrajsinh Gohil",
@@ -34,9 +54,20 @@
         "twitter": "DevrajsinhGohi5"
       },
       {
-        "name": "Wasim Reja",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/116302870?v=4",
-        "github": "devwasim"
+        "name": "Shreyan Majumdar",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/95446014?v=4",
+        "github": "Shreyan-12345"
+      },
+      {
+        "name": "Laxman Kohar",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/73365025?v=4",
+        "github": "Laxmankohar",
+        "twitter": "Laxmankohar2"
+      },
+      {
+        "name": "Vivek Kumar Tiwari",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/71543332?v=4",
+        "github": "vk20july"
       },
       {
         "name": "Purva Rajyaguru",
@@ -56,7 +87,12 @@
         "twitter": "SujalSamai"
       },
       {
-        "name": "TOMOYA KURODA",
+        "name": "Tuhin Banerjee",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/76838565?v=4",
+        "github": "TuhinBanerjee31"
+      },
+      {
+        "name": "Tomoya Kuroda",
         "avatarUrl": "https://avatars.githubusercontent.com/u/31934952?v=4",
         "github": "tomoyanime"
       },
@@ -68,7 +104,8 @@
       {
         "name": "Ankit Karn",
         "avatarUrl": "https://avatars.githubusercontent.com/u/45123508?v=4",
-        "github": "AnkitKarnAK"
+        "github": "AnkitKarnAK",
+        "twitter": "ankitkarnak"
       },
       {
         "name": "Nilesh Mishra",
@@ -78,7 +115,8 @@
       {
         "name": "Dmitrii",
         "avatarUrl": "https://avatars.githubusercontent.com/u/87036699?v=4",
-        "github": "Dimterion"
+        "github": "Dimterion",
+        "twitter": "Dimterion"
       },
       {
         "name": "Harshdeep Singh",
@@ -98,12 +136,6 @@
         "github": "aaheli8"
       },
       {
-        "name": "Laxman kohar",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/73365025?v=4",
-        "github": "Laxmankohar",
-        "twitter": "Laxmankohar2"
-      },
-      {
         "name": "Tamal Das",
         "avatarUrl": "https://avatars.githubusercontent.com/u/72851613?v=4",
         "github": "IAmTamal",
@@ -119,6 +151,32 @@
         "avatarUrl": "https://avatars.githubusercontent.com/u/9291969?v=4",
         "github": "luiserdef",
         "twitter": "luiserdef"
+      },
+      {
+        "name": "Sayandip Paul",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/97384477?v=4",
+        "github": "sayandippaul"
+      },
+      {
+        "name": "Kushal Ghosh",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/108950724?v=4",
+        "github": "kushaljgec2025"
+      },
+      {
+        "name": "Mohamed Shahin",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/88769427?v=4",
+        "github": "itsshahinhere",
+        "twitter": "itsshahinhere"
+      },
+      {
+        "name": "Puspendu Das",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/77235824?v=4",
+        "github": "PuspenduGit"
+      },
+      {
+        "name": "Sowham Bhuin",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/95470604?v=4",
+        "github": "Sowham-3098"
       },
       {
         "name": "Hareesh",
@@ -212,17 +270,10 @@
         "github": "kejcao"
       },
       {
-        "name": "charles",
+        "name": "chaaals",
         "avatarUrl": "https://avatars.githubusercontent.com/u/70326902?v=4",
         "github": "chaaals",
         "twitter": "chalsthebreaker"
-      },
-      {
-        "name": "Tuhin Banerjee",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/76838565?v=4",
-        "github": "TuhinBanerjee31",
-        "twitter": ""
       }
-      
    ]
   }
