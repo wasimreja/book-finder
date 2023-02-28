@@ -27,6 +27,21 @@
     }
   </script>
 
+ <!--------Preloader---------------->
+ <div class="preloader">
+
+  <div class="dots-container">
+      <div class="dot red"></div>
+      <div class="dot green"></div>
+      <div class="dot yellow"></div>
+  </div>
+
+  <div class="preloader-text">
+      Loading...
+  </div>
+</div>
+
+<!------------------------------------------->
 <nav id="nav">
   <div class="container-fluid align-items-center">
     <a class="navbar-brand" href="index.html">
@@ -114,6 +129,19 @@
     });
 </script>
 <script src="./js/main.js"></script>
+ <!--------------Preloader Script---------------->
+<script>
+  const preloader = document.querySelector(".preloader");
+  const preloaderDuration = 500;
+  
+  const hidePreloader = () => {
+      setTimeout(() => {
+          preloader.classList.add("hide");
+      }, preloaderDuration);
+  }
+  
+  window.addEventListener("load", hidePreloader);
+  </script>
 </body>
 
 </html>
