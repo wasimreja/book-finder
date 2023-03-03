@@ -31,15 +31,10 @@ function listen(e, pause) {
   }, 1000);
 }
 
-function search(e) {
-  e.preventDefault();
-  const search = document.getElementById("input").value;
-  if (search.trim() === "") return;
-  document.activeElement.blur(); // this removes focus on the input bar after search
-
-  // console.log("Working");
+function Runapi(curpage,search){
+  console.log(`https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curpage-1)*5);
   $.ajax({
-    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
+    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curpage-1)*5,
     dataType: "json",
     beforeSend: function () {
       $(".whirly-loader").show();
@@ -47,7 +42,6 @@ function search(e) {
     complete: function () {
       $(".whirly-loader").hide();
     },
-
     success: function (res) {
       const resultsContainer = document.getElementById("results");
       while (resultsContainer.firstChild) {
@@ -61,7 +55,7 @@ function search(e) {
         let notfound = document.createElement("DIV");
         notfound.innerHTML = `
         <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-message"
-             color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
+            color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
             <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
             <div>
               <p class="lead"> <span class="text-danger">Oops!</span> Book not found.</p>
@@ -198,6 +192,27 @@ function search(e) {
   });
 }
 
+function search(e) {
+  e.preventDefault();
+  const search = document.getElementById("input").value;
+  if (search.trim() === "") return;
+  document.activeElement.blur(); // this removes focus on the input bar after search
+  Runapi(1,search);
+  for(let curpage=1;curpage<=4;curpage++){
+    let mainDiv=document.getElementById('pagination');
+    mainDiv.children[curpage].addEventListener('click' ,function(e){
+      mainDiv.children[curpage].style.backgroundColor='dodgerblue';
+      for(let curpage1=1;curpage1<=4;curpage1++){
+        if(curpage1!==curpage){
+          mainDiv.children[curpage1].style.removeProperty('background-color');
+        }
+      }
+      Runapi(curpage,search);
+    });
+  }
+  
+  // console.log("Working");
+}
 document.querySelector(".search-form").addEventListener("submit", search);
 
 const scroll = document.getElementById("return-to-top");
@@ -221,7 +236,6 @@ icon.onclick = function () {
     localStorage.setItem("theme", "light");
   }
 };
-
 const initIcon = () => {
   if (document.body.classList.contains("dark-theme")) {
     icon.src = "img/sun.png";
