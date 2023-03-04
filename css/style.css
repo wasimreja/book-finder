@@ -121,7 +121,7 @@ html {
   height: auto;
   z-index: 100;
   background-color: var(--nav-color);
-  padding: 10px 5px;
+  padding: 5px 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -213,7 +213,7 @@ footer {
 }
 
 .illustration {
-  width: 20rem;
+  width: 22rem;
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
@@ -953,7 +953,7 @@ footer {
 
 @media only screen and (max-width: 400px) {
   .illustration {
-    width: 70%;
+    width: 80%;
   }
   .title {
     font-size: 6em;
@@ -1013,7 +1013,7 @@ footer {
     margin: 3px 0;
   }
   .nav-menu.active {
-    top: 56px;
+    top: 3rem;
     left: 0;
   }
   footer {
