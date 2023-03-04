@@ -132,8 +132,9 @@ html {
 
 #bk-logo{
   width: 50px;
-  height: 60px;
-  margin-right: 0.6rem;
+  height: 50px;
+  margin-right: 10px;
+  margin-bottom: 5px;
 }
 
 .text {
