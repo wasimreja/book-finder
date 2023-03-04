@@ -4,6 +4,7 @@ html {
   scroll-behavior: smooth;
   position: relative;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -127,6 +128,12 @@ html {
 
 .navbar-brand {
   margin-top: 15px;
+}
+
+#bk-logo{
+  width: 50px;
+  height: 60px;
+  margin-right: 0.6rem;
 }
 
 .text {
