@@ -1021,3 +1021,40 @@ footer {
     bottom: 0;
   }
 }
+
+#pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#pagination a,
+#pagination button {
+  display: inline-block;
+  
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4caf50;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#pagination a:hover,
+#pagination button:hover {
+  background-color: #3e8e41;
+}
+#pagination button {
+  background-color: gray;
+  color: white;
+}
+#pagination a:disabled,
+#pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
