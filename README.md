@@ -34,10 +34,6 @@ So what are you waiting for? Search your favourite book right now!
 ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Screenshot
-
-![Screenshot 2023-02-25 at 23-48-46 Book Finder](https://user-images.githubusercontent.com/77227201/221373286-b131510b-0bad-496c-bef7-e335bf85ac9c.png)
-
 ## Getting Started
 
 Below are the steps to follow to contribute to this project:
@@ -109,10 +105,6 @@ git push -u origin <your_branch_name>
 **14.** Click on `Create pull request`.
 
 **15.** And you are done creating a pull request to this project. Be patient while your PR is reviewed.
-
-## Add Name
-
-Once you make your contribution, do not forget to add your name in `contributors.json` file. Further instructions are mentioned there.
 
 ## License
 
