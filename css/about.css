@@ -47,6 +47,9 @@
 } */
 .col-lg-8{
   background: var(--result-card-color);
+  /* padding-bottom: 31px; */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .rev{
   color: var(--secondary-color);
@@ -80,9 +83,17 @@
   border: none;
   cursor:pointer;
   border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .benefit .card:hover{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.benefit .card-title{
+  font-weight:600;
+}
+.benefit .card-text{
+  font-family: "Comfortaa", sans-serif;
+font-weight: 300;
 }
 @media only screen and (max-width: 400px) {
   .title {
