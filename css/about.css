@@ -22,7 +22,7 @@
   padding-bottom: 2rem;
 }
 
-.col-lg-7 {
+/* .col-lg-7 {
   transition: 0.3s;
   background: var(--result-card-color);
   padding-bottom: 31px;
@@ -44,6 +44,21 @@
   100% {
     transform: translateY(0px);
   }
+} */
+.col-lg-8{
+  background: var(--result-card-color);
+}
+.rev{
+  color: var(--secondary-color);
+}
+.rev p{
+  font-size:1.2rem;
+  font-weight:500;
+  
+}
+.s{
+  font-size:1.1rem;
+  font-weight:400;
 }
 
 .description {
@@ -56,7 +71,19 @@
   max-width: 28rem;
   display: block;
 }
-
+.perk{
+  color: var(--secondary-color);
+}
+.benefit .card{
+  color: var(--secondary-color);
+  background: var(--result-card-color);
+  border: none;
+  cursor:pointer;
+  border-radius: 5px;
+}
+.benefit .card:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 @media only screen and (max-width: 400px) {
   .title {
     font-size: 3em;
