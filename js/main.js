@@ -35,6 +35,7 @@ function listen(e, pause) {
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
+  $('#pagination-wrapper').removeClass('hidden');
   if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
   initiateApi(1,search);
