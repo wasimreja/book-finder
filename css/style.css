@@ -61,10 +61,6 @@ html {
   opacity: 0;
   pointer-events: none;
 }
-.preloader.hide {
-  opacity: 0;
-  pointer-events: none;
-}
 
 .preloader .preloader-text {
   color: #847d7d;
@@ -78,26 +74,22 @@ html {
   margin-bottom: 48px;
 }
 
-.preloader .dot {
-  background: #f8bf6f;
+.preloader .dots-container > div {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin: 0 5px;
-}
-
-.preloader .dot.red {
   background:#bc3926;
   animation: bounce 1000ms infinite;
 }
 
-.preloader .dot.green {
+.preloader .dots-container > div:nth-child(2) {
   background: #f8bf6f;
   animation: bounce 1000ms infinite;
   animation-delay: 200ms;
 }
 
-.preloader .dot.yellow {
+.preloader .dots-container > div:nth-child(3) {
   background: #ffdeb6 ;
   animation: bounce 1000ms infinite;
   animation-delay: 400ms;
@@ -112,8 +104,6 @@ html {
       transform: translateY(0);
   }
 }
-
-/*=================================*/
 
 #nav {
   position: fixed;

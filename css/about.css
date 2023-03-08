@@ -22,33 +22,10 @@
   padding-bottom: 2rem;
 }
 
-/* .col-lg-7 {
-  transition: 0.3s;
-  background: var(--result-card-color);
-  padding-bottom: 31px;
-  border-radius: 20px;
-  animation-name: floating;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
-} */
 .col-lg-7{
   background: var(--result-card-color);
-  /* padding-bottom: 31px; */
-  border-radius: 20px;
+  cursor: pointer;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .rev{

@@ -27,49 +27,48 @@
     }
   </script>
 
- <!--------Preloader---------------->
- <div class="preloader">
+  <!--------Preloader---------------->
+  <div class="preloader">
 
-  <div class="dots-container">
-      <div class="dot red"></div>
-      <div class="dot green"></div>
-      <div class="dot yellow"></div>
-  </div>
+    <div class="dots-container">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
 
-  <div class="preloader-text">
+    <div class="preloader-text">
       Loading...
-  </div>
-</div>
-
-<!------------------------------------------->
-<nav id="nav">
-  <div class="container-fluid align-items-center">
-    <img id="bk-logo" src="./img/book.png" alt="logo" >
-    <a class="navbar-brand" href="index.html">
-      <span class="text">Book</span><span class="find">Finder</span>
-    </a>    
-    <div class="mode d-flex align-items-center">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
-        </li>
-      </ul>
-      <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-
-      </div>
     </div>
   </div>
-</nav>
+
+  <nav id="nav">
+    <div class="container-fluid align-items-center">
+      <img id="bk-logo" src="./img/book.png" alt="logo">
+      <a class="navbar-brand" href="index.html">
+        <span class="text">Book</span><span class="find">Finder</span>
+      </a>
+      <div class="mode d-flex align-items-center">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
+          </li>
+        </ul>
+        <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode" />
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+
+        </div>
+      </div>
+    </div>
+  </nav>
   <header class="header" id="header">
     <img src="img/Man-Reading-a-Book-Vector-Illustration.svg" alt="Man Reading a Book" class="illustration" />
     <h1 class="title">
@@ -99,51 +98,38 @@
     <div id="results" class="results container">
     </div>
   </section>
-  
-  <a href="#" id="return-to-top" class="special1" aria-label="Go to Top"> 
+
+  <a href="#" id="return-to-top" class="special1">
     <i class="fa fa-arrow-up"></i>
   </a>
-  <footer class="foot" >
-    <div >
+  <footer class="foot">
+    <div>
       Made with ❤️ by <a href="https://github.com/wasimreja">Wasim Reja</a>
-  </div>
-  <div class="icons">
-    <a class ="twitter" href="https://twitter.com/_wasimreja" target="_blank">
-      <i class="fa fa-twitter"></i>
-    </a>
-    <a class ="linkedin" href="https://www.linkedin.com/in/wasimreja" target="_blank">
-      <i class="fa fa-linkedin"></i>
-    </a>
-    <a class ="instagram" href="https://www.instagram.com/_wasimreja" target="_blank">
-      <i class="fa fa-instagram"></i>
-    </a>
-    
-  </div> 
-   </footer>
+    </div>
+    <div class="icons">
+      <a class="twitter" href="https://twitter.com/_wasimreja" target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a class="linkedin" href="https://www.linkedin.com/in/wasimreja" target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a class="instagram" href="https://www.instagram.com/_wasimreja" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init({
-        offset: 200,
-        duration: 1000
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 200,
+      duration: 1000
     });
-</script>
-<script src="./js/main.js"></script>
- <!--------------Preloader Script---------------->
-<script>
-  const preloader = document.querySelector(".preloader");
-  const preloaderDuration = 500;
-  
-  const hidePreloader = () => {
-      setTimeout(() => {
-          preloader.classList.add("hide");
-      }, preloaderDuration);
-  }
-  
-  window.addEventListener("load", hidePreloader);
-
   </script>
+  <script src="./js/main.js"></script>
+  <script src="./js/preloader.js"></script>
 </body>
 
 </html>
