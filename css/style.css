@@ -1171,7 +1171,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  fill: #f6af54;
+  fill: #dbd3d3;
   cursor: pointer;
   transition: opacity 0.2s;
 }
