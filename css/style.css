@@ -1177,7 +1177,7 @@ footer {
 }
 
 .btn:hover {
-  opacity: 0.6;
+  fill: #d0c5c5;
 }
 
 .btn--next {
