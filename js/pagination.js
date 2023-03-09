@@ -1,4 +1,4 @@
-var btns = document.querySelectorAll('.btn');
+var btns = document.querySelectorAll('.dots');
 var paginationWrapper = document.querySelector('.pagination-wrapper');
 var bigDotContainer = document.querySelector('.big-dot-container');
 var littleDot = document.querySelector('.little-dot');
@@ -24,3 +24,5 @@ function cleanClasses() {
     paginationWrapper.classList.remove('transition-prev')
   }
 }
+
+

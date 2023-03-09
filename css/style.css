@@ -907,6 +907,7 @@ footer {
   width: 100vw;
   align-items: center;
   padding: 2rem;
+  margin-top: 50px;
 }
 
 .foot a {
@@ -1054,7 +1055,7 @@ footer {
 .little-dot {
   width: 6px;
   height: 6px;
-  background: #dc3545;
+  background: #dbd3d3;
   border-radius: 100%;
   display: inline-block;
   vertical-align: middle;
@@ -1121,7 +1122,7 @@ footer {
   width: 12px;
   height: 12px;
   border-radius: 100%;
-  background: #f6af54;
+  background: #eba544;
   position: absolute;
   top: 50%;
   right: -6px;
@@ -1167,17 +1168,17 @@ footer {
   animation: big-dot-container--animation-next 0.3s forwards;
 }
 
-.btn {
+.dots {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  fill: #f6af54;
+  fill: #dbd3d3;
   cursor: pointer;
   transition: opacity 0.2s;
 }
 
-.btn:hover {
-  opacity: 0.6;
+.dots:hover {
+  fill: #d0c5c5;
 }
 
 .btn--next {
@@ -1187,3 +1188,4 @@ footer {
 .btn--prev {
   right: calc(100% + 20px);
 }
+

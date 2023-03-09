@@ -40,9 +40,9 @@ function search(e) {
   document.activeElement.blur(); // this removes focus on the input bar after search
   initiateApi(1,search);
   for(let curr=1; curr < 5; curr++){
-    let mainDiv=document.getElementById('pagination');
+    let mainDiv=document.getElementById('pagination-wrapper');
     mainDiv.children[curr].addEventListener('click' ,function(e){
-      mainDiv.children[curr].style.backgroundColor='dodgerblue';
+      // mainDiv.children[curr].style.backgroundColor='dodgerblue';
       for(let curr1=1; curr1 < 5; curr1++){
         if(curr1!==curr){
           mainDiv.children[curr1].style.removeProperty('background-color');
