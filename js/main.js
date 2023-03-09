@@ -79,19 +79,21 @@ function search(e) {
 
       if (bookNotFound) {
 
-        let notfound = document.createElement("DIV");
-        notfound.innerHTML = `
-        <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-message"
-             color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
-            <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
-            <div>
-              <p class="lead"> <span class="text-danger">Oops!</span> Book not found.</p>
-              <p class="fs-3">The book you’re looking for doesn’t exist.</p>
-            </div>
-        </div>
-        `;
+        // let notfound = document.createElement("DIV");
+        // notfound.innerHTML = `
+        // <div class="d-flex flex-column flex-sm-row align-items-center justify-content-center text-center text-sm-left error-message"
+        //      color=(icon.classList.contains('fa-moon') ? 'text-white' : 'text-dark'>
+        //     <img src="./img/file-not-found.gif" alt="404 error" width="100" height="100" class="m-2">
+        //     <div>
+        //       <p class="lead"> <span class="text-danger">Oops!</span> Book not found.</p>
+        //       <p class="fs-3">The book you’re looking for doesn’t exist.</p>
+        //     </div>
+        // </div>
+        // `;
 
-        document.getElementById("results").appendChild(notfound);
+        // document.getElementById("results").appendChild(notfound);
+        
+        location.replace("404.html"); // Redirect to 404 page
       } else {
         for (let i = 0; i < res.items.length; i++) {
           // DIV
