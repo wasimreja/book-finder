@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Josefin+Sans:wght@100;300&display=swap");
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #403e3e;
+  --nav-color: #f4f1f1;
+  --search-bar-color: #f4f1f1;
+  --result-card-color: #efefef;
+}
+
+.dark-theme {
+  --primary-color: #323339;
+  --secondary-color: #fcf4f4;
+  --nav-color: #26272b;
+  --search-bar-color: #3e4046;
+  --result-card-color: #3e3f47;
+}
+
+.title {
+    font-size: 4em;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+/* =================================================================== */
+ .hear{
+  font-weight:600;
+  font-family: "Comfortaa", sans-serif;
+  color:var(--secondary-color);
+  font-size:1.3rem;
+ } 
+ .mail h5{
+  font-weight:600!important;
+  font-family: "Josefin Sans", sans-serif;
+  color:var(--secondary-color);
+ }
+ .mail p{
+  color:var(--secondary-color);
+  font-weight:300;
+  font-family: "Comfortaa", sans-serif;
+ }
+ /* ================================================================= */
+ .form{
+  color:var(--secondary-color);
+  font-weight:600;
+  font-family: "Comfortaa", sans-serif;
+ }
+ .form form{
+  background: var(--result-card-color);
+  border-radius:10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+ }
+ input[type=text], input[type=email]{
+  background: var(--result-card-color);
+  border: 1px solid var(--secondary-color);
+ }
+ .form textarea{
+  background: var(--result-card-color);
+  border: 1px solid var(--secondary-color);
+ }
+ .form .btn{
+  background: var(--secondary-color);
+  color:var(--primary-color);
+  border: 1px solid var(--secondary-color);
+  font-weight:600;
+  font-family: "Comfortaa", sans-serif;
+  border-radius:5px;
+ }
+ .btn:hover{
+  background: var(--secondary-color)!important;
+  color: #eba544!important;
+ }
+ .btn:focus{
+  outline:none!important;
+  box-shadow:none!important;
+ }
+ /* =================================================================== */
+@media only screen and (max-width: 400px) {
+    .title {
+      font-size: 3em;
+    }
+  }
+  
