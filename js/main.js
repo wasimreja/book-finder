@@ -34,12 +34,33 @@ function listen(e, pause) {
 function search(e) {
   e.preventDefault();
   const search = document.getElementById("input").value;
+  $('#pagination-wrapper').removeClass('hidden');
   if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
+  initiateApi(1,search);
+  for(let curr=1; curr < 5; curr++){
+    let mainDiv=document.getElementById('pagination-wrapper');
+    mainDiv.children[curr].addEventListener('click' ,function(e){
+      // mainDiv.children[curr].style.backgroundColor='dodgerblue';
+      for(let curr1=1; curr1 < 5; curr1++){
+        if(curr1!==curr){
+          mainDiv.children[curr1].style.removeProperty('background-color');
+        }
+      }
+      initiateApi(curr,search);
+    });
+  }
 
   // console.log("Working");
+}
+
+
+  function initiateApi(curr,search){
+    console.log(`https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curr-1)*5);
+  // console.log("Working");
   $.ajax({
-    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=20`,
+    url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curr-1)*5
+    ,
     dataType: "json",
     beforeSend: function () {
       $(".whirly-loader").show();
