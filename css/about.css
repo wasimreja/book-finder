@@ -51,11 +51,6 @@
   max-width: 28rem;
   display: block;
 }
-.perk{
-  color: var(--secondary-color);
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-}
 .benefit .card{
   color: var(--secondary-color);
   background: var(--result-card-color);
