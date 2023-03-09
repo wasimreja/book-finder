@@ -9,6 +9,16 @@
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
 <img src="https://forthebadge.com/images/badges/open-source.svg" />
+
+<br>
+<br>
+  
+![Issues](https://img.shields.io/github/issues/wasimreja/book-finder?color=brightgreen)
+![Pull requests](https://img.shields.io/github/issues-pr/wasimreja/book-finder)
+![Forks](https://img.shields.io/github/forks/wasimreja/book-finder)
+![Stars](https://img.shields.io/github/stars/wasimreja/book-finder)
+![Licence](https://img.shields.io/github/license/wasimreja/book-finder?color=orange)
+
 </div>
 
 ## About The Project
