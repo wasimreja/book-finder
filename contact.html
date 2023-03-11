@@ -6,17 +6,16 @@
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Find the book you want to read next!" />
   <title>Book Finder</title>
-  <link rel="shortcut icon" href="img/book.png" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/book.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <!-----------------font awesome------------------------->
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer"/> -->
   <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/contact.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
 </head>
 
 <body class="bg">
@@ -30,105 +29,98 @@
     }
   </script>
 
- 
-<!------------------------------------------->
-<nav id="nav">
-  <div class="container-fluid align-items-center">
-    <img id="bk-logo" src="./img/book.png" alt="logo" >
-    <a class="navbar-brand" href="index.html">
-      <span class="text">Book</span><span class="find">Finder</span>
-    </a>    
-    <div class="mode d-flex align-items-center">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html"> <span class="find">Contact Us</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
-        </li>
-      </ul>
-      <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+  <nav id="nav">
+    <div class="container-fluid align-items-center">
+      <img id="bk-logo" src="./img/book.png" alt="logo">
+      <a class="navbar-brand" href="index.html">
+        <span class="text">Book</span><span class="find">Finder</span>
+      </a>
+      <div class="mode d-flex align-items-center">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"> <span class="find">Contact Us</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
+          </li>
+        </ul>
+        <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode" />
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
 
+        </div>
       </div>
     </div>
-  </div>
-</nav>
+  </nav>
 <!-- --------------------------------------------------------------------------------------------------------- -->
-
-<section class="About">
-    <header class="header" id="header" style="text-align: center;">
-    <h1 class="title">
-      Contact
-      <p class="finder" style="display: inline-block">Us</p>
-    </h1>
-    <div id="cardsset">
-    </div>
+  <section id="contact">
     <div class="search" id="search-bar">
       <form class="search-form">
       </form>
     </div>
-   </header>
-    
-  </section>
-
-  <!-- ----------------------------------------------------------------------------------------------------------- -->
-
-  <section>
-    <div class="container py-3" id="header">
-       <div class="row g-4">
-        <div class="col-lg-6 py-5">
-            <p class="hear">We'd love to hear from you!</p>
-            <div class="mail"> <h5>  <i class="fa fa-envelope fa-1x ico   "> </i>      Email  </h5>
-                 <p class="sty">bookfinder@gmail.com</p>
+    <div class="container2 contact">
+      <div class="vl"></div>
+      <div class="contact_title">
+        <h1>Contact <p style="display: inline-block" >Us</p></h1>
+        <h2>Let's Get In Touch.</h2>
+      </div>
+      <div class="contact_form row">
+        <div class="col-md-7 form">
+          <form>
+            <div class="input_group">
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder=" " required="" >
             </div>
-            <div class="mx-auto">
-            <figure>
-              <img src="img/cont.png" alt="" height="100% " width="100%">
-            </figure>
+            <div class="input_group">
+              <label for="email">Email</label>
+              <input id="email" type="text" name="Subject" placeholder=" " required="" >
             </div>
-            <!-- <div> <h4>  <i class="fa fa-phone fa-1x ico  p-3 "> </i>   Phone </h4>
-                <p class="sty"></p>
-            </div> -->
+            <div class="input_group">
+              <label for="sub">Subject</label>
+              <input id="sub" type="text" name="Email" placeholder=" " required="" >
+            </div>
+            <div class="input_group">
+              <label for="msg">Message</label>
+              <textarea id="msg" type="text" name="Message" placeholder=" " rows="4" required="" ></textarea>
+            </div>
+            <button class="btn btn-submit" type="submit">Send Message</button>
+          </form>
         </div>
-        <div class="col-lg-6 py-5 form">
-            
-                  <form  class="row p-5 g-3">
-                  <div class="col-md-12">  <label for="exampleFormControlInput1" class="form-label">Full Name</label>
-            <input type="text" class="form-control" required id="exampleFormControlInput1" placeholder="">
+        <div class="col-md-5 follow">
+          <h3>Follow Us</h3>
+          <div class="contact_link">
+            <a href="index.html">
+            <img src="img/book.png">
+            </i>
+            <span>Book Finder</span>
+          </a>
+          <p>go-to place for all kinds of book related searches</p>
           </div>
-                  <div class="col-md-12 pt-3">  <label for="exampleFormControlInput1" class="form-label">E-Mail Address</label>
-            <input type="email" class="form-control" required id="exampleFormControlInput1" placeholder="">
-          </div>  
-        
-          <div class="col-md-12 pt-3">  <label for="exampleFormControlInput1" class="form-label">Phone Number</label>
-            <input type="text" class="form-control" required id="exampleFormControlInput1" placeholder="">
-          </div>  
-         
-          <div class="col-md-12 pt-3">
-                    <div>
-                     <label class="form-label">Query</label>
-                      <textarea class="form-control" required id="exampleFormControlTextarea1" rows="4"></textarea>
-                    </div>
-                  </div>
-                 
-          
-          <div class="col-12 pt-3">
-                  <button type="button" class=" btn" data-bs-toggle="tooltip" data-bs-placement="right" > Send</button>
-                  </div>
-                </form>
-
+          <div class="social_link">
+            <a href="https://twitter.com/_wasimreja">
+              <i class="bx bxl-twitter">
+              </i>
+            </a>
+            <a href="https://www.linkedin.com/in/wasimreja">
+              <i class="bx bxl-linkedin">
+              </i>
+            </a>
+            <a href="https://www.instagram.com/_wasimreja">
+              <i class="bx bxl-instagram">
+              </i>
+            </a>
+          </div>
+          <img class="img-fluid" src="img/image.svg">
         </div>
-       </div>
+      </div>
     </div>
   </section>
   <!-- ----------------------------------------------------------------------------------------------------------- -->
@@ -160,11 +152,15 @@
   </div> 
    </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-<script src="./js/main.js"></script>
- 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init({
+       offset: 200,
+       duration: 1000
+     });
+   </script>
+   <script src="./js/main.js"></script>
 </body>
 
 </html>
