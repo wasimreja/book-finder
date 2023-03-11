@@ -1,0 +1,148 @@
+
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    width: 110%;
+    height: 80px;
+    z-index: 10;
+}
+
+.container1, .container2 {
+    padding: 120px 40px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container1 .description, .container2 .description {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 440px;
+    max-height: 300px;
+}
+
+.container-img {
+    max-width: 678px;
+    max-height: 440px;
+    width: 50%;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #403e3e;
+    --nav-color: #f4f1f1;
+    --search-bar-color: #f4f1f1;
+    --result-card-color: #efefef;
+}
+  
+.dark-theme {
+    --primary-color: #323339;
+    --secondary-color: #fcf4f4;
+    --nav-color: #26272b;
+    --search-bar-color: #3e4046;
+    --result-card-color: #3e3f47;
+}
+
+.title{
+    margin-top: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4em;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.description h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 120%;
+    width: 100%;
+    color:var(--secondary-color);
+    font-family: "Comfortaa", sans-serif;
+}
+
+.description p {
+  font-weight:400;
+  font-family: "Comfortaa", sans-serif;
+  color:var(--secondary-color);
+  font-size:1.3rem;
+}
+
+
+/* Responsivness part */
+
+@media screen and (max-width:768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: -webkit-fill-available;
+    }
+
+
+    .container2 {
+        display: block;
+    }
+
+    .container2-mobile {
+        display: block;
+    }
+
+    .container1,
+    .container2-mobile {
+        padding: 56px 24px;
+        display: block;
+    }
+
+    .container1>img,
+    .container2-mobile>img {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .container1>.description,
+    .container2-mobile>.description {
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .container1>.description>h2,
+    .container2-mobile>.description>h2 {
+        margin-top: 20px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .container1>.description>p,
+    .container2-mobile>.description>p {
+        padding: 0;
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+} 

@@ -28,18 +28,6 @@
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-.rev{
-  color: var(--secondary-color);
-}
-.rev p{
-  font-size:1.2rem;
-  font-weight:500;
-  
-}
-.s{
-  font-size:1.1rem;
-  font-weight:400;
-}
 
 .description {
   padding: 2rem 2rem;
@@ -51,31 +39,7 @@
   max-width: 28rem;
   display: block;
 }
-.perk{
-  color: var(--secondary-color);
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
-}
-.benefit .card{
-  color: var(--secondary-color);
-  background: var(--result-card-color);
-  border: none;
-  cursor:pointer;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.benefit .card:hover{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-.benefit .card-title{
-  font-weight:600;
-  font-family: "Comfortaa", sans-serif;
 
-}
-.benefit .card-text{
-  font-family: "Comfortaa", sans-serif;
-
-}
 @media only screen and (max-width: 400px) {
   .title {
     font-size: 3em;
