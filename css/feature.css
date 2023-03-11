@@ -1,66 +1,205 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Poppins', sans-serif;
 }
-.featureItem_info1{
-    display:flex;
+
+header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-left:100px;
-    height: 395px;
+    max-width: 1080px;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
 }
-.featureItem_info2{
-    display:flex;
-    justify-content: space-between;
-    height:285px;
-}
-.featureItem_info3{
-    display:flex;
-    justify-content: space-between;
-    margin-left: 120px;
-    margin-bottom:100px;
-    height:395px;
-}
-.features_top{
+
+.container, .container2 {
+    padding: 120px 40px;
+    align-items: center;
     display: flex;
     justify-content: center;
-    letter-spacing: 5px;
-    font-size: 50px;
-    font-weight:500;
 }
 
-.text{
-    height: 450px;
-    width:365px;
-    margin-top:60px;
-    margin-left: 100px;
-    letter-spacing: 2px;
+.container .description, .container2 .description {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 440px;
+    max-height: 300px;
 }
-.text1{
-    height: 450px;
-    width:455px;
-    margin-right: 350px;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
+:root {
+    --primary-color: #fff;
+    --secondary-color: #403e3e;
+    --nav-color: #f4f1f1;
+    --search-bar-color: #f4f1f1;
+    --result-card-color: #efefef;
 }
-h3{
-    font-size:30px;
-    font-weight: 410;
+  
+.container-img {
+    max-width: 678px;
+    max-height: 440px;
+    width: 50%;
 }
 
-.img1{
-    height:230px;
-    margin-right:450px;
-    margin-top:45px;
+.dark-theme {
+    --primary-color: #323339;
+    --secondary-color: #fcf4f4;
+    --nav-color: #26272b;
+    --search-bar-color: #3e4046;
+    --result-card-color: #3e3f47;
 }
-.img2{
-    height:260px;
-    margin-left:250px;
+
+.title{
+    margin-top: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 4em;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+}
+
+.description h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 120%;
+    width: 100%;
+}
+
+.description p {
+    padding-top: 1rem;
+    font-size: 20px;
+    line-height: 32px;
+    width: 100%;
+    color: rgb(100, 100, 100);
+}
+
+
+/* Responsivness part */
+
+@media screen and (max-width:768px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
     
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: -webkit-fill-available;
+    }
+
+
+    .container2 {
+        display: block;
+    }
+
+    .container2-mobile {
+        display: block;
+    }
+
+    .container,
+    .container2-mobile {
+        padding: 56px 24px;
+        display: block;
+    }
+
+    .container>img,
+    .container2-mobile>img {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .container>.description,
+    .container2-mobile>.description {
+        padding: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .container>.description>h2,
+    .container2-mobile>.description>h2 {
+        margin-top: 20px;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    .container>.description>p,
+    .container2-mobile>.description>p {
+        padding: 0;
+        margin-top: 24px;
+        font-size: 20px;
+        line-height: 32px;
+    }
+} 
+
+/*RESPONSIVE FUNCTIONALITY FOR TITLE*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .title{
+        margin-left:30px;
+    }
 }
-.img3{
-    height:260px;
-    margin-top:10px;
-    margin-right:450px;
-    margin-bottom: 50px;
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .title{
+        margin-left:40px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .title{
+        margin-left: 20px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .title{
+        margin-left: 60px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .title{
+        margin-left: 47px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .title{
+        margin-left: 85px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title{
+        margin-left: 185px;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    .title{
+        margin-left: 285px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .title{
+        margin-left: 485px;
+    }
 }

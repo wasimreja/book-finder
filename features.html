@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Finder</title>
+    <link rel="shortcut icon" href="./img/book.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/feature.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body class="bg">
+  <script>
+    // this script need to in body but before html content to avoid flickering
+    const localTheme = localStorage?.getItem("theme");
+    if (localTheme === "dark") {
+      document.body.classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+    }
+  </script>
+
+    <nav id="nav">
+        <div class="container-fluid align-items-center">
+          <img id="bk-logo" src="./img/book.png" alt="logo">
+          <a class="navbar-brand" href="index.html">
+            <span class="text">Book</span><span class="find">Finder</span>
+          </a>
+          <div class="mode d-flex align-items-center">
+            <ul class="nav-menu">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"> <span class="find">Home</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> <span class="find">About Us</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html"> <span class="find">Contact Us</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="features.html"> <span class="find">Features</span></a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
+              </li>
+            </ul>
+            <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+      
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="features">
+      <header class="header" id="header" style="text-align: center;">
+        <h1 class="title">
+          Features
+        </h1>
+        <div id="cardsset">
+        </div>
+        <div class="search" id="search-bar">
+          <form class="search-form">
+          </form>
+        </div>
+      </header>
+        <div class="container2 aos-init aos-animate" data-aos="fade-up">
+            <div class="description">
+                <h3>Search in seconds</h3>
+                <p>With many e-books, you have ability to search through an entire book in seconds.</p>
+            </div>
+            <img class="container-img" style="height:300px; width:380px" src="img/e-book-app-6921052-5662039.png" alt="">
+        </div>
+        <div class="container aos-init" data-aos="fade-up">
+          <img class="container-img" style="height:300px; width:380px" src="img/woman-reading-book-while-drinking-coffee-5632630-4696294.png" alt="">
+          <div class="description">
+              <h3>Read anytime, anywhere</h3>
+              <p>If you enjoy reading on the go,you can take your whole library with you.</p>
+          </div> 
+        </div>
+        <div class="container2 aos-init aos-animate"data-aos="fade-up">
+            <div class="description">
+                <h3>Audio books</h3>
+                <p>Book Finder helps you to not only get your fav e-books but also makes them available in audio forms.</p>
+            </div>
+            <img class="container-img" style="height:300px; width:380px" src="img/man-holding-books-in-her-hands-and-listening-and-reading-them-online-5186298-4332949.png" alt="">
+        </div>
+    </section>
+    
+    <a href="#" id="return-to-top" class="special1">
+        <i class="fa fa-arrow-up"></i>
+      </a>
+      <footer class="foot">
+        <div>
+          Made with ❤️ by <a href="https://github.com/wasimreja">Wasim Reja</a>
+        </div>
+        <div class="icons">
+          <a class="twitter" href="https://twitter.com/_wasimreja" target="_blank">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a class="linkedin" href="https://www.linkedin.com/in/wasimreja" target="_blank">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a class="instagram" href="https://www.instagram.com/_wasimreja" target="_blank">
+            <i class="fa fa-instagram"></i>
+          </a>
+    
+        </div>
+      </footer>
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+        AOS.init({
+          offset: 200,
+          duration: 1000
+        });
+      </script>
+      <script src="./js/main.js"></script>
+</body>
+</html>
