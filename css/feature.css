@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 
 img {
     overflow-clip-margin: content-box;
@@ -17,20 +17,20 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1080px;
-    width: 100%;
+    max-width: 1500px;
+    width: 110%;
     height: 80px;
     z-index: 10;
 }
 
-.container, .container2 {
-    padding: 120px 40px;
+.container1, .container2 {
+    padding: 120px 40px 10px;
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
-.container .description, .container2 .description {
+.container1 .description, .container2 .description {
     padding: 0 2rem;
     display: flex;
     flex-direction: column;
@@ -38,6 +38,13 @@ header {
     max-width: 440px;
     max-height: 300px;
 }
+
+.container-img {
+    max-width: 678px;
+    max-height: 440px;
+    width: 50%;
+}
+
 :root {
     --primary-color: #fff;
     --secondary-color: #403e3e;
@@ -46,12 +53,6 @@ header {
     --result-card-color: #efefef;
 }
   
-.container-img {
-    max-width: 678px;
-    max-height: 440px;
-    width: 50%;
-}
-
 .dark-theme {
     --primary-color: #323339;
     --secondary-color: #fcf4f4;
@@ -73,14 +74,15 @@ header {
     font-weight: 800;
     line-height: 120%;
     width: 100%;
+    color:var(--secondary-color);
+    font-family: "Comfortaa", sans-serif;
 }
 
 .description p {
-    padding-top: 1rem;
-    font-size: 20px;
-    line-height: 32px;
-    width: 100%;
-    color: rgb(100, 100, 100);
+  font-weight:400;
+  font-family: "Comfortaa", sans-serif;
+  color:var(--secondary-color);
+  font-size:1.3rem;
 }
 
 
@@ -109,26 +111,26 @@ header {
         display: block;
     }
 
-    .container,
+    .container1,
     .container2-mobile {
         padding: 56px 24px;
         display: block;
     }
 
-    .container>img,
+    .container1>img,
     .container2-mobile>img {
         margin-top: 20px;
         width: 100%;
     }
 
-    .container>.description,
+    .container1>.description,
     .container2-mobile>.description {
         padding: 0;
         margin-top: 20px;
         width: 100%;
     }
 
-    .container>.description>h2,
+    .container1>.description>h2,
     .container2-mobile>.description>h2 {
         margin-top: 20px;
         font-size: 36px;
@@ -136,7 +138,7 @@ header {
         line-height: 120%;
     }
 
-    .container>.description>p,
+    .container1>.description>p,
     .container2-mobile>.description>p {
         padding: 0;
         margin-top: 24px;
@@ -144,62 +146,3 @@ header {
         line-height: 32px;
     }
 } 
-
-/*RESPONSIVE FUNCTIONALITY FOR TITLE*/
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .title{
-        margin-left:30px;
-    }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .title{
-        margin-left:40px;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .title{
-        margin-left: 20px;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .title{
-        margin-left: 60px;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    .title{
-        margin-left: 47px;
-    }
-}
-
-@media only screen and (min-width: 1100px) {
-    .title{
-        margin-left: 85px;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    .title{
-        margin-left: 185px;
-    }
-}
-
-@media only screen and (min-width: 1300px) {
-    .title{
-        margin-left: 285px;
-    }
-}
-@media only screen and (min-width: 1400px) {
-    .title{
-        margin-left: 485px;
-    }
-}

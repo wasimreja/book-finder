@@ -234,39 +234,22 @@ function scrollFunction() {
 }
 
 var icon = document.getElementById("icon");
-const tag=document.getElementsByTagName("p");
 icon.onclick = function () {
   document.body.classList.toggle("dark-theme");
   if (document.body.classList.contains("dark-theme")) {
     icon.src = "img/sun.png";
     localStorage.setItem("theme", "dark");
-    whitecolor();
-    console.log('a');
   } else {
     icon.src = "img/moon.png";
     localStorage.setItem("theme", "light");
-    blackcolor();
-    console.log('b');
   }
 };
 
-function whitecolor(){
-  tag[0].style.color="white";
-  tag[1].style.color="white";
-  tag[2].style.color="white";
-}
-function blackcolor(){
-  tag[0].style.color="black";
-  tag[1].style.color="black";
-  tag[2].style.color="black";
-}
 const initIcon = () => {
   if (document.body.classList.contains("dark-theme")) {
     icon.src = "img/sun.png";
-    whitecolor();
   } else {
     icon.src = "img/moon.png";
-    blackcolor();
   }
 };
 window.onload = initIcon();
