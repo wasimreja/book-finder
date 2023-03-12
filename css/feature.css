@@ -1,48 +1,6 @@
-
-
-img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
-}
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1500px;
-    width: 110%;
-    height: 80px;
-    z-index: 10;
-}
-
-.container1, .container2 {
-    padding: 120px 40px 10px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.container1 .description, .container2 .description {
-    padding: 0 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 440px;
-    max-height: 300px;
-}
-
-.container-img {
-    max-width: 678px;
-    max-height: 440px;
-    width: 50%;
 }
 
 :root {
@@ -51,29 +9,57 @@ header {
     --nav-color: #f4f1f1;
     --search-bar-color: #f4f1f1;
     --result-card-color: #efefef;
-}
+  }
   
-.dark-theme {
+  .dark-theme {
     --primary-color: #323339;
     --secondary-color: #fcf4f4;
     --nav-color: #26272b;
     --search-bar-color: #3e4046;
     --result-card-color: #3e3f47;
+  }
+
+
+.container{
+    color: var(--secondary-color);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-block: 10px;
 }
+
+.container:nth-child(2n){
+    flex-direction: row-reverse;
+
+}
+
+.container-img {
+    max-width: 678px;
+    max-height: 440px;
+    width: 50%;
+    margin-inline: 40px;
+    margin-bottom: 20px
+}
+
 
 .title{
-    margin-top: 50px;
-    font-family: "Josefin Sans", sans-serif;
+    padding-top: 9rem;
     font-size: 4em;
-    padding-top: 5rem;
-    padding-bottom: 2rem;
 }
 
-.description h2 {
-    font-size: 48px;
+.description {
+    max-width: 35rem;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.description h3 {
+    margin-bottom: 30px;
+    font-size: 30px;
     font-weight: 800;
-    line-height: 120%;
-    width: 100%;
     color:var(--secondary-color);
     font-family: "Comfortaa", sans-serif;
 }
@@ -82,17 +68,22 @@ header {
   font-weight:400;
   font-family: "Comfortaa", sans-serif;
   color:var(--secondary-color);
-  font-size:1.3rem;
+  font-size:1.2rem;
+
 }
 
 
+.features{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
 /* Responsivness part */
 
-@media screen and (max-width:768px) {
-    * {
-        margin: 0;
-        padding: 0;
-    }
+@media screen and (max-width:868px) {
     
     header {
         display: flex;
@@ -102,47 +93,18 @@ header {
         width: -webkit-fill-available;
     }
 
-
-    .container2 {
-        display: block;
+    .container {
+        flex-direction: column;
+        background-color: transparent;
     }
 
-    .container2-mobile {
-        display: block;
+    .container:nth-child(2n){
+        flex-direction: column;
     }
 
-    .container1,
-    .container2-mobile {
-        padding: 56px 24px;
-        display: block;
+    .description {
+        align-items: center;
+        text-align: center;
     }
-
-    .container1>img,
-    .container2-mobile>img {
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .container1>.description,
-    .container2-mobile>.description {
-        padding: 0;
-        margin-top: 20px;
-        width: 100%;
-    }
-
-    .container1>.description>h2,
-    .container2-mobile>.description>h2 {
-        margin-top: 20px;
-        font-size: 36px;
-        font-weight: 700;
-        line-height: 120%;
-    }
-
-    .container1>.description>p,
-    .container2-mobile>.description>p {
-        padding: 0;
-        margin-top: 24px;
-        font-size: 20px;
-        line-height: 32px;
-    }
-} 
+    
+}
