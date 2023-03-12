@@ -1,10 +1,11 @@
 
 		/* Add your custom styles here */ 
-	
+		@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
+
  
 		.containerf { 
-            font-family: Arial, sans-serif; 
-			max-width: 800px; 
+            font-family: "Comfortaa", cursive;
+			max-width: 1000px; 
 			margin: 0 auto; 
 			padding: 20px; 
          
@@ -25,10 +26,11 @@
         
 		} 
         .question:after {
-  content: '\02795';
-  /* Unicode character for "plus" sign (+) */
+  content: '+';
+ 
   font-size: 18px;
-  color: #777;
+  
+  color: #eba544;
   float: right;
   margin-left: 5px;
   margin-bottom: 20px;
