@@ -267,4 +267,7 @@ div.contact div.contact_form form button.btn-submit {
   div.contact div.contact_form form button.btn-submit{
     width: 100%;
   }
+  .img-fluid{
+    margin-top: 0px;
+  }
 }
