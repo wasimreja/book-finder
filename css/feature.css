@@ -21,32 +21,30 @@
 
 
 .container{
-    background-color: var(--result-card-color);
     color: var(--secondary-color);
     align-items: center;
     display: flex;
     justify-content: center;
     padding-block: 10px;
-    border-radius: 20px;
 }
 
 .container:nth-child(2n){
     flex-direction: row-reverse;
+
 }
 
 .container-img {
     max-width: 678px;
     max-height: 440px;
     width: 50%;
-    margin: 40px;
+    margin-inline: 40px;
+    margin-bottom: 20px
 }
 
 
 .title{
     padding-top: 9rem;
-    padding-bottom: 2.5rem;
     font-size: 4em;
-
 }
 
 .description {
@@ -54,15 +52,14 @@
     margin: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    
 }
 
 .description h3 {
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 800;
-    text-align: center;
     color:var(--secondary-color);
     font-family: "Comfortaa", sans-serif;
 }
@@ -72,7 +69,7 @@
   font-family: "Comfortaa", sans-serif;
   color:var(--secondary-color);
   font-size:1.2rem;
-  text-align: center;
+
 }
 
 
@@ -81,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
 }
 
 /* Responsivness part */
@@ -104,4 +101,10 @@
     .container:nth-child(2n){
         flex-direction: column;
     }
+
+    .description {
+        align-items: center;
+        text-align: center;
+    }
+    
 }
