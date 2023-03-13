@@ -31,27 +31,31 @@ function listen(e, pause) {
   }, 1000);
 }
 
+let currPage =1;
+
 function search(e) {
   e.preventDefault();
-  const search = document.getElementById("input").value;
+  let search = document.getElementById("input").value;
   $('#pagination-wrapper').removeClass('hidden');
   if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
-  initiateApi(1,search);
-  for(let curr=1; curr < 5; curr++){
-    let mainDiv=document.getElementById('pagination-wrapper');
-    mainDiv.children[curr].addEventListener('click' ,function(e){
-      // mainDiv.children[curr].style.backgroundColor='dodgerblue';
-      for(let curr1=1; curr1 < 5; curr1++){
-        if(curr1!==curr){
-          mainDiv.children[curr1].style.removeProperty('background-color');
-        }
-      }
-      initiateApi(curr,search);
-    });
-  }
+  initiateApi(currPage,search);
+
 
   // console.log("Working");
+}
+
+function nextPage() {
+  let search = document.getElementById("input").value;
+  currPage++;
+  initiateApi(currPage,search);
+}
+
+
+function prevPage() {
+  let search = document.getElementById("input").value;
+  currPage--;
+  initiateApi(currPage,search);
 }
 
 
@@ -253,3 +257,7 @@ const initIcon = () => {
   }
 };
 window.onload = initIcon();
+
+
+
+
