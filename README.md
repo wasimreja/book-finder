@@ -8,7 +8,24 @@
 <div align="center">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" />
-<img src="https://forthebadge.com/images/badges/open-source.svg" />
+<img src="https://forthebadge.com/images/badges/open-source.svg" /><br>
+ <img src="https://img.shields.io/badge/-PRs%20welcome-brightgreen" />
+  <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fwasimreja%2Fbook-finder&countColor=%23263759&style=flat" />
+  <img src="https://img.shields.io/github/forks/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/stars/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/last-commit/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/contributors/wasimreja/book-finder" />
+  <img src"https://img.shields.io/github/repo-size/wasimreja/book-finder" />
+  <br>
+  <img src="https://img.shields.io/github/repo-size/wasimreja/book-finder" />
+  <img src="https://img.shields.io/tokei/lines/github/wasimreja/book-finder" />
+  <br>
+  <img src="https://img.shields.io/github/license/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/issues/wasimreja/book-finder" />
+  <img src"https://img.shields.io/github/issues-closed-raw/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/issues-closed-raw/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/issues-pr-raw/wasimreja/book-finder" />
+  <img src="https://img.shields.io/github/issues-pr-closed/wasimreja/book-finder" />
 </div>
 
 ## About The Project
