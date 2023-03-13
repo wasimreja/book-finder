@@ -14,6 +14,12 @@ html {
   --search-bar-color: #f4f1f1;
   --result-card-color: #efefef;
   --loader-bg:#f6f6f6;
+  --twitter-hover-color: #00aced;
+  --linked-hover-color: #007bb6;
+  --instagram-hover-color: #ea2c59;
+  --github-hover-color: black;
+  --icon-hover-color:#fff;
+  
 }
 
 .dark-theme {
@@ -23,6 +29,10 @@ html {
   --search-bar-color: #3e4046;
   --result-card-color: #3e3f47;
   --loader-bg:#333;
+  --twitter-hover-color: #00aced;
+  --linked-hover-color: #007bb6;
+  --instagram-hover-color: #ea2c59;
+  --github-hover-color: black;
 }
 
 /* Scroll bar */
@@ -934,20 +944,24 @@ footer {
   text-align: center;
   transition: all 0.2s linear;
 }
+.github :hover {
+  background-color: var(--github-hover-color) !important;
+  color: var(--icon-hover-color) !important;
+}
 
 .twitter :hover {
-  background-color: #00aced;
-  color: #fff;
+  background-color: var(--twitter-hover-color) !important;
+  color: var(--icon-hover-color) !important;
 }
 
 .linkedin :hover {
-  background-color: #007bb6;
-  color: #fff;
+  background-color: var(--linked-hover-color) !important;
+  color: var(--icon-hover-color) !important;
 }
 
 .instagram :hover {
-  background-color: #ea2c59;
-  color: #fff;
+  background-color: var(--instagram-hover-color) !important;
+  color: var(--icon-hover-color) !important;
 }
 
 @media only screen and (max-width: 400px) {
