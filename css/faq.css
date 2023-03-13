@@ -1,0 +1,54 @@
+
+		/* Add your custom styles here */ 
+		@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&family=Josefin+Sans:wght@100;300&display=swap");
+
+ 
+		.containerf { 
+            font-family: "Comfortaa", cursive;
+			max-width: 1000px; 
+			margin: 0 auto; 
+			padding: 20px; 
+         
+		} 
+ 
+		h1 { 
+			text-align: center; 
+			font-size: 36px; 
+			margin-bottom: 20px; 
+		} 
+ 
+		.question { 
+			font-weight: bold; 
+            
+			
+			margin-bottom: 10px; 
+			cursor: pointer; 
+        
+		} 
+        .question:after {
+content: '\02795';
+/* Unicode character for "plus" sign (+) */
+font-size: 18px;
+color: #777;
+  float: right;
+  margin-left: 5px;
+  margin-bottom: 20px;
+}
+hr{
+    margin-top: 30px;
+}
+ 
+		.answer { 
+			margin-bottom: 10px; 
+			display: none; 
+		} 
+ 
+		.answer p { 
+			margin: 0; 
+			line-height: 1.5; 
+		} 
+ 
+		.answer.active { 
+			display: block; 
+		} 
+	
