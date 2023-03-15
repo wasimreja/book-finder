@@ -35,13 +35,47 @@
   text-align: left;
   margin-left: 20px;
 }
-.contact {
-  position: relative;
-  margin: 1rem 15rem;
-  margin-top: 5rem !important;
+
+h3{
+  color: var(--secondary-color);
+  padding-bottom: 20px;
 }
 
-.text{
+.follow{
+  background-color: var(--result-card-color);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  margin: 1rem 15rem;
+  margin-top: 5rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.sub-btn{
+  color: var(--secondary-color);
+  background-color: var(--search-bar-color);
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  margin: 10px;
+}
+
+.textp{
   font-size: 2.5rem;
   margin-left: 10px;
   margin-top: -20px;
@@ -73,6 +107,7 @@ div.contact div.contact_form form {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
 }
 
 .input_group label {
@@ -88,7 +123,7 @@ div.contact div.contact_form form {
   margin: 0.1rem 0;
   margin-left: 0px;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   background: transparent;
   border: none;
@@ -98,25 +133,20 @@ div.contact div.contact_form form {
   transition: all 0.2s ease;
 }
 div.contact div.contact_form .follow {
+  height: 100%;
+  width: 100%;
   font-family: "Comfortaa", sans-serif;
   padding: 2rem 4rem;
-  position: relative;
   background: var(--follow-color);
 }
-div.contact div.contact_form .follow h3 {
-  margin: 0.5rem 0;
-  font-size: 2.2rem;
-  /* font-weight: bold; */
-  color: var(--follow-text-color);
-  letter-spacing: 0.5px;
-}
+
 
 div.contact div.contact_form .follow .social_link {
   margin: 2rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+
 }
 div.contact div.contact_form .follow .social_link a i {
   margin: auto;
@@ -130,7 +160,6 @@ div.contact div.contact_form .follow .social_link a i {
   line-height: 45px;
   border-radius: 100%;
   background-color: var(--icons-bgcolor);
-  display: inline-block;
   text-align: center;
   transition: all 0.2s linear;
 }
@@ -140,6 +169,9 @@ div.contact div.contact_form .follow .social_link a i{
   transition: all 0.3s linear;
 }
 .bx {
+  color: var(--secondary-color);
+  font-size:2.4rem;
+  margin-block: 10px;
   font-family: boxicons !important;
   font-weight: 400;
   font-style: normal;
@@ -152,48 +184,33 @@ div.contact div.contact_form .follow .social_link a i{
 img, svg {
   vertical-align: middle;
 }
-div.contact div.contact_form form button.btn-submit {
-  margin: 1rem 2rem 3rem;
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: "Comfortaa", sans-serif;
-  color: rgb(247,250,252);
-  background: rgb(74,144,244);
-  border-radius: 2px;
-  box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
-}
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  border-radius: .25rem;
-  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.vl {
-  border-left: 6px solid rgb(74,144,244);
-  height: 120px;
-  position: absolute;
-  top: 80px;
-  border-radius: 5px;
-}
+
+
+
 .img-fluid{
-  margin-top: 100px;
-  width: 85%;
+ padding: 50px;
 }
+
+
+.box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 80vw;
+  color: var(--secondary-color);
+  font-family: "Comfortaa", sans-serif;
+  background-color: var(--nav-color);
+}
+
+.textbox {
+  color:var(--secondary-color);
+  
+  font-family: "Comfortaa", sans-serif;
+  font-size: larger;
+}
+
 
 
 @media screen and (max-width: 1400px){
@@ -204,42 +221,39 @@ div.contact div.contact_form form button.btn-submit {
     padding: 0.8px;
   }
   .input_group input,.input_group textarea{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
   .contact{
-    margin: 4rem 3rem;
+    margin: 4rem 1rem;
   }
   .input_group label{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
-  div.contact div.contact_form form button.btn-submit{
-    font-size: 1.1rem;
-    margin-left: 0rem;
-  }
-  div.contact div.contact_form .follow h3  {
-    font-size: 1.8rem;
-  }
+
+
 
 }
  @media screen and (max-width: 940px){
   .container2{
     max-width: 1000px;
   }
-  div.contact div.contact_form .follow h3 {
-    font-size: 2rem;
-  }
+
   div.contact div.contact_form .follow .contact_link a span  {
     font-size: 1rem;
   }
   div.contact div.contact_form .follow .contact_link p{
     font-size: 0.8rem;
   }
-  div.contact div.contact_form form button.btn-submit{
-    font-size: 0.9rem;
-    margin-left: 0rem;
-  }
+
   .input_group label{
     font-size: 1rem;
+  }
+  .box{
+    flex-direction: column;
+  }
+
+  .form {
+    margin: 40px;
   }
 
 }
@@ -264,9 +278,7 @@ div.contact div.contact_form form button.btn-submit {
 }
 
 @media screen and (max-width: 600px){
-  div.contact div.contact_form form button.btn-submit{
-    width: 100%;
-  }
+
   .img-fluid{
     margin-top: 0px;
   }
