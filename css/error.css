@@ -18,13 +18,6 @@
     --smaller-font-size: .813rem;
   }
 }
-@media screen and (min-width: 1024px) {
-  :root {
-    --biggest-font-size: 5rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: .813rem;
-  }
-}
 
 /*=============== BASE ===============*/
 * {
@@ -34,7 +27,7 @@
 }
 
 body {
-  /* font-family: var(--body-font); */
+  font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: 500;
   color: var(--text-color);
@@ -42,7 +35,6 @@ body {
 
 a {
   text-decoration: none;
-  font-family: var(--body-font);
 }
 
 img {
@@ -51,6 +43,11 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1024px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
 
 .main {
   overflow: hidden; /* For the animations ScrollReveal */
@@ -59,38 +56,29 @@ img {
 /*=============== HOME ===============*/
 .home {
   background-color: var(--first-color);
+  padding: 9rem 0 2rem;
   height: 100vh;
-  padding-top: 10rem;
+  display: grid;
 }
 
 .home__container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-bottom: 5.5rem !important;
+  display: grid;
+  align-content: center;
+  row-gap: 2.5rem;
 }
 
 .home__data {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.home__subtitle{
-    font-family: var(--body-font);
+  text-align: center;
 }
 
 .home__title {
   font-size: var(--biggest-font-size);
   margin: .75rem 0;
-  font-family: var(--body-font);
-}
-
-.home__description{
-    font-family: var(--body-font);
 }
 
 .home__button {
   margin-top: 2rem;
+  display: inline-block;
   background-color: var(--text-color);
   color: #fff;
   padding: .80rem 1.5rem;
@@ -100,12 +88,10 @@ img {
 
 .home__button:hover {
   box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
-  scale: 1.2;
 }
 
 .home__img img {
-  width: 300px !important;
-  margin-bottom: 2rem !important;
+  width: 230px;
   animation: floaty 1.8s infinite alternate;
 }
 
@@ -116,7 +102,7 @@ img {
 .home__shadow {
   width: 130px;
   height: 24px;
-  background-color: hsla(37, 22%, 19%, 0.347);
+  background-color: hsla(38, 21%, 19%, .16);
   margin: 0 auto;
   border-radius: 50%;
   filter: blur(7px);
@@ -133,12 +119,11 @@ img {
 }
 
 .home__footer span a{
-  color: var(--text-color);
-  font-size: 1rem;
+  color: black;
 }
 
 .home__footer span a:hover{
-  color:gray;
+  color: gray;
 }
 
 @keyframes floaty {
@@ -159,48 +144,55 @@ img {
   }
 }
 
-@media screen and (max-width: 700px){
-
-  .home__img img {
-    width: 200px !important;
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .home {
+    padding-top: 7rem;
   }
-
-  .home__container {
-    padding-bottom: 9rem !important;
-  }
-
 }
 
-@media screen and (max-width: 500px){
-
-  .home__img img {
-    width: 180px !important;
-  }
-
-  .home__title {
-    font-size: 2rem;
-  }
-
-  .home__description{
-    font-size: 13px;
-  }
-
-  .home{
-    padding-top: 1rem;
-  }
-
+/* For large devices */
+@media screen and (min-width: 1024px) {
   .home__container {
-    flex-direction: column-reverse;
-    padding-bottom: 7rem !important;
-  }
-
-  .home__data {
-    padding-top: 3.5rem;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    column-gap: 2rem;
+  }
+  .home__data {
+    text-align: initial;
+  }
+  .home__img img {
+    width: 400px;
+  }
+  .home__shadow {
+    width: 250px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1048px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.7;
   }
 
-  .home__footer span a{
-    font-size: 13px;
+  .home {
+    height: initial;
+    row-gap: 4rem;
   }
+}
 
+/* For 4K resolutions (3840 x 2160, 4096 x 2160) */
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 3.1;
+  }
 }
