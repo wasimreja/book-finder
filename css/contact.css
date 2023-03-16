@@ -6,7 +6,7 @@
   --nav-color: #f4f1f1;
   --search-bar-color: #f4f1f1;
   --result-card-color: #efefef;
-  --follow-color: rgba(0,0,0,0.2);
+  --follow-color: rgba(0,0,0,0.1);
   --label-color: black;
   --follow-text-color: #323339;
   --icons-bgcolor: rgba(0,0,0,0.1);
@@ -47,7 +47,7 @@
   margin-top: -20px;
   letter-spacing: 2px;
 }
-.contact div.contact_form {
+.contact .contact_form {
   margin: 2rem 0.5rem;
   position: relative;
   background: var(--result-card-color);
@@ -60,7 +60,7 @@
   flex: 0 0 auto;
   width: 58.33333333%;
 }
-div.contact div.contact_form form {
+.contact .contact_form form {
   margin: auto;
   padding: 0.5rem;
   position: relative;
@@ -89,21 +89,21 @@ div.contact div.contact_form form {
   margin-left: 0px;
   width: 100%;
   font-size: 0.8rem;
-  font-weight: 600;
   background: transparent;
   border: none;
   border-bottom: 2px solid lightgray;
   letter-spacing: 1px;
   outline: none;
   transition: all 0.2s ease;
+  font-family: "Comfortaa", sans-serif !important;
 }
-div.contact div.contact_form .follow {
+.contact .contact_form .follow {
   font-family: "Comfortaa", sans-serif;
   padding: 2rem 4rem;
   position: relative;
   background: var(--follow-color);
 }
-div.contact div.contact_form .follow h3 {
+.contact .contact_form .follow h3 {
   margin: 0.5rem 0;
   font-size: 2.2rem;
   /* font-weight: bold; */
@@ -111,16 +111,41 @@ div.contact div.contact_form .follow h3 {
   letter-spacing: 0.5px;
 }
 
-div.contact div.contact_form .follow .social_link {
+.social_link a:hover{
+  scale: 1.2;
+  transition: all 0.4s ease-in-out;
+}
+
+.follow .social_link .github :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .twitter :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .linkedin :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .instagram :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.contact .contact_form .follow .social_link {
   margin: 2rem 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
-div.contact div.contact_form .follow .social_link a i {
+.contact .contact_form .follow .social_link a i {
   margin: auto;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   /* color: var(--label-color) !important; */
   color: #737373;
   margin-right: 20px;
@@ -129,13 +154,12 @@ div.contact div.contact_form .follow .social_link a i {
   height: 45px;
   line-height: 45px;
   border-radius: 100%;
-  background-color: var(--icons-bgcolor);
   display: inline-block;
   text-align: center;
   transition: all 0.2s linear;
 }
 
-div.contact div.contact_form .follow .social_link a i{
+.contact .contact_form .follow .social_link a i{
   text-decoration: none;
   transition: all 0.3s linear;
 }
@@ -152,7 +176,7 @@ div.contact div.contact_form .follow .social_link a i{
 img, svg {
   vertical-align: middle;
 }
-div.contact div.contact_form form button.btn-submit {
+.contact .contact_form form button.btn-submit {
   margin: 1rem 2rem 3rem;
   padding: 1rem 2.5rem;
   font-size: 1rem;
@@ -161,7 +185,7 @@ div.contact div.contact_form form button.btn-submit {
   color: rgb(247,250,252);
   background: #eba544;
   border-radius: 2px;
-  box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 10px rgb(0, 0, 0, 0.2);
   transition: all 0.2s ease;
 }
 .btn {
@@ -212,11 +236,11 @@ div.contact div.contact_form form button.btn-submit {
   .input_group label{
     font-size: 1.1rem;
   }
-  div.contact div.contact_form form button.btn-submit{
+  .contact .contact_form form button.btn-submit{
     font-size: 1.1rem;
     margin-left: 0rem;
   }
-  div.contact div.contact_form .follow h3  {
+  .contact .contact_form .follow h3  {
     font-size: 1.8rem;
   }
 
@@ -225,16 +249,20 @@ div.contact div.contact_form form button.btn-submit {
   .container2{
     max-width: 1000px;
   }
-  div.contact div.contact_form .follow h3 {
+  .contact_form .follow{
+    padding: 1.8rem !important;
+  } 
+
+  .contact .contact_form .follow h3 {
     font-size: 2rem;
   }
-  div.contact div.contact_form .follow .contact_link a span  {
+  .contact .contact_form .follow .contact_link a span  {
     font-size: 1rem;
   }
-  div.contact div.contact_form .follow .contact_link p{
+  .contact .contact_form .follow .contact_link p{
     font-size: 0.8rem;
   }
-  div.contact div.contact_form form button.btn-submit{
+  .contact .contact_form form button.btn-submit{
     font-size: 0.9rem;
     margin-left: 0rem;
   }
@@ -244,7 +272,20 @@ div.contact div.contact_form form button.btn-submit {
 
 }
 @media screen and (max-width: 600px){
-  div.contact div.contact_form .follow .contact_link {
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .contact{
+    margin: 4rem 1rem;
+  }
+
+  .input_group input,.input_group textarea{
+    font-size: 14px;
+  }
+
+  .contact .contact_form .follow .contact_link {
     margin-left: 0;
     padding: 0;
   }
@@ -254,8 +295,8 @@ div.contact div.contact_form form button.btn-submit {
   .contact .contact_title h2{
     font-size: 2.1rem !important;
   }
-  div.contact div.contact_form .follow .social_link a i{
-    font-size: 1.3rem;
+  .contact .contact_form .follow .social_link a i{
+    font-size: 2rem;
     width: 35px;
     height: 35px;
     line-height: 35px;
@@ -264,7 +305,7 @@ div.contact div.contact_form form button.btn-submit {
 }
 
 @media screen and (max-width: 600px){
-  div.contact div.contact_form form button.btn-submit{
+  .contact .contact_form form button.btn-submit{
     width: 100%;
   }
   .img-fluid{
