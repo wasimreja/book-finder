@@ -6,7 +6,7 @@
   --nav-color: #f4f1f1;
   --search-bar-color: #f4f1f1;
   --result-card-color: #efefef;
-  --follow-color: rgba(0,0,0,0.2);
+  --follow-color: rgba(0,0,0,0.1);
   --label-color: black;
   --follow-text-color: #323339;
   --icons-bgcolor: rgba(0,0,0,0.1);
@@ -89,7 +89,6 @@
   margin-left: 0px;
   width: 100%;
   font-size: 0.8rem;
-  font-weight: 600;
   background: transparent;
   border: none;
   border-bottom: 2px solid lightgray;
@@ -117,6 +116,26 @@
   transition: all 0.4s ease-in-out;
 }
 
+.follow .social_link .github :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .twitter :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .linkedin :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
+.follow .social_link .instagram :hover {
+  background-color: transparent !important;
+  color: #818a91 !important;
+}
+
 .contact .contact_form .follow .social_link {
   margin: 2rem 0;
   display: flex;
@@ -126,7 +145,7 @@
 }
 .contact .contact_form .follow .social_link a i {
   margin: auto;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   /* color: var(--label-color) !important; */
   color: #737373;
   margin-right: 20px;
@@ -135,7 +154,6 @@
   height: 45px;
   line-height: 45px;
   border-radius: 100%;
-  background-color: var(--icons-bgcolor);
   display: inline-block;
   text-align: center;
   transition: all 0.2s linear;
@@ -254,6 +272,19 @@ img, svg {
 
 }
 @media screen and (max-width: 600px){
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .contact{
+    margin: 4rem 1rem;
+  }
+
+  .input_group input,.input_group textarea{
+    font-size: 14px;
+  }
+
   .contact .contact_form .follow .contact_link {
     margin-left: 0;
     padding: 0;
@@ -265,7 +296,7 @@ img, svg {
     font-size: 2.1rem !important;
   }
   .contact .contact_form .follow .social_link a i{
-    font-size: 1.3rem;
+    font-size: 2rem;
     width: 35px;
     height: 35px;
     line-height: 35px;
