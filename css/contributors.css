@@ -1,21 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500;700&family=Josefin+Sans:wght@100;300&display=swap");
-
-:root {
-  --primary-color: #fff;
-  --secondary-color: #403e3e;
-  --nav-color: #f4f1f1;
-  --search-bar-color: #f4f1f1;
-  --result-card-color: #efefef;
-}
-
-.dark-theme {
-  --primary-color: #323339;
-  --secondary-color: #fcf4f4;
-  --nav-color: #26272b;
-  --search-bar-color: #3e4046;
-  --result-card-color: #3e3f47;
-}
-
 .title {
   font-size: 4em;
   padding-top: 5rem;
@@ -28,9 +10,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 2.1rem;
-  margin: 0 auto;
   margin-top: 2rem;
-  margin-bottom: 5rem;
 }
 
 .profilepic {

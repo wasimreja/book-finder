@@ -1,5 +1,3 @@
-//PAGINATION
-
 var btns = document.querySelectorAll('.dots');
 var paginationWrapper = document.querySelector('.pagination-wrapper');
 var bigDotContainer = document.querySelector('.big-dot-container');

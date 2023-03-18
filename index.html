@@ -18,7 +18,6 @@
 
 <body class="bg">
   <script>
-    // this script need to in body but before html content to avoid flickering
     const localTheme = localStorage?.getItem("theme");
     if (localTheme === "dark") {
       document.body.classList.add("dark-theme");
@@ -29,15 +28,12 @@
     }
   </script>
 
-  <!--------Preloader---------------->
   <div class="preloader">
-
     <div class="dots-container">
       <div></div>
       <div></div>
       <div></div>
     </div>
-
     <div class="preloader-text">
       Loading...
     </div>
@@ -45,7 +41,7 @@
 
   <nav id="nav">
     <div class="container-fluid align-items-center">
-      <img id="bk-logo" src="./img/book.png" alt="logo">
+      <img id="logo" src="./img/book.png" alt="logo">
       <a class="navbar-brand" href="index.html">
         <span class="text">Book</span><span class="find">Finder</span>
       </a>
@@ -64,62 +60,55 @@
             <a class="nav-link" href="contributors.html"> <span class="find">Contributors</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="faq.html"> <span class="find">FAQs</span></a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="contact.html"> <span class="find">Contact</span></a>
           </li>
         </ul>
-        <img class="logo" id="icon" src="img/moon.png" alt="Toggle Dark Mode"/>
+        <img class="dark-mode" id="icon" src="img/moon.png" alt="Toggle Dark Mode" />
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
-  
         </div>
       </div>
     </div>
   </nav>
+
   <header class="header" id="header">
     <img src="img/Man-Reading-a-Book-Vector-Illustration.svg" alt="Man Reading a Book" class="illustration" />
     <h1 class="title">
       Book
-      <p class="finder" style="display: inline-block">Finder</p>
+      <p class="finder">Finder</p>
     </h1>
   </header>
-  <main>
-    <div class="search" id="search-bar">
-      <form class="search-form">
-        <div class="p-1 rounded rounded-pill shadow-sm mb-5">
-          <div class="input-group">
-            <input type="search" id="input" placeholder="Find the book you want to read next!"
-              aria-describedby="button-addon1" class="form-control border-0 " />
-            <div class="input-group-append">
-              <button id="button-addon1" type="submit" class="btn btn-link text-primary" aria-label="Search">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
+  <div class="search" id="search-bar">
+    <form class="search-form">
+      <div class="p-1 rounded rounded-pill shadow-sm mb-5">
+        <div class="input-group">
+          <input type="search" id="input" placeholder="Find the book you want to read next!"
+            aria-describedby="button-addon1" class="form-control border-0 " />
+          <div class="input-group-append">
+            <button id="button-addon1" type="submit" class="btn btn-link text-primary" aria-label="Search">
+              <i class="fa fa-search"></i>
+            </button>
           </div>
         </div>
-      </form>
-    </div>
-  </main>
-  <section>
-    <div class="whirly-loader" style="display: none;"></div>
-    <div id="results" class="results container">
-    </div>
-  </section>
+      </div>
+    </form>
+  </div>
+  <div class="whirly-loader" style="display: none;"></div>
+  <div id="results" class="results container"></div>
 
-  <a href="#" id="return-to-top" class="special1">
+  <a href="#" id="return-to-top" class="scroll-container">
     <i class="fa fa-arrow-up"></i>
   </a>
 
-  <div id ="pagination-wrapper" class = "pagination-wrapper hidden">
-    <svg class="dots btn--prev" onclick="prevPage()" id="prev-btn" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z"/>
-      <path d="M0-.5h24v24H0z" fill="none"/>
+  <div id="pagination-wrapper" class="pagination-wrapper hidden">
+    <svg class="dots btn--prev" onclick="prevPage()" id="prev-btn" height="96" viewBox="0 0 24 24" width="96"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.41 16.09l-4.58-4.59 4.58-4.59L14 5.5l-6 6 6 6z" />
+      <path d="M0-.5h24v24H0z" fill="none" />
     </svg>
-    
+
     <div class="pagination-container">
       <div class="little-dot  little-dot--first"></div>
       <div class="little-dot">
@@ -129,13 +118,13 @@
       </div>
       <div class="little-dot  little-dot--last"></div>
     </div>
-    
-    <svg class="dots btn--next" onclick="nextPage()" id="next-btn" height="96" viewBox="0 0 24 24" width="96" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/>
-      <path d="M0-.25h24v24H0z" fill="none"/>
+
+    <svg class="dots btn--next" onclick="nextPage()" id="next-btn" height="96" viewBox="0 0 24 24" width="96"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z" />
+      <path d="M0-.25h24v24H0z" fill="none" />
     </svg>
   </div>
-
 
   <footer class="foot">
     <div>
@@ -151,7 +140,6 @@
       <a class="instagram" href="https://www.instagram.com/_wasimreja" target="_blank">
         <i class="fa fa-instagram"></i>
       </a>
-
     </div>
   </footer>
 

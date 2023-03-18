@@ -12,10 +12,14 @@
         "github": "arjunchoudhury07"
       },
       {
+        "name": "Tuhin Banerjee",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/76838565?v=4",
+        "github": "TuhinBanerjee31"
+      },
+      {
         "name": "Khushi Marothi",
         "avatarUrl": "https://avatars.githubusercontent.com/u/85816852?v=4",
-        "github": "khushimarothi",
-        "twitter": ""
+        "github": "khushimarothi"
       },
       {
         "name": "Vivek Kumar Tiwari",
@@ -36,18 +40,18 @@
         "name": "Ankan Roy",
         "avatarUrl": "https://avatars.githubusercontent.com/u/109351887?v=4",
         "github": "cu8code"  
-      },        
-      {
-        "name": "Tuhin Banerjee",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/76838565?v=4",
-        "github": "TuhinBanerjee31"
       },
+      {
+        "name": "Ritika Malik",
+        "avatarUrl": "https://avatars.githubusercontent.com/u/91181981?v=4",
+        "github": "ritika728",
+        "twitter": "ritikatwts"
+      },        
       {
         "name": "Shreyanka Dan",
         "avatarUrl": "https://avatars.githubusercontent.com/u/101724719?v=4",
         "github": "shreyanka155"  
       },
-  
       {
         "name": "Nikhil Aggarwal",
         "avatarUrl": "https://avatars.githubusercontent.com/u/100992874?v=4",
@@ -71,16 +75,9 @@
         "twitter": "DevrajsinhGohi5"
       },
       {
-        "name": "S-ishita",
+        "name": "Ishita Singhal",
         "avatarUrl": "https://avatars.githubusercontent.com/u/104543751?v=4",
-        "github": "S-ishitai",
-        "twitter": ""
-      },
-      {
-        "name": "Ritika Malik",
-        "avatarUrl": "https://avatars.githubusercontent.com/u/91181981?v=4",
-        "github": "ritika728",
-        "twitter": "ritikatwts"
+        "github": "S-ishita"
       },
       {
         "name": "Shreyan Majumdar",
@@ -111,10 +108,9 @@
         "twitter": "SujalSamai"
       },
       {
-        "name": "Awesomeasma",
+        "name": "Asma Naaz Shaik",
         "avatarUrl": "https://avatars.githubusercontent.com/u/86073340?v=4",
-        "github": "Awesomeasma",
-        "twitter": ""
+        "github": "Awesomeasma"
       },
       {
         "name": "Tomoya Kuroda",
@@ -300,6 +296,5 @@
         "github": "chaaals",
         "twitter": "chalsthebreaker"
       }
-
    ]
   }

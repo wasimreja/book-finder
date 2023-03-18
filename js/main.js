@@ -18,7 +18,6 @@ function listen(e, pause) {
 
   const message = `The name of the book is ${bookName}  . It is written ${authorName} .  ${bookDescription}`;
 
-  // console.log(bookDescription);
   let synth = speechSynthesis;
   synth.cancel();
   if (pause) {
@@ -40,9 +39,6 @@ function search(e) {
   if (search.trim() === "") return;
   document.activeElement.blur(); // this removes focus on the input bar after search
   initiateApi(currPage,search);
-
-
-  // console.log("Working");
 }
 
 function nextPage() {
@@ -61,7 +57,7 @@ function prevPage() {
 
   function initiateApi(curr,search){
     console.log(`https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curr-1)*5);
-  // console.log("Working");
+
   $.ajax({
     url: `https://www.googleapis.com/books/v1/volumes?q="${search}"&maxResults=5&startIndex=`+(curr-1)*5
     ,
@@ -231,9 +227,9 @@ const scroll = document.getElementById("return-to-top");
 window.onscroll = () => scrollFunction();
 function scrollFunction() {
   if (document.body.scrollTop || document.documentElement.scrollTop > 20) {
-    scroll.classList.remove("special1");
+    scroll.classList.remove("scroll-container");
   } else {
-    scroll.classList.add("special1");
+    scroll.classList.add("scroll-container");
   }
 }
 
